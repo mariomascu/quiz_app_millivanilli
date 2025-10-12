@@ -1,0 +1,17 @@
+{
+  "name": "quiz_app_millivanilli",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "validate:data": "node scripts/validate_data.mjs",
+    "convert:legacy": "node scripts/convert_legacy_to_new_schema.mjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0"
+  }
+}

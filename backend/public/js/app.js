@@ -1,3 +1,4 @@
+'use strict';
 // ========================================
 // VARIABLES GLOBALES
 // ========================================
@@ -27,7 +28,26 @@ const elements = {
 };
 
 // ========================================
-// INICIALIZACIÓN
+// UTILIDADES DE SEGURIDAD Y ALEATORIEDAD
+// ========================================
+function escapeHTML(str = '') {
+    return String(str)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+}
+
+function mezclarArray(array) {
+    const mezclado = Array.from(array);
+    for (let i = mezclado.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [mezclado[i], mezclado[j]] = [mezclado[j], mezclado[i]];
+    }
+    return mezclado;
+}
+
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
     inicializarApp();
@@ -39,7 +59,6 @@ async function inicializarApp() {
         mostrarPantalla('initial');
         configurarEventListeners();
     } catch (error) {
-        // Mostrar el mensaje de error lanzado por cargarPreguntas (por ejemplo: sugerencia de usar servidor local)
         const msg = (error && error.message) ? error.message : 'No se pudo cargar el archivo de preguntas. Verifica que el archivo "preguntas.json" esté en la carpeta "data/".';
         mostrarError(msg);
         console.error('Error al inicializar la app:', error);
@@ -66,32 +85,27 @@ async function cargarPreguntas() {
         // Transformar el formato del JSON (soportar el formato actual del fichero)
         // Formato esperado por la app (por pregunta):
         // { id: number, text: string, options: [{id: 'A', text: '...'}], correctAnswer: 'A', reference: string }
-        const letters = (i) => String.fromCharCode(65 + i); // A, B, C...
-
         todasLasPreguntas = data.map((q) => {
-        const text = q.text || q.question || '';
+            const text = q.text || q.question || '';
 
-                // Normalizar opciones (pueden venir como strings o como objetos).
-                // Nuevo formato: cada opción puede incluir un booleano que indica si es la correcta (isCorrect/ correct).
-                let options = [];
-                if (Array.isArray(q.options) && q.options.length > 0) {
-                    if (typeof q.options[0] === 'string') {
-                        // Si las opciones son strings, marcar como correctas comparando con q.answer si existe
-                        options = q.options.map((optText) => ({ text: optText, isCorrect: q.answer ? (optText === q.answer) : false }));
-                    } else if (typeof q.options[0] === 'object') {
-                        options = q.options.map((opt) => {
-                            // Considerar la opción correcta solo si el indicador es estrictamente true.
-                            // Aceptamos distintas claves: isCorrect, is_correct, correct
-                            const isCorrect = (opt.isCorrect === true) || (opt.is_correct === true) || (opt.correct === true);
-                            // Si no hay flag booleano, no marcamos como correcta aquí (podría usarse q.answer en compatibilidad)
-                            // Para compatibilidad con formatos antiguos: si no hay flag y q.answer existe, usar comparación de texto
-                            const fallbackIsCorrect = (!isCorrect && q.answer) ? (opt.text === q.answer || opt.label === q.answer) : false;
-                            return { text: opt.text || opt.label || '', isCorrect: isCorrect || fallbackIsCorrect };
-                        });
-                    }
+            // Normalizar opciones (pueden venir como strings o como objetos).
+            // Nuevo formato: cada opción puede incluir un booleano que indica si es la correcta (isCorrect/ is_correct/ correct).
+            let options = [];
+            if (Array.isArray(q.options) && q.options.length > 0) {
+                if (typeof q.options[0] === 'string') {
+                    // Si las opciones son strings, marcar como correctas comparando con q.answer si existe
+                    options = q.options.map((optText) => ({ text: optText, isCorrect: q.answer ? (optText === q.answer) : false }));
+                } else if (typeof q.options[0] === 'object') {
+                    options = q.options.map((opt) => {
+                        // Considerar la opción correcta solo si el indicador es estrictamente true.
+                        // Aceptamos distintas claves: isCorrect, is_correct, correct
+                        const isCorrect = (opt.isCorrect === true) || (opt.is_correct === true) || (opt.correct === true);
+                        // Para compatibilidad con formatos antiguos: si no hay flag y q.answer existe, usar comparación exacta por texto
+                        const fallbackIsCorrect = (!isCorrect && q.answer) ? (opt.text === q.answer || opt.label === q.answer) : false;
+                        return { text: opt.text || opt.label || '', isCorrect: isCorrect || fallbackIsCorrect };
+                    });
                 }
-
-            const reference = q.reference || q.source || q.explanation || '';
+            }
 
             // Normalizar campos adicionales: explanation, source, epigrafe, pagina
             const explanation = q.explanation || q.explain || q.reference || '';
@@ -116,14 +130,25 @@ async function cargarPreguntas() {
             };
         });
 
+        // Validación mínima: IDs únicos y una correcta por pregunta
+        const ids = new Set();
+        for (const q of todasLasPreguntas) {
+            if (ids.has(q.id)) {
+                console.warn(`ID duplicado detectado en datos: ${q.id}`);
+            }
+            ids.add(q.id);
+            const corrects = q.options.filter(o => o.isCorrect === true);
+            if (corrects.length !== 1) {
+                console.warn(`Pregunta id=${q.id} tiene ${corrects.length} opciones correctas`);
+            }
+        }
+
         console.log(`✅ ${todasLasPreguntas.length} preguntas cargadas y normalizadas correctamente`);
 
     } catch (error) {
-        // Si se intenta abrir el proyecto por file://, fetch puede fallar con TypeError "Failed to fetch"
         if (error instanceof TypeError || /Failed to fetch/i.test(error.message)) {
             throw new Error('Error al cargar preguntas: parece que estás abriendo el HTML con file://. Arranca un servidor HTTP local (ej. `python -m http.server` o `npx http-server`) y abre la app en http://localhost:8000');
         }
-
         throw new Error(`Error al cargar preguntas: ${error.message}`);
     }
 }
@@ -153,7 +178,6 @@ function mostrarError(mensaje) {
 // ========================================
 function configurarEventListeners() {
     elements.generateBtn.addEventListener('click', handleGenerarCuestionario);
-    // El handler real se llama `corregirCuestionario` (no existe `handleCorregirCuestionario`)
     elements.correctBtn.addEventListener('click', corregirCuestionario);
     elements.repeatBtn.addEventListener('click', handleRepetirCuestionario);
     elements.newQuizBtn.addEventListener('click', handleNuevoCuestionario);
@@ -173,13 +197,12 @@ function handleGenerarCuestionario() {
     generarCuestionario(cantidadSeleccionada);
     mostrarPantalla('quiz');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-        // Al generar un nuevo cuestionario, asegurarnos de que el botón de corregir esté habilitado
-        if (elements.correctBtn) elements.correctBtn.disabled = false;
-        // y los botones de repetir/nuevo se deshabilitan hasta corregir
-        if (elements.repeatBtn) elements.repeatBtn.disabled = true;
-        if (elements.newQuizBtn) elements.newQuizBtn.disabled = true;
+    // Al generar un nuevo cuestionario, asegurarnos de que el botón de corregir esté habilitado
+    if (elements.correctBtn) elements.correctBtn.disabled = false;
+    // y los botones de repetir/nuevo se deshabilitan hasta corregir
+    if (elements.repeatBtn) elements.repeatBtn.disabled = true;
+    if (elements.newQuizBtn) elements.newQuizBtn.disabled = true;
 }
-
 
 function handleRepetirCuestionario() {
     repetirCuestionario();
@@ -196,6 +219,12 @@ function handleNuevoCuestionario() {
 // ========================================
 // FUNCIONES PRINCIPALES
 // ========================================
+function seleccionarPreguntasAleatorias(array, cantidad) {
+    // Fisher–Yates para seleccionar sin sesgo
+    const mezclado = mezclarArray(array);
+    return mezclado.slice(0, cantidad);
+}
+
 function generarCuestionario(cantidad) {
     // Seleccionar preguntas aleatorias
     preguntasActuales = seleccionarPreguntasAleatorias(todasLasPreguntas, cantidad);
@@ -206,20 +235,6 @@ function generarCuestionario(cantidad) {
     
     // Renderizar cuestionario
     renderizarCuestionario();
-}
-
-function seleccionarPreguntasAleatorias(array, cantidad) {
-    const shuffled = [...array].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, cantidad);
-}
-
-function mezclarArray(array) {
-    const mezclado = [...array];
-    for (let i = mezclado.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [mezclado[i], mezclado[j]] = [mezclado[j], mezclado[i]];
-    }
-    return mezclado;
 }
 
 function renderizarCuestionario() {
@@ -233,11 +248,11 @@ function renderizarCuestionario() {
         // Barajar las opciones para que el orden cambie cada vez
         const opcionesBarajadas = mezclarArray(pregunta.options || []);
         // Asignar ids A,B,C... y determinar cuál es la respuesta correcta en este orden actual
-    const opcionesConId = opcionesBarajadas.map((opt, idx) => ({ id: String.fromCharCode(65 + idx), text: opt.text, isCorrect: !!opt.isCorrect }));
-    const opcionesOrdenadas = opcionesConId; // variable usada abajo
+        const opcionesConId = opcionesBarajadas.map((opt, idx) => ({ id: String.fromCharCode(65 + idx), text: opt.text, isCorrect: !!opt.isCorrect }));
+        const opcionesOrdenadas = opcionesConId; // variable usada abajo
 
-    // Guardar las opciones actuales (con id) en la propia pregunta para referencias posteriores
-    pregunta.options = opcionesConId.map(o => ({ id: o.id, text: o.text, isCorrect: o.isCorrect }));
+        // Guardar las opciones actuales (con id) en la propia pregunta para referencias posteriores
+        pregunta.options = opcionesConId.map(o => ({ id: o.id, text: o.text, isCorrect: o.isCorrect }));
 
         // Guardar el id actual de la respuesta correcta en la propia pregunta
         const correctOpts = opcionesConId.filter(o => o.isCorrect);
@@ -262,25 +277,25 @@ function renderizarCuestionario() {
             }
         }
     
-            questionDiv.innerHTML = `
-                <div class="question-number">Pregunta ${index + 1}</div>
-                <div class="question-text">${pregunta.text}</div>
-            
-                <div class="options-container">
-                    ${opcionesOrdenadas.map(opcion => `
-                        <div class="answer-option" data-option="${opcion.id}">
-                            <input 
-                                type="radio" 
-                                id="q${pregunta.id}_${opcion.id}" 
-                                name="question${pregunta.id}" 
-                                value="${opcion.id}"
-                                ${cuestionarioCorregido ? 'disabled' : ''}
-                            >
-                            <label for="q${pregunta.id}_${opcion.id}">${opcion.id}. ${opcion.text}</label>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
+        questionDiv.innerHTML = `
+            <div class="question-number">Pregunta ${index + 1}</div>
+            <div class="question-text">${escapeHTML(pregunta.text)}</div>
+        
+            <div class="options-container">
+                ${opcionesOrdenadas.map(opcion => `
+                    <div class="answer-option" data-option="${opcion.id}">
+                        <input 
+                            type="radio" 
+                            id="q${pregunta.id}_${opcion.id}" 
+                            name="question${pregunta.id}" 
+                            value="${opcion.id}"
+                            ${cuestionarioCorregido ? 'disabled' : ''}
+                        >
+                        <label for="q${pregunta.id}_${opcion.id}">${opcion.id}. ${escapeHTML(opcion.text)}</label>
+                    </div>
+                `).join('')}
+            </div>
+        `;
         
         elements.questionsContainer.appendChild(questionDiv);
     });
@@ -305,7 +320,7 @@ function corregirCuestionario() {
     // Limpiar contenedor de preguntas corregidas
     elements.correctedQuestionsContainer.innerHTML = '<h3>📝 Revisión de Respuestas</h3>';
     
-    preguntasActuales.forEach((pregunta, index) => {
+    preguntasActuales.forEach((pregunta) => {
         const questionDiv = document.getElementById(`question-${pregunta.id}`);
         const respuestaUsuario = respuestasUsuario[pregunta.id];
 
@@ -363,37 +378,35 @@ function corregirCuestionario() {
             }
         }
 
-    if (!respuestaUsuario) {
+        let feedbackDiv;
+        if (!respuestaUsuario) {
             // Sin responder
             sinResponder++;
-            // Mostrar feedback detallado similar a una incorrecta: indicar la respuesta correcta y referencias
             const opcionCorrecta = pregunta.options.find(opt => opt.id === pregunta.correctAnswer) || { text: '' };
-            const feedbackDiv = document.createElement('div');
+            feedbackDiv = document.createElement('div');
             feedbackDiv.className = 'feedback unanswered';
-            let fbHtml = `La respuesta correcta es: <strong>${pregunta.correctAnswer}. ${opcionCorrecta.text}</strong>`;
-            if (pregunta.explanation) fbHtml += `<div class="explanation">📝 Explicación: ${pregunta.explanation}</div>`;
-            if (pregunta.source) fbHtml += `<div class="source">📚 Fuente: ${pregunta.source}</div>`;
-            if (pregunta.epigrafe) fbHtml += `<div class="epigrafe">🗂 Epígrafe: ${pregunta.epigrafe}</div>`;
-            if (pregunta.pagina) fbHtml += `<div class="pagina">📄 Página: ${pregunta.pagina}</div>`;
+            let fbHtml = `La respuesta correcta es: <strong>${pregunta.correctAnswer}. ${escapeHTML(opcionCorrecta.text)}</strong>`;
+            if (pregunta.explanation) fbHtml += `<div class="explanation">📝 Explicación: ${escapeHTML(pregunta.explanation)}</div>`;
+            if (pregunta.source) fbHtml += `<div class="source">📚 Fuente: ${escapeHTML(pregunta.source)}</div>`;
+            if (pregunta.epigrafe) fbHtml += `<div class="epigrafe">🗂 Epígrafe: ${escapeHTML(pregunta.epigrafe)}</div>`;
+            if (pregunta.pagina) fbHtml += `<div class="pagina">📄 Página: ${escapeHTML(String(pregunta.pagina))}</div>`;
             feedbackDiv.innerHTML = fbHtml;
             questionDiv.appendChild(feedbackDiv);
-    } else if (respuestaUsuario === pregunta.correctAnswer) {
+        } else if (respuestaUsuario === pregunta.correctAnswer) {
             // Correcta
             correctas++;
             questionDiv.classList.add('correct');
 
-            const feedbackDiv = document.createElement('div');
+            feedbackDiv = document.createElement('div');
             feedbackDiv.className = 'feedback correct';
-            feedbackDiv.innerHTML = '✅ ¡Correcto!';
+            feedbackDiv.textContent = '✅ ¡Correcto!';
             questionDiv.appendChild(feedbackDiv);
-    } else {
+        } else {
             // Incorrecta
             incorrectas++;
             questionDiv.classList.add('incorrect');
 
             // Marcar respuesta del usuario y marcar sólo la opción correcta (si existe)
-            const opciones = questionDiv.querySelectorAll('.answer-option');
-            // user-answer ya marcado arriba cuando existía respuestaUsuario
             if (pregunta.correctAnswer) {
                 const target = questionDiv.querySelector(`.answer-option[data-option="${pregunta.correctAnswer}"]`);
                 if (target) target.classList.add('correct-answer');
@@ -401,24 +414,20 @@ function corregirCuestionario() {
 
             // Añadir feedback detallado
             const opcionCorrecta = pregunta.options.find(opt => opt.id === pregunta.correctAnswer) || { text: '' };
-            const feedbackDiv = document.createElement('div');
+            feedbackDiv = document.createElement('div');
             feedbackDiv.className = 'feedback incorrect';
-            // Construir contenido de feedback de forma controlada para evitar caracteres raros
-            let fbHtml = `❌ Incorrecto. La respuesta correcta es: <strong>${pregunta.correctAnswer}. ${opcionCorrecta.text}</strong>`;
-            if (pregunta.explanation) fbHtml += `<div class="explanation">📝 Explicación: ${pregunta.explanation}</div>`;
-            if (pregunta.source) fbHtml += `<div class="source">📚 Fuente: ${pregunta.source}</div>`;
-            if (pregunta.epigrafe) fbHtml += `<div class="epigrafe">🗂 Epígrafe: ${pregunta.epigrafe}</div>`;
-            if (pregunta.pagina) fbHtml += `<div class="pagina">📄 Página: ${pregunta.pagina}</div>`;
+            let fbHtml = `❌ Incorrecto. La respuesta correcta es: <strong>${pregunta.correctAnswer}. ${escapeHTML(opcionCorrecta.text)}</strong>`;
+            if (pregunta.explanation) fbHtml += `<div class="explanation">📝 Explicación: ${escapeHTML(pregunta.explanation)}</div>`;
+            if (pregunta.source) fbHtml += `<div class="source">📚 Fuente: ${escapeHTML(pregunta.source)}</div>`;
+            if (pregunta.epigrafe) fbHtml += `<div class="epigrafe">🗂 Epígrafe: ${escapeHTML(pregunta.epigrafe)}</div>`;
+            if (pregunta.pagina) fbHtml += `<div class="pagina">📄 Página: ${escapeHTML(String(pregunta.pagina))}</div>`;
             feedbackDiv.innerHTML = fbHtml;
             questionDiv.appendChild(feedbackDiv);
-
-            // (antes) Clonación de la pregunta ahora se hará fuera del bloque condicional
         }
 
-        // Clonar la pregunta (sea correcta, incorrecta o sin responder) para mostrar en el contenedor de revisión
+        // Clonar la pregunta al panel de revisión
         const clonedQuestion = questionDiv.cloneNode(true);
         clonedQuestion.id = `corrected-${pregunta.id}`;
-        // En la copia, forzar que el input seleccionado por el usuario aparezca `checked` y `disabled`
         if (respuestaUsuario) {
             const clonedInput = clonedQuestion.querySelector(`#q${pregunta.id}_${respuestaUsuario}`);
             if (clonedInput) {
@@ -426,7 +435,6 @@ function corregirCuestionario() {
                 clonedInput.disabled = true;
             }
         }
-        // Asegurar también que la opción correcta (si existe) tenga la clase en la copia
         if (pregunta.correctAnswer) {
             const correctInClone = clonedQuestion.querySelector(`.answer-option[data-option="${pregunta.correctAnswer}"]`);
             if (correctInClone) correctInClone.classList.add('correct-answer');
@@ -437,7 +445,6 @@ function corregirCuestionario() {
     // Deshabilitar solo los radio buttons del cuestionario (no los del selector inicial)
     if (elements.questionsContainer) {
         elements.questionsContainer.querySelectorAll('input[type="radio"]').forEach(input => {
-            // Mantener la selección del usuario visible (checked) y deshabilitar para evitar cambios
             input.disabled = true;
         });
     }
@@ -445,21 +452,21 @@ function corregirCuestionario() {
     // Calcular puntuación
     const puntuacion = calcularPuntuacion(correctas, incorrectas);
     mostrarResultados(correctas, incorrectas, sinResponder, puntuacion);
-        // Deshabilitar el botón de corregir una vez corregido
-        if (elements.correctBtn) elements.correctBtn.disabled = true;
-        // Habilitar y mostrar los botones de repetir y nuevo cuestionario
-        if (elements.repeatBtn) {
-            elements.repeatBtn.disabled = false;
-            elements.repeatBtn.style.display = '';
-        }
-        if (elements.newQuizBtn) {
-            elements.newQuizBtn.disabled = false;
-            elements.newQuizBtn.style.display = '';
-        }
+    // Deshabilitar el botón de corregir una vez corregido
+    if (elements.correctBtn) elements.correctBtn.disabled = true;
+    // Habilitar y mostrar los botones de repetir y nuevo cuestionario
+    if (elements.repeatBtn) {
+        elements.repeatBtn.disabled = false;
+        elements.repeatBtn.style.display = '';
+    }
+    if (elements.newQuizBtn) {
+        elements.newQuizBtn.disabled = false;
+        elements.newQuizBtn.style.display = '';
+    }
 
-        // Mostrar la pantalla de resultados
-        mostrarPantalla('results');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Mostrar la pantalla de resultados
+    mostrarPantalla('results');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function calcularPuntuacion(correctas, incorrectas) {
@@ -487,33 +494,33 @@ function mostrarResultados(correctas, incorrectas, sinResponder, puntuacion) {
 
     elements.resultsContainer.innerHTML = `
         <h2>📊 Resultados del Test</h2>
-    <div class="result-item">✅ Preguntas acertadas: <strong>${correctas}</strong></div>
-    <div class="result-item">❌ Preguntas falladas: <strong>${incorrectas}</strong></div>
-    <div class="result-item">⚪ Preguntas sin responder: <strong>${sinResponder}</strong></div>
-    <div class="final-score">${puntuacion.puntos} / ${puntuacion.total}</div>
-    <div class="result-item">📈 Porcentaje de acierto: <strong>${puntuacion.porcentaje}%</strong></div>
-    <div class="result-item">📝 Nota sobre 10: <strong>${puntuacion.notaSobre10}</strong></div>
+        <div class="result-item">✅ Preguntas acertadas: <strong>${correctas}</strong></div>
+        <div class="result-item">❌ Preguntas falladas: <strong>${incorrectas}</strong></div>
+        <div class="result-item">⚪ Preguntas sin responder: <strong>${sinResponder}</strong></div>
+        <div class="final-score">${puntuacion.puntos} / ${puntuacion.total}</div>
+        <div class="result-item">📈 Porcentaje de acierto: <strong>${puntuacion.porcentaje}%</strong></div>
+        <div class="result-item">📝 Nota sobre 10: <strong>${puntuacion.notaSobre10}</strong></div>
 
-    <div class="calculation">
-        <h3>📐 Cálculo de la puntuación</h3>
-        <div class="calc-row">Puntos por aciertos: <strong>${puntosBrutos} × 1 = ${puntosBrutos.toFixed(2)}</strong></div>
-        <div class="calc-row">Deducción por errores: <strong>${incorrectas} × 0.33 = -${deduccionPorIncorrectas.toFixed(2)}</strong></div>
-        <div class="calc-row">Puntos netos: <strong>${puntosBrutos.toFixed(2)} - ${deduccionPorIncorrectas.toFixed(2)} = ${puntosNetos.toFixed(2)}</strong></div>
-        <div class="calc-row">Porcentaje de acierto: <strong>(${correctas} / ${total}) × 100 = ${porcentaje.toFixed(2)}%</strong></div>
-        <div class="calc-row">Nota sobre 10: <strong>(${puntosNetos.toFixed(2)} / ${total}) × 10 = ${notaSobre10.toFixed(2)}</strong></div>
-    </div>
+        <div class="calculation">
+            <h3>📐 Cálculo de la puntuación</h3>
+            <div class="calc-row">Puntos por aciertos: <strong>${puntosBrutos} × 1 = ${puntosBrutos.toFixed(2)}</strong></div>
+            <div class="calc-row">Deducción por errores: <strong>${incorrectas} × 0.33 = -${deduccionPorIncorrectas.toFixed(2)}</strong></div>
+            <div class="calc-row">Puntos netos: <strong>${puntosBrutos.toFixed(2)} - ${deduccionPorIncorrectas.toFixed(2)} = ${puntosNetos.toFixed(2)}</strong></div>
+            <div class="calc-row">Porcentaje de acierto: <strong>(${correctas} / ${total}) × 100 = ${porcentaje.toFixed(2)}%</strong></div>
+            <div class="calc-row">Nota sobre 10: <strong>(${puntosNetos.toFixed(2)} / ${total}) × 10 = ${puntuacion.notaSobre10}</strong></div>
+        </div>
     `;
 }
 
 function repetirCuestionario() {
-// Mezclar el orden de las preguntas actuales
-preguntasActuales = mezclarArray(preguntasActuales);
-// Resetear respuestas y estado
-respuestasUsuario = {};
-cuestionarioCorregido = false;
+    // Mezclar el orden de las preguntas actuales
+    preguntasActuales = mezclarArray(preguntasActuales);
+    // Resetear respuestas y estado
+    respuestasUsuario = {};
+    cuestionarioCorregido = false;
 
-// Renderizar cuestionario
-renderizarCuestionario();
+    // Renderizar cuestionario
+    renderizarCuestionario();
     // Al repetir, habilitar el botón de corregir y deshabilitar repetir/nuevo hasta corregir
     if (elements.correctBtn) elements.correctBtn.disabled = false;
     if (elements.repeatBtn) elements.repeatBtn.disabled = true;
@@ -522,15 +529,16 @@ renderizarCuestionario();
     mostrarPantalla('quiz');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
 function nuevoCuestionario() {
-// Resetear todo
-preguntasActuales = [];
-respuestasUsuario = {};
-cuestionarioCorregido = false;
-// Limpiar contenedores
-elements.questionsContainer.innerHTML = '';
-elements.resultsContainer.innerHTML = '';
-elements.correctedQuestionsContainer.innerHTML = '';
+    // Resetear todo
+    preguntasActuales = [];
+    respuestasUsuario = {};
+    cuestionarioCorregido = false;
+    // Limpiar contenedores
+    elements.questionsContainer.innerHTML = '';
+    elements.resultsContainer.innerHTML = '';
+    elements.correctedQuestionsContainer.innerHTML = '';
     // Al volver a la pantalla inicial, asegurar estado de botones
     if (elements.correctBtn) elements.correctBtn.disabled = false;
     if (elements.repeatBtn) elements.repeatBtn.disabled = true;
@@ -539,6 +547,7 @@ elements.correctedQuestionsContainer.innerHTML = '';
     mostrarPantalla('initial');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
 // ========================================
 // UTILIDADES
 // ========================================
