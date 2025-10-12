@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación de cuestionarios para oposiciones - Reglamento Orgánico Municipal de Córdoba">
+    <title>Cuestionarios de Oposiciones - Ayuntamiento de Córdoba</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Cuestionarios de Oposiciones</h1>
+            <h2>Ordenanza Ayto. Córdoba</h2>
+            <p class="subtitle">Reglamento Orgánico Municipal del Ayuntamiento de Córdoba</p>
+        </header>
+
+        <!-- Pantalla de carga -->
+        <div id="loadingScreen" class="screen">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Cargando preguntas...</p>
+        </div>
+
+        <!-- Mensaje de error -->
+        <div id="errorScreen" class="screen hidden">
+            <div class="error-box">
+                <h2>❌ Error al cargar las preguntas</h2>
+                <p id="errorMessage"></p>
+                <button class="btn btn-secondary" onclick="location.reload()">Reintentar</button>
+            </div>
+        </div>
+
+        <!-- Pantalla inicial -->
+        <div id="initialScreen" class="screen hidden">
+            <div class="scoring-info">
+                <h3>📊 Sistema de Puntuación</h3>
+                <ul>
+                    <li>✅ Pregunta correcta: <strong>+1 punto</strong></li>
+                    <li>❌ Pregunta incorrecta: <strong>-0.33 puntos</strong> (cada 3 fallos = -1 punto)</li>
+                    <li>⚪ Pregunta sin responder: <strong>0 puntos</strong></li>
+                </ul>
+            </div>
+
+            <div class="question-selector">
+                <h3>Selecciona el número de preguntas:</h3>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="questionCount" value="20" checked>
+                        <span>20 preguntas</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="questionCount" value="30">
+                        <span>30 preguntas</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="questionCount" value="40">
+                        <span>40 preguntas</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="generateBtn">Generar Cuestionario</button>
+            </div>
+        </div>
+
+        <!-- Pantalla del cuestionario -->
+        <div id="quizScreen" class="screen hidden">
+            <div class="quiz-header">
+                <h2>Cuestionario</h2>
+                <p class="quiz-info">Responde todas las preguntas y pulsa "Corregir Test"</p>
+            </div>
+            
+            <div id="questionsContainer"></div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="correctBtn">Corregir Test</button>
+            </div>
+        </div>
+
+        <!-- Pantalla de resultados -->
+        <div id="resultsScreen" class="screen hidden">
+            <div class="results-box" id="resultsContainer"></div>
+
+            <div class="corrected-questions" id="correctedQuestionsContainer"></div>
+
+            <div class="button-group">
+                <button class="btn btn-secondary" id="repeatBtn">🔄 Repetir Cuestionario</button>
+                <button class="btn btn-tertiary" id="newQuizBtn">✨ Generar Nuevo Cuestionario</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 - Cuestionarios de Oposiciones Milli Vanilli | Ayuntamiento de Córdoba</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

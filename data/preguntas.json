@@ -1,0 +1,814 @@
+[
+  {
+    "id": 1,
+    "question": "Según el ROM, ¿qué elementos debe contener el acta de cada sesión plenaria y cuál es el sistema preferente de documentación?",
+    "options": [
+      {
+        "text": "Solo debe incluir el resultado de las votaciones; el sistema preferente es el audio‑acta sin acta escrita.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe incluir preguntas del público; el sistema preferente es acta manuscrita firmada por todos los concejales.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta.",
+        "is_correct": true
+      },
+      {
+        "text": "Debe incluir exclusivamente los acuerdos; el sistema preferente es la transcripción literal en papel.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 99 fija el contenido mínimo del acta y establece la vídeo‑acta como sistema preferente, acompañada de certificación de autenticidad e integridad.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
+    "pagina": 8970,
+    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta."
+  },
+  {
+    "id": 2,
+    "question": "¿Cuándo son nulos los acuerdos del Pleno y qué excepción permite tratar asuntos no incluidos en el orden del día?",
+    "options": [
+      {
+        "text": "Son nulos si se vota por nominal; la excepción es una moción de censura.",
+        "is_correct": false
+      },
+      {
+        "text": "Son nulos solo cuando la Secretaría lo dictamine; la excepción es el voto de calidad de la Presidencia.",
+        "is_correct": false
+      },
+      {
+        "text": "Nunca son nulos si hay quorum; la excepción es que exista mayoría absoluta.",
+        "is_correct": false
+      },
+      {
+        "text": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 49 declara la nulidad por tratar asuntos no incluidos salvo especial y previa declaración de urgencia con el quórum de mayoría simple.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Régimen de sesiones",
+    "pagina": 8953,
+    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple."
+  },
+  {
+    "id": 3,
+    "question": "¿Qué estructura mínima debe incluirse siempre en el orden del día de las sesiones ordinarias del Pleno?",
+    "options": [
+      {
+        "text": "Únicamente ruegos y preguntas y aprobación del acta anterior.",
+        "is_correct": false
+      },
+      {
+        "text": "Debate general sobre el estado del municipio sin expedientes.",
+        "is_correct": false
+      },
+      {
+        "text": "Solo proposiciones del Gobierno y mociones de la oposición.",
+        "is_correct": false
+      },
+      {
+        "text": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 48 exige incluir, en capítulo diferenciado, los expedientes con eficacia jurídica y la parte de impulso y control.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Orden del día",
+    "pagina": 8953,
+    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control."
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál es el objeto del Título II del ROM respecto al Ayuntamiento de Córdoba?",
+    "options": [
+      {
+        "text": "Regular los procesos electorales locales y autonómicos.",
+        "is_correct": false
+      },
+      {
+        "text": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local.",
+        "is_correct": true
+      },
+      {
+        "text": "Fijar el régimen sancionador tributario municipal.",
+        "is_correct": false
+      },
+      {
+        "text": "Establecer el padrón municipal y el inventario de bienes.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 132.1 define el objeto: regular el gobierno y la administración municipal conforme a la legislación de régimen local.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
+    "pagina": 8981,
+    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local."
+  },
+  {
+    "id": 5,
+    "question": "Conforme a los principios generales del Título II, ¿cómo debe servir la Administración municipal y qué valores debe garantizar?",
+    "options": [
+      {
+        "text": "Debe priorizar la confidencialidad absoluta sobre la transparencia y actuar solo por silencio administrativo.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe atender solo órdenes del Pleno y no coordinarse con otras administraciones.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe centrarse en reducir costes sin consideración a la legalidad o a la ciudadanía.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 133 recoge objetividad, eficacia, calidad, transparencia y coordinación con otras administraciones.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
+    "pagina": 8981,
+    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa."
+  },
+  {
+    "id": 6,
+    "question": "¿Cómo define el ROM la naturaleza de la Junta de Gobierno Local?",
+    "options": [
+      {
+        "text": "Órgano exclusivamente consultivo sin capacidad ejecutiva.",
+        "is_correct": false
+      },
+      {
+        "text": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas.",
+        "is_correct": true
+      },
+      {
+        "text": "Órgano que sustituye al Pleno en todas sus competencias normativas.",
+        "is_correct": false
+      },
+      {
+        "text": "Órgano de control jurisdiccional de los acuerdos del Pleno.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 147 caracteriza a la Junta de Gobierno Local como órgano colegiado ejecutivo que colabora en la dirección política.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
+    "pagina": 8986,
+    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas."
+  },
+  {
+    "id": 7,
+    "question": "¿Quién nombra y separa a los miembros de la Junta de Gobierno Local y cuál es el límite máximo de su número?",
+    "options": [
+      {
+        "text": "Los nombra Intervención; el máximo es de dos miembros.",
+        "is_correct": false
+      },
+      {
+        "text": "La Secretaría General del Pleno los designa; no hay límite numérico.",
+        "is_correct": false
+      },
+      {
+        "text": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía.",
+        "is_correct": true
+      },
+      {
+        "text": "El Pleno los elige por sorteo; su número es la mitad de los concejales.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 148 atribuye a la Alcaldía el nombramiento y cese; fija el límite de un tercio del Pleno, además de la Alcaldía.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
+    "pagina": 8986,
+    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía."
+  },
+  {
+    "id": 8,
+    "question": "Respecto a la organización municipal, ¿qué límite establece el ROM para el número de Áreas de Gobierno y a quién corresponde fijarlas?",
+    "options": [
+      {
+        "text": "No hay límite y las fija la Junta de Gobierno Local.",
+        "is_correct": false
+      },
+      {
+        "text": "No podrán exceder de cinco y las fija el Pleno por mayoría cualificada.",
+        "is_correct": false
+      },
+      {
+        "text": "Deben coincidir con el número de comisiones informativas y las decide la oposición.",
+        "is_correct": false
+      },
+      {
+        "text": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 168 establece el tope de diez Áreas y atribuye a la Alcaldía su determinación.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. De la Administración del Ayuntamiento – Áreas de Gobierno",
+    "pagina": 8992,
+    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados."
+  },
+  {
+    "id": 9,
+    "question": "Según la ordenación jerárquica, ¿a quién corresponde la dirección superior de las Áreas de Gobierno?",
+    "options": [
+      {
+        "text": "A las Direcciones Generales exclusivamente.",
+        "is_correct": false
+      },
+      {
+        "text": "A la Intervención General del Ayuntamiento.",
+        "is_correct": false
+      },
+      {
+        "text": "A las Concejalías Delegadas.",
+        "is_correct": true
+      },
+      {
+        "text": "Al Pleno, de forma directa y permanente.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 170 asigna la dirección superior de las Áreas a las Concejalías Delegadas.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. De la Administración del Ayuntamiento – Ordenación jerárquica",
+    "pagina": 8992,
+    "answer": "A las Concejalías Delegadas."
+  },
+  {
+    "id": 10,
+    "question": "En relación con los informes de la Secretaría General del Pleno, ¿cuál es el plazo general para su emisión y qué exclusividad se prevé?",
+    "options": [
+      {
+        "text": "El plazo es de 24 horas; y pueden ser sustituidos por informes de los Grupos Municipales.",
+        "is_correct": false
+      },
+      {
+        "text": "El plazo general es de treinta días; y siempre cabe un informe adicional de Tesorería.",
+        "is_correct": false
+      },
+      {
+        "text": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito.",
+        "is_correct": true
+      },
+      {
+        "text": "No hay plazo; y los informes son vinculantes para el Poder Judicial.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 98 fija un plazo de diez días y la exclusividad del informe de legalidad, sin perjuicio del de Intervención en su materia.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Informes de Secretaría",
+    "pagina": 8970,
+    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito."
+  },
+  {
+    "id": 1,
+    "question": "Según el ROM, ¿qué elementos debe contener el acta de cada sesión plenaria y cuál es el sistema preferente de documentación?",
+    "options": [
+      {
+        "text": "Solo debe incluir el resultado de las votaciones; el sistema preferente es el audio‑acta sin acta escrita.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe incluir preguntas del público; el sistema preferente es acta manuscrita firmada por todos los concejales.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta.",
+        "is_correct": true
+      },
+      {
+        "text": "Debe incluir exclusivamente los acuerdos; el sistema preferente es la transcripción literal en papel.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 99 fija el contenido mínimo del acta y establece la vídeo‑acta como sistema preferente, acompañada de certificación de autenticidad e integridad.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
+    "pagina": 8970,
+    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta."
+  },
+  {
+    "id": 2,
+    "question": "¿Cuándo son nulos los acuerdos del Pleno y qué excepción permite tratar asuntos no incluidos en el orden del día?",
+    "options": [
+      {
+        "text": "Son nulos si se vota por nominal; la excepción es una moción de censura.",
+        "is_correct": false
+      },
+      {
+        "text": "Son nulos solo cuando la Secretaría lo dictamine; la excepción es el voto de calidad de la Presidencia.",
+        "is_correct": false
+      },
+      {
+        "text": "Nunca son nulos si hay quorum; la excepción es que exista mayoría absoluta.",
+        "is_correct": false
+      },
+      {
+        "text": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 49 declara la nulidad por tratar asuntos no incluidos salvo especial y previa declaración de urgencia con el quórum de mayoría simple.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Régimen de sesiones",
+    "pagina": 8953,
+    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple."
+  },
+  {
+    "id": 3,
+    "question": "¿Qué estructura mínima debe incluirse siempre en el orden del día de las sesiones ordinarias del Pleno?",
+    "options": [
+      {
+        "text": "Únicamente ruegos y preguntas y aprobación del acta anterior.",
+        "is_correct": false
+      },
+      {
+        "text": "Debate general sobre el estado del municipio sin expedientes.",
+        "is_correct": false
+      },
+      {
+        "text": "Solo proposiciones del Gobierno y mociones de la oposición.",
+        "is_correct": false
+      },
+      {
+        "text": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 48 exige incluir, en capítulo diferenciado, los expedientes con eficacia jurídica y la parte de impulso y control.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Orden del día",
+    "pagina": 8953,
+    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control."
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál es el objeto del Título II del ROM respecto al Ayuntamiento de Córdoba?",
+    "options": [
+      {
+        "text": "Regular los procesos electorales locales y autonómicos.",
+        "is_correct": false
+      },
+      {
+        "text": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local.",
+        "is_correct": true
+      },
+      {
+        "text": "Fijar el régimen sancionador tributario municipal.",
+        "is_correct": false
+      },
+      {
+        "text": "Establecer el padrón municipal y el inventario de bienes.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 132.1 define el objeto: regular el gobierno y la administración municipal conforme a la legislación de régimen local.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
+    "pagina": 8981,
+    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local."
+  },
+  {
+    "id": 5,
+    "question": "Conforme a los principios generales del Título II, ¿cómo debe servir la Administración municipal y qué valores debe garantizar?",
+    "options": [
+      {
+        "text": "Debe priorizar la confidencialidad absoluta sobre la transparencia y actuar solo por silencio administrativo.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe atender solo órdenes del Pleno y no coordinarse con otras administraciones.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe centrarse en reducir costes sin consideración a la legalidad o a la ciudadanía.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 133 recoge objetividad, eficacia, calidad, transparencia y coordinación con otras administraciones.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
+    "pagina": 8981,
+    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa."
+  },
+  {
+    "id": 6,
+    "question": "¿Cómo define el ROM la naturaleza de la Junta de Gobierno Local?",
+    "options": [
+      {
+        "text": "Órgano exclusivamente consultivo sin capacidad ejecutiva.",
+        "is_correct": false
+      },
+      {
+        "text": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas.",
+        "is_correct": true
+      },
+      {
+        "text": "Órgano que sustituye al Pleno en todas sus competencias normativas.",
+        "is_correct": false
+      },
+      {
+        "text": "Órgano de control jurisdiccional de los acuerdos del Pleno.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 147 caracteriza a la Junta de Gobierno Local como órgano colegiado ejecutivo que colabora en la dirección política.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
+    "pagina": 8986,
+    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas."
+  },
+  {
+    "id": 7,
+    "question": "¿Quién nombra y separa a los miembros de la Junta de Gobierno Local y cuál es el límite máximo de su número?",
+    "options": [
+      {
+        "text": "Los nombra Intervención; el máximo es de dos miembros.",
+        "is_correct": false
+      },
+      {
+        "text": "La Secretaría General del Pleno los designa; no hay límite numérico.",
+        "is_correct": false
+      },
+      {
+        "text": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía.",
+        "is_correct": true
+      },
+      {
+        "text": "El Pleno los elige por sorteo; su número es la mitad de los concejales.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 148 atribuye a la Alcaldía el nombramiento y cese; fija el límite de un tercio del Pleno, además de la Alcaldía.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
+    "pagina": 8986,
+    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía."
+  },
+  {
+    "id": 8,
+    "question": "Respecto a la organización municipal, ¿qué límite establece el ROM para el número de Áreas de Gobierno y a quién corresponde fijarlas?",
+    "options": [
+      {
+        "text": "No hay límite y las fija la Junta de Gobierno Local.",
+        "is_correct": false
+      },
+      {
+        "text": "No podrán exceder de cinco y las fija el Pleno por mayoría cualificada.",
+        "is_correct": false
+      },
+      {
+        "text": "Deben coincidir con el número de comisiones informativas y las decide la oposición.",
+        "is_correct": false
+      },
+      {
+        "text": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 168 establece el tope de diez Áreas y atribuye a la Alcaldía su determinación.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. De la Administración del Ayuntamiento – Áreas de Gobierno",
+    "pagina": 8992,
+    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados."
+  },
+  {
+    "id": 9,
+    "question": "Según la ordenación jerárquica, ¿a quién corresponde la dirección superior de las Áreas de Gobierno?",
+    "options": [
+      {
+        "text": "A las Direcciones Generales exclusivamente.",
+        "is_correct": false
+      },
+      {
+        "text": "A la Intervención General del Ayuntamiento.",
+        "is_correct": false
+      },
+      {
+        "text": "A las Concejalías Delegadas.",
+        "is_correct": true
+      },
+      {
+        "text": "Al Pleno, de forma directa y permanente.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 170 asigna la dirección superior de las Áreas a las Concejalías Delegadas.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. De la Administración del Ayuntamiento – Ordenación jerárquica",
+    "pagina": 8992,
+    "answer": "A las Concejalías Delegadas."
+  },
+  {
+    "id": 10,
+    "question": "En relación con los informes de la Secretaría General del Pleno, ¿cuál es el plazo general para su emisión y qué exclusividad se prevé?",
+    "options": [
+      {
+        "text": "El plazo es de 24 horas; y pueden ser sustituidos por informes de los Grupos Municipales.",
+        "is_correct": false
+      },
+      {
+        "text": "El plazo general es de treinta días; y siempre cabe un informe adicional de Tesorería.",
+        "is_correct": false
+      },
+      {
+        "text": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito.",
+        "is_correct": true
+      },
+      {
+        "text": "No hay plazo; y los informes son vinculantes para el Poder Judicial.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 98 fija un plazo de diez días y la exclusividad del informe de legalidad, sin perjuicio del de Intervención en su materia.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Informes de Secretaría",
+    "pagina": 8970,
+    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito."
+  },
+
+  
+  {
+    "id": 11,
+    "question": "Según el ROM, ¿qué elementos debe contener el acta de cada sesión plenaria y cuál es el sistema preferente de documentación?",
+    "options": [
+      {
+        "text": "Solo debe incluir el resultado de las votaciones; el sistema preferente es el audio‑acta sin acta escrita.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe incluir preguntas del público; el sistema preferente es acta manuscrita firmada por todos los concejales.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta.",
+        "is_correct": true
+      },
+      {
+        "text": "Debe incluir exclusivamente los acuerdos; el sistema preferente es la transcripción literal en papel.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 99 fija el contenido mínimo del acta y establece la vídeo‑acta como sistema preferente, acompañada de certificación de autenticidad e integridad.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
+    "pagina": 8970,
+    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta."
+  },
+  {
+    "id": 12,
+    "question": "¿Cuándo son nulos los acuerdos del Pleno y qué excepción permite tratar asuntos no incluidos en el orden del día?",
+    "options": [
+      {
+        "text": "Son nulos si se vota por nominal; la excepción es una moción de censura.",
+        "is_correct": false
+      },
+      {
+        "text": "Son nulos solo cuando la Secretaría lo dictamine; la excepción es el voto de calidad de la Presidencia.",
+        "is_correct": false
+      },
+      {
+        "text": "Nunca son nulos si hay quorum; la excepción es que exista mayoría absoluta.",
+        "is_correct": false
+      },
+      {
+        "text": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 49 declara la nulidad por tratar asuntos no incluidos salvo especial y previa declaración de urgencia con el quórum de mayoría simple.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Régimen de sesiones",
+    "pagina": 8953,
+    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple."
+  },
+  {
+    "id": 13,
+    "question": "¿Qué estructura mínima debe incluirse siempre en el orden del día de las sesiones ordinarias del Pleno?",
+    "options": [
+      {
+        "text": "Únicamente ruegos y preguntas y aprobación del acta anterior.",
+        "is_correct": false
+      },
+      {
+        "text": "Debate general sobre el estado del municipio sin expedientes.",
+        "is_correct": false
+      },
+      {
+        "text": "Solo proposiciones del Gobierno y mociones de la oposición.",
+        "is_correct": false
+      },
+      {
+        "text": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 48 exige incluir, en capítulo diferenciado, los expedientes con eficacia jurídica y la parte de impulso y control.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Orden del día",
+    "pagina": 8953,
+    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control."
+  },
+  {
+    "id": 14,
+    "question": "¿Cuál es el objeto del Título II del ROM respecto al Ayuntamiento de Córdoba?",
+    "options": [
+      {
+        "text": "Regular los procesos electorales locales y autonómicos.",
+        "is_correct": false
+      },
+      {
+        "text": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local.",
+        "is_correct": true
+      },
+      {
+        "text": "Fijar el régimen sancionador tributario municipal.",
+        "is_correct": false
+      },
+      {
+        "text": "Establecer el padrón municipal y el inventario de bienes.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 132.1 define el objeto: regular el gobierno y la administración municipal conforme a la legislación de régimen local.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
+    "pagina": 8981,
+    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local."
+  },
+  {
+    "id": 15,
+    "question": "Conforme a los principios generales del Título II, ¿cómo debe servir la Administración municipal y qué valores debe garantizar?",
+    "options": [
+      {
+        "text": "Debe priorizar la confidencialidad absoluta sobre la transparencia y actuar solo por silencio administrativo.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe atender solo órdenes del Pleno y no coordinarse con otras administraciones.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe centrarse en reducir costes sin consideración a la legalidad o a la ciudadanía.",
+        "is_correct": false
+      },
+      {
+        "text": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 133 recoge objetividad, eficacia, calidad, transparencia y coordinación con otras administraciones.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
+    "pagina": 8981,
+    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa."
+  },
+  {
+    "id": 16,
+    "question": "¿Cómo define el ROM la naturaleza de la Junta de Gobierno Local?",
+    "options": [
+      {
+        "text": "Órgano exclusivamente consultivo sin capacidad ejecutiva.",
+        "is_correct": false
+      },
+      {
+        "text": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas.",
+        "is_correct": true
+      },
+      {
+        "text": "Órgano que sustituye al Pleno en todas sus competencias normativas.",
+        "is_correct": false
+      },
+      {
+        "text": "Órgano de control jurisdiccional de los acuerdos del Pleno.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 147 caracteriza a la Junta de Gobierno Local como órgano colegiado ejecutivo que colabora en la dirección política.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
+    "pagina": 8986,
+    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas."
+  },
+  {
+    "id": 17,
+    "question": "¿Quién nombra y separa a los miembros de la Junta de Gobierno Local y cuál es el límite máximo de su número?",
+    "options": [
+      {
+        "text": "Los nombra Intervención; el máximo es de dos miembros.",
+        "is_correct": false
+      },
+      {
+        "text": "La Secretaría General del Pleno los designa; no hay límite numérico.",
+        "is_correct": false
+      },
+      {
+        "text": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía.",
+        "is_correct": true
+      },
+      {
+        "text": "El Pleno los elige por sorteo; su número es la mitad de los concejales.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 148 atribuye a la Alcaldía el nombramiento y cese; fija el límite de un tercio del Pleno, además de la Alcaldía.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
+    "pagina": 8986,
+    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía."
+  },
+  {
+    "id": 18,
+    "question": "Respecto a la organización municipal, ¿qué límite establece el ROM para el número de Áreas de Gobierno y a quién corresponde fijarlas?",
+    "options": [
+      {
+        "text": "No hay límite y las fija la Junta de Gobierno Local.",
+        "is_correct": false
+      },
+      {
+        "text": "No podrán exceder de cinco y las fija el Pleno por mayoría cualificada.",
+        "is_correct": false
+      },
+      {
+        "text": "Deben coincidir con el número de comisiones informativas y las decide la oposición.",
+        "is_correct": false
+      },
+      {
+        "text": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados.",
+        "is_correct": true
+      }
+    ],
+    "explanation": "El art. 168 establece el tope de diez Áreas y atribuye a la Alcaldía su determinación.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. De la Administración del Ayuntamiento – Áreas de Gobierno",
+    "pagina": 8992,
+    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados."
+  },
+  {
+    "id": 19,
+    "question": "Según la ordenación jerárquica, ¿a quién corresponde la dirección superior de las Áreas de Gobierno?",
+    "options": [
+      {
+        "text": "A las Direcciones Generales exclusivamente.",
+        "is_correct": false
+      },
+      {
+        "text": "A la Intervención General del Ayuntamiento.",
+        "is_correct": false
+      },
+      {
+        "text": "A las Concejalías Delegadas.",
+        "is_correct": true
+      },
+      {
+        "text": "Al Pleno, de forma directa y permanente.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 170 asigna la dirección superior de las Áreas a las Concejalías Delegadas.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título II. De la Administración del Ayuntamiento – Ordenación jerárquica",
+    "pagina": 8992,
+    "answer": "A las Concejalías Delegadas."
+  },
+  {
+    "id": 20,
+    "question": "En relación con los informes de la Secretaría General del Pleno, ¿cuál es el plazo general para su emisión y qué exclusividad se prevé?",
+    "options": [
+      {
+        "text": "El plazo es de 24 horas; y pueden ser sustituidos por informes de los Grupos Municipales.",
+        "is_correct": false
+      },
+      {
+        "text": "El plazo general es de treinta días; y siempre cabe un informe adicional de Tesorería.",
+        "is_correct": false
+      },
+      {
+        "text": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito.",
+        "is_correct": true
+      },
+      {
+        "text": "No hay plazo; y los informes son vinculantes para el Poder Judicial.",
+        "is_correct": false
+      }
+    ],
+    "explanation": "El art. 98 fija un plazo de diez días y la exclusividad del informe de legalidad, sin perjuicio del de Intervención en su materia.",
+    "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
+    "epigrafe": "Título I. Del Pleno y sus Comisiones – Informes de Secretaría",
+    "pagina": 8970,
+    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito."
+  }
+]
