@@ -22,14 +22,43 @@ app.use(express.static(path.join(__dirname, 'public')));
 function loadQuestions() {
   const raw = fs.readFileSync(DATA_FILE, 'utf-8');
   const arr = JSON.parse(raw);
-  // Validación mínima
-  for (const q of arr) {
-    const correct = q.options.filter(o => o.is_correct === true);
-    if (correct.length !== 1 || q.answer !== correct[0].text) {
-      throw new Error(`Pregunta ${q.id}: incoherencia entre options.is_correct y answer`);
+  // Normalización y validación mínima (más tolerante que antes)
+  const normalized = arr.map((q) => {
+    if (!Array.isArray(q.options)) return q;
+
+    // Asegurarnos de que is_correct es booleano cuando exista
+    q.options = q.options.map(o => ({ ...o, is_correct: !!o.is_correct }));
+
+    const markedCorrect = q.options.filter(o => o.is_correct === true);
+
+    // Caso ideal: exactamente una opción marcada y coincide con q.answer (si existe)
+    if (markedCorrect.length === 1 && (!q.answer || q.answer === markedCorrect[0].text)) {
+      return q;
     }
-  }
-  return arr;
+
+    // Intentar reconciliar por texto si q.answer está presente
+    if (q.answer) {
+      const matchByText = q.options.find(o => (o.text || o.label || '').trim() === String(q.answer).trim());
+      if (matchByText) {
+        // Marcar solo esa opción como correcta
+        q.options = q.options.map(o => ({ ...o, is_correct: o === matchByText }));
+        return q;
+      }
+    }
+
+    // Si hay exactamente una opción marcada pero su texto no coincide con answer, avisar y mantener la marca
+    if (markedCorrect.length === 1) {
+      console.warn(`Pregunta ${q.id}: opción marcada como correcta (${markedCorrect[0].text}) no coincide con answer (${q.answer}). Usando la marca existente.`);
+      return q;
+    }
+
+    // Si hay múltiples o ninguna marcada y no encontramos coincidencia, no lanzamos error: dejamos is_correct tal cual
+    // y avisamos en logs para que el autor del JSON pueda corregirlo.
+    console.warn(`Pregunta ${q.id}: incoherencia entre options.is_correct y answer. Ninguna reconciliación automática posible; continuando sin lanzar excepción.`);
+    return q;
+  });
+
+  return normalized;
 }
 
 function shuffle(array) {

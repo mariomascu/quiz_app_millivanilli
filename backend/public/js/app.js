@@ -70,16 +70,23 @@ async function inicializarApp() {
 // ========================================
 async function cargarPreguntas() {
     try {
-        const response = await fetch('./data/preguntas.json');
+        // Preferimos pedir las preguntas al endpoint del servidor. Esto evita problemas
+        // cuando `data/` no está dentro de `public/` (el servidor ya ofrece `/api/questions`).
+        const response = await fetch('/api/questions');
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const data = await response.json();
+        const payload = await response.json();
+
+        // El endpoint puede devolver { count, questions } o directamente un array.
+        const data = Array.isArray(payload)
+            ? payload
+            : (Array.isArray(payload?.questions) ? payload.questions : []);
 
         if (!Array.isArray(data) || data.length === 0) {
-            throw new Error('El archivo JSON está vacío o no tiene el formato correcto');
+            throw new Error('El endpoint /api/questions devolvió un resultado vacío o con formato inesperado');
         }
 
         // Transformar el formato del JSON (soportar el formato actual del fichero)

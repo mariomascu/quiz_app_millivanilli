@@ -24,7 +24,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
     "pagina": 8970,
-    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta."
+    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta.",
+    "text": "Según el ROM, ¿qué elementos debe contener el acta de cada sesión plenaria y cuál es el sistema preferente de documentación?"
   },
   {
     "id": 2,
@@ -51,7 +52,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Régimen de sesiones",
     "pagina": 8953,
-    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple."
+    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple.",
+    "text": "¿Cuándo son nulos los acuerdos del Pleno y qué excepción permite tratar asuntos no incluidos en el orden del día?"
   },
   {
     "id": 3,
@@ -78,7 +80,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Orden del día",
     "pagina": 8953,
-    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control."
+    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control.",
+    "text": "¿Qué estructura mínima debe incluirse siempre en el orden del día de las sesiones ordinarias del Pleno?"
   },
   {
     "id": 4,
@@ -105,7 +108,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local."
+    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local.",
+    "text": "¿Cuál es el objeto del Título II del ROM respecto al Ayuntamiento de Córdoba?"
   },
   {
     "id": 5,
@@ -132,7 +136,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa."
+    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa.",
+    "text": "Conforme a los principios generales del Título II, ¿cómo debe servir la Administración municipal y qué valores debe garantizar?"
   },
   {
     "id": 6,
@@ -159,7 +164,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas."
+    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas.",
+    "text": "¿Cómo define el ROM la naturaleza de la Junta de Gobierno Local?"
   },
   {
     "id": 7,
@@ -186,7 +192,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía."
+    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía.",
+    "text": "¿Quién nombra y separa a los miembros de la Junta de Gobierno Local y cuál es el límite máximo de su número?"
   },
   {
     "id": 8,
@@ -213,7 +220,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Áreas de Gobierno",
     "pagina": 8992,
-    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados."
+    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados.",
+    "text": "Respecto a la organización municipal, ¿qué límite establece el ROM para el número de Áreas de Gobierno y a quién corresponde fijarlas?"
   },
   {
     "id": 9,
@@ -240,7 +248,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Ordenación jerárquica",
     "pagina": 8992,
-    "answer": "A las Concejalías Delegadas."
+    "answer": "A las Concejalías Delegadas.",
+    "text": "Según la ordenación jerárquica, ¿a quién corresponde la dirección superior de las Áreas de Gobierno?"
   },
   {
     "id": 10,
@@ -267,7 +276,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Informes de Secretaría",
     "pagina": 8970,
-    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito."
+    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito.",
+    "text": "En relación con los informes de la Secretaría General del Pleno, ¿cuál es el plazo general para su emisión y qué exclusividad se prevé?"
   },
   {
     "id": 11,
@@ -294,7 +304,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
     "pagina": 8970,
-    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta."
+    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta.",
+    "text": "Según el ROM, ¿qué elementos debe contener el acta de cada sesión plenaria y cuál es el sistema preferente de documentación?"
   },
   {
     "id": 12,
@@ -321,7 +332,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Régimen de sesiones",
     "pagina": 8953,
-    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple."
+    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple.",
+    "text": "¿Cuándo son nulos los acuerdos del Pleno y qué excepción permite tratar asuntos no incluidos en el orden del día?"
   },
   {
     "id": 13,
@@ -348,7 +360,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Orden del día",
     "pagina": 8953,
-    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control."
+    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control.",
+    "text": "¿Qué estructura mínima debe incluirse siempre en el orden del día de las sesiones ordinarias del Pleno?"
   },
   {
     "id": 14,
@@ -375,7 +388,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local."
+    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local.",
+    "text": "¿Cuál es el objeto del Título II del ROM respecto al Ayuntamiento de Córdoba?"
   },
   {
     "id": 15,
@@ -402,7 +416,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa."
+    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa.",
+    "text": "Conforme a los principios generales del Título II, ¿cómo debe servir la Administración municipal y qué valores debe garantizar?"
   },
   {
     "id": 16,
@@ -429,7 +444,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas."
+    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas.",
+    "text": "¿Cómo define el ROM la naturaleza de la Junta de Gobierno Local?"
   },
   {
     "id": 17,
@@ -456,7 +472,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía."
+    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía.",
+    "text": "¿Quién nombra y separa a los miembros de la Junta de Gobierno Local y cuál es el límite máximo de su número?"
   },
   {
     "id": 18,
@@ -483,7 +500,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Áreas de Gobierno",
     "pagina": 8992,
-    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados."
+    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados.",
+    "text": "Respecto a la organización municipal, ¿qué límite establece el ROM para el número de Áreas de Gobierno y a quién corresponde fijarlas?"
   },
   {
     "id": 19,
@@ -510,7 +528,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Ordenación jerárquica",
     "pagina": 8992,
-    "answer": "A las Concejalías Delegadas."
+    "answer": "A las Concejalías Delegadas.",
+    "text": "Según la ordenación jerárquica, ¿a quién corresponde la dirección superior de las Áreas de Gobierno?"
   },
   {
     "id": 20,
@@ -537,7 +556,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Informes de Secretaría",
     "pagina": 8970,
-    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito."
+    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito.",
+    "text": "En relación con los informes de la Secretaría General del Pleno, ¿cuál es el plazo general para su emisión y qué exclusividad se prevé?"
   },
   {
     "id": 21,
@@ -564,7 +584,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
     "pagina": 8970,
-    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta."
+    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta.",
+    "text": "Según el ROM, ¿qué elementos debe contener el acta de cada sesión plenaria y cuál es el sistema preferente de documentación?"
   },
   {
     "id": 22,
@@ -591,7 +612,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Régimen de sesiones",
     "pagina": 8953,
-    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple."
+    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple.",
+    "text": "¿Cuándo son nulos los acuerdos del Pleno y qué excepción permite tratar asuntos no incluidos en el orden del día?"
   },
   {
     "id": 23,
@@ -618,7 +640,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Orden del día",
     "pagina": 8953,
-    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control."
+    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control.",
+    "text": "¿Qué estructura mínima debe incluirse siempre en el orden del día de las sesiones ordinarias del Pleno?"
   },
   {
     "id": 24,
@@ -645,7 +668,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local."
+    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local.",
+    "text": "¿Cuál es el objeto del Título II del ROM respecto al Ayuntamiento de Córdoba?"
   },
   {
     "id": 25,
@@ -672,7 +696,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa."
+    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa.",
+    "text": "Conforme a los principios generales del Título II, ¿cómo debe servir la Administración municipal y qué valores debe garantizar?"
   },
   {
     "id": 26,
@@ -699,7 +724,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas."
+    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas.",
+    "text": "¿Cómo define el ROM la naturaleza de la Junta de Gobierno Local?"
   },
   {
     "id": 27,
@@ -726,7 +752,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía."
+    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía.",
+    "text": "¿Quién nombra y separa a los miembros de la Junta de Gobierno Local y cuál es el límite máximo de su número?"
   },
   {
     "id": 28,
@@ -753,7 +780,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Áreas de Gobierno",
     "pagina": 8992,
-    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados."
+    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados.",
+    "text": "Respecto a la organización municipal, ¿qué límite establece el ROM para el número de Áreas de Gobierno y a quién corresponde fijarlas?"
   },
   {
     "id": 29,
@@ -780,7 +808,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Ordenación jerárquica",
     "pagina": 8992,
-    "answer": "A las Concejalías Delegadas."
+    "answer": "A las Concejalías Delegadas.",
+    "text": "Según la ordenación jerárquica, ¿a quién corresponde la dirección superior de las Áreas de Gobierno?"
   },
   {
     "id": 30,
@@ -807,7 +836,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Informes de Secretaría",
     "pagina": 8970,
-    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito."
+    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito.",
+    "text": "En relación con los informes de la Secretaría General del Pleno, ¿cuál es el plazo general para su emisión y qué exclusividad se prevé?"
   },
   {
     "id": 31,
@@ -834,7 +864,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
     "pagina": 8970,
-    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta."
+    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta.",
+    "text": "Según el ROM, ¿qué elementos debe contener el acta de cada sesión plenaria y cuál es el sistema preferente de documentación?"
   },
   {
     "id": 32,
@@ -861,7 +892,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Régimen de sesiones",
     "pagina": 8953,
-    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple."
+    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple.",
+    "text": "¿Cuándo son nulos los acuerdos del Pleno y qué excepción permite tratar asuntos no incluidos en el orden del día?"
   },
   {
     "id": 33,
@@ -888,7 +920,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Orden del día",
     "pagina": 8953,
-    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control."
+    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control.",
+    "text": "¿Qué estructura mínima debe incluirse siempre en el orden del día de las sesiones ordinarias del Pleno?"
   },
   {
     "id": 34,
@@ -915,7 +948,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local."
+    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local.",
+    "text": "¿Cuál es el objeto del Título II del ROM respecto al Ayuntamiento de Córdoba?"
   },
   {
     "id": 35,
@@ -942,7 +976,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa."
+    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa.",
+    "text": "Conforme a los principios generales del Título II, ¿cómo debe servir la Administración municipal y qué valores debe garantizar?"
   },
   {
     "id": 36,
@@ -969,7 +1004,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas."
+    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas.",
+    "text": "¿Cómo define el ROM la naturaleza de la Junta de Gobierno Local?"
   },
   {
     "id": 37,
@@ -996,7 +1032,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía."
+    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía.",
+    "text": "¿Quién nombra y separa a los miembros de la Junta de Gobierno Local y cuál es el límite máximo de su número?"
   },
   {
     "id": 38,
@@ -1023,7 +1060,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Áreas de Gobierno",
     "pagina": 8992,
-    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados."
+    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados.",
+    "text": "Respecto a la organización municipal, ¿qué límite establece el ROM para el número de Áreas de Gobierno y a quién corresponde fijarlas?"
   },
   {
     "id": 39,
@@ -1050,7 +1088,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Ordenación jerárquica",
     "pagina": 8992,
-    "answer": "A las Concejalías Delegadas."
+    "answer": "A las Concejalías Delegadas.",
+    "text": "Según la ordenación jerárquica, ¿a quién corresponde la dirección superior de las Áreas de Gobierno?"
   },
   {
     "id": 40,
@@ -1077,7 +1116,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Informes de Secretaría",
     "pagina": 8970,
-    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito."
+    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito.",
+    "text": "En relación con los informes de la Secretaría General del Pleno, ¿cuál es el plazo general para su emisión y qué exclusividad se prevé?"
   },
   {
     "id": 41,
@@ -1104,7 +1144,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
     "pagina": 8970,
-    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta."
+    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta.",
+    "text": "Según el ROM, ¿qué elementos debe contener el acta de cada sesión plenaria y cuál es el sistema preferente de documentación?"
   },
   {
     "id": 42,
@@ -1131,7 +1172,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Régimen de sesiones",
     "pagina": 8953,
-    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple."
+    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple.",
+    "text": "¿Cuándo son nulos los acuerdos del Pleno y qué excepción permite tratar asuntos no incluidos en el orden del día?"
   },
   {
     "id": 43,
@@ -1158,7 +1200,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Orden del día",
     "pagina": 8953,
-    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control."
+    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control.",
+    "text": "¿Qué estructura mínima debe incluirse siempre en el orden del día de las sesiones ordinarias del Pleno?"
   },
   {
     "id": 44,
@@ -1185,7 +1228,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local."
+    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local.",
+    "text": "¿Cuál es el objeto del Título II del ROM respecto al Ayuntamiento de Córdoba?"
   },
   {
     "id": 45,
@@ -1212,7 +1256,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa."
+    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa.",
+    "text": "Conforme a los principios generales del Título II, ¿cómo debe servir la Administración municipal y qué valores debe garantizar?"
   },
   {
     "id": 46,
@@ -1239,7 +1284,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas."
+    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas.",
+    "text": "¿Cómo define el ROM la naturaleza de la Junta de Gobierno Local?"
   },
   {
     "id": 47,
@@ -1266,7 +1312,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía."
+    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía.",
+    "text": "¿Quién nombra y separa a los miembros de la Junta de Gobierno Local y cuál es el límite máximo de su número?"
   },
   {
     "id": 48,
@@ -1293,7 +1340,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Áreas de Gobierno",
     "pagina": 8992,
-    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados."
+    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados.",
+    "text": "Respecto a la organización municipal, ¿qué límite establece el ROM para el número de Áreas de Gobierno y a quién corresponde fijarlas?"
   },
   {
     "id": 49,
@@ -1320,7 +1368,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Ordenación jerárquica",
     "pagina": 8992,
-    "answer": "A las Concejalías Delegadas."
+    "answer": "A las Concejalías Delegadas.",
+    "text": "Según la ordenación jerárquica, ¿a quién corresponde la dirección superior de las Áreas de Gobierno?"
   },
   {
     "id": 50,
@@ -1347,7 +1396,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Informes de Secretaría",
     "pagina": 8970,
-    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito."
+    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito.",
+    "text": "En relación con los informes de la Secretaría General del Pleno, ¿cuál es el plazo general para su emisión y qué exclusividad se prevé?"
   },
   {
     "id": 51,
@@ -1374,7 +1424,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "1. En el marco de lo dispuesto por la Legislación de Régimen Local, el presente Título tiene por – CAPÍTULO I. DISPOSICIONES GENERALES",
     "pagina": 62,
-    "answer": "Desempeñan funciones directivas profesionales bajo dependencia del órgano político competente."
+    "answer": "Desempeñan funciones directivas profesionales bajo dependencia del órgano político competente.",
+    "text": "En cuanto a las Direcciones Generales…"
   },
   {
     "id": 52,
@@ -1401,7 +1452,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "de CórdobaEl Título I regula el Estatuto de las personas titulares de las Concejalías, los Grupos Municipales,",
     "pagina": 14,
-    "answer": "Control interno y fiscalización de la gestión económico‑financiera y presupuestaria."
+    "answer": "Control interno y fiscalización de la gestión económico‑financiera y presupuestaria.",
+    "text": "La Intervención municipal ejerce…"
   },
   {
     "id": 53,
@@ -1428,7 +1480,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "",
     "pagina": 1,
-    "answer": "Deben emitirse antes de la adopción de acuerdos y formar parte del expediente."
+    "answer": "Deben emitirse antes de la adopción de acuerdos y formar parte del expediente.",
+    "text": "Los informes preceptivos…"
   },
   {
     "id": 54,
@@ -1455,7 +1508,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "",
     "pagina": 1,
-    "answer": "El órgano competente puede adoptar la decisión, motivando su discrepancia, conforme a la legislación de régimen local."
+    "answer": "El órgano competente puede adoptar la decisión, motivando su discrepancia, conforme a la legislación de régimen local.",
+    "text": "En caso de discrepancia entre un informe de Secretaría y uno de Intervención…"
   },
   {
     "id": 55,
@@ -1482,7 +1536,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Decreto de la Alcaldía, dando cuenta al Pleno."
+    "answer": "Decreto de la Alcaldía, dando cuenta al Pleno.",
+    "text": "Las delegaciones de Alcaldía deben formalizarse mediante…"
   },
   {
     "id": 56,
@@ -1509,7 +1564,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Incluye derechos y deberes, y regula el régimen de dedicación y retribuciones."
+    "answer": "Incluye derechos y deberes, y regula el régimen de dedicación y retribuciones.",
+    "text": "En cuanto al Estatuto de los miembros de la Corporación…"
   },
   {
     "id": 57,
@@ -1536,7 +1592,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "El debate público y la exigencia de responsabilidad política."
+    "answer": "El debate público y la exigencia de responsabilidad política.",
+    "text": "El régimen de control y fiscalización del Pleno se basa en…"
   },
   {
     "id": 58,
@@ -1563,7 +1620,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Se ajusta al principio de proporcionalidad de los Grupos Municipales, conforme a la legislación de régimen local."
+    "answer": "Se ajusta al principio de proporcionalidad de los Grupos Municipales, conforme a la legislación de régimen local.",
+    "text": "La constitución de las Comisiones del Pleno…"
   },
   {
     "id": 59,
@@ -1590,7 +1648,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Debe ser eficaz, suficiente y con antelación suficiente para el ejercicio de sus funciones."
+    "answer": "Debe ser eficaz, suficiente y con antelación suficiente para el ejercicio de sus funciones.",
+    "text": "El sistema de información a los concejales…"
   },
   {
     "id": 60,
@@ -1617,7 +1676,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "El concejal debe abstenerse de intervenir y votar en asuntos con interés directo o indirecto."
+    "answer": "El concejal debe abstenerse de intervenir y votar en asuntos con interés directo o indirecto.",
+    "text": "En materia de conflicto de intereses, el ROM prevé que…"
   },
   {
     "id": 61,
@@ -1644,7 +1704,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Permanentes, especiales y no permanentes, con las funciones que determine el Pleno."
+    "answer": "Permanentes, especiales y no permanentes, con las funciones que determine el Pleno.",
+    "text": "Las Comisiones del Pleno pueden ser…"
   },
   {
     "id": 62,
@@ -1671,7 +1732,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Ostenta la máxima representación, dirección del Gobierno y la Administración y preside los órganos colegiados de los que forma parte."
+    "answer": "Ostenta la máxima representación, dirección del Gobierno y la Administración y preside los órganos colegiados de los que forma parte.",
+    "text": "El Alcalde, como Presidente de la Corporación…"
   },
   {
     "id": 63,
@@ -1698,7 +1760,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Delegables de la Alcaldía y del Pleno, si este lo autoriza."
+    "answer": "Delegables de la Alcaldía y del Pleno, si este lo autoriza.",
+    "text": "La Junta de Gobierno Local, por delegación, puede tener atribuciones…"
   },
   {
     "id": 64,
@@ -1725,7 +1788,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "No público, sin perjuicio de la publicidad de los acuerdos adoptados."
+    "answer": "No público, sin perjuicio de la publicidad de los acuerdos adoptados.",
+    "text": "El régimen de publicidad de las sesiones de la Junta de Gobierno Local es…"
   },
   {
     "id": 65,
@@ -1752,7 +1816,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Se ajusta al tiempo de intervención establecido en el ROM y la Presidencia garantiza la ordenación."
+    "answer": "Se ajusta al tiempo de intervención establecido en el ROM y la Presidencia garantiza la ordenación.",
+    "text": "En el debate de las mociones…"
   },
   {
     "id": 66,
@@ -1779,7 +1844,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Ordinario y extraordinario, y el Alcalde fija la periodicidad de las ordinarias."
+    "answer": "Ordinario y extraordinario, y el Alcalde fija la periodicidad de las ordinarias.",
+    "text": "El régimen de sesiones de la JGL es…"
   },
   {
     "id": 67,
@@ -1806,7 +1872,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Asesoramiento legal, fe pública y asistencia a los órganos colegiados del Pleno y de la JGL."
+    "answer": "Asesoramiento legal, fe pública y asistencia a los órganos colegiados del Pleno y de la JGL.",
+    "text": "La Secretaría General del Pleno tiene, entre otras, funciones de…"
   },
   {
     "id": 68,
@@ -1833,7 +1900,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Las intervenciones deben ser sobre el punto del orden del día y con respeto a la Presidencia y al Reglamento."
+    "answer": "Las intervenciones deben ser sobre el punto del orden del día y con respeto a la Presidencia y al Reglamento.",
+    "text": "El régimen de intervención en el Pleno establece que…"
   },
   {
     "id": 69,
@@ -1860,7 +1928,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "No se integran en Grupos y tienen derechos limitados según el ROM, sin privilegios económicos."
+    "answer": "No se integran en Grupos y tienen derechos limitados según el ROM, sin privilegios económicos.",
+    "text": "Los concejales no adscritos…"
   },
   {
     "id": 70,
@@ -1887,7 +1956,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Artículo 23. De la constitución y funcionamiento orgánico.",
     "pagina": 1,
-    "answer": "Es preceptiva y se compone con criterios de proporcionalidad para el examen y dictamen de las cuentas anuales."
+    "answer": "Es preceptiva y se compone con criterios de proporcionalidad para el examen y dictamen de las cuentas anuales.",
+    "text": "La Comisión Especial de Cuentas…"
   },
   {
     "id": 71,
@@ -1914,7 +1984,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
     "pagina": 8970,
-    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta."
+    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta.",
+    "text": "Según el ROM, ¿qué elementos debe contener el acta de cada sesión plenaria y cuál es el sistema preferente de documentación?"
   },
   {
     "id": 72,
@@ -1941,7 +2012,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Régimen de sesiones",
     "pagina": 8953,
-    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple."
+    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple.",
+    "text": "¿Cuándo son nulos los acuerdos del Pleno y qué excepción permite tratar asuntos no incluidos en el orden del día?"
   },
   {
     "id": 73,
@@ -1968,7 +2040,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Orden del día",
     "pagina": 8953,
-    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control."
+    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control.",
+    "text": "¿Qué estructura mínima debe incluirse siempre en el orden del día de las sesiones ordinarias del Pleno?"
   },
   {
     "id": 74,
@@ -1995,7 +2068,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local."
+    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local.",
+    "text": "¿Cuál es el objeto del Título II del ROM respecto al Ayuntamiento de Córdoba?"
   },
   {
     "id": 75,
@@ -2022,7 +2096,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa."
+    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa.",
+    "text": "Conforme a los principios generales del Título II, ¿cómo debe servir la Administración municipal y qué valores debe garantizar?"
   },
   {
     "id": 76,
@@ -2049,7 +2124,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas."
+    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas.",
+    "text": "¿Cómo define el ROM la naturaleza de la Junta de Gobierno Local?"
   },
   {
     "id": 77,
@@ -2076,7 +2152,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía."
+    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía.",
+    "text": "¿Quién nombra y separa a los miembros de la Junta de Gobierno Local y cuál es el límite máximo de su número?"
   },
   {
     "id": 78,
@@ -2103,7 +2180,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Áreas de Gobierno",
     "pagina": 8992,
-    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados."
+    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados.",
+    "text": "Respecto a la organización municipal, ¿qué límite establece el ROM para el número de Áreas de Gobierno y a quién corresponde fijarlas?"
   },
   {
     "id": 79,
@@ -2130,7 +2208,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Ordenación jerárquica",
     "pagina": 8992,
-    "answer": "A las Concejalías Delegadas."
+    "answer": "A las Concejalías Delegadas.",
+    "text": "Según la ordenación jerárquica, ¿a quién corresponde la dirección superior de las Áreas de Gobierno?"
   },
   {
     "id": 80,
@@ -2157,7 +2236,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Informes de Secretaría",
     "pagina": 8970,
-    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito."
+    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito.",
+    "text": "En relación con los informes de la Secretaría General del Pleno, ¿cuál es el plazo general para su emisión y qué exclusividad se prevé?"
   },
   {
     "id": 81,
@@ -2184,7 +2264,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
     "pagina": 8970,
-    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta."
+    "answer": "Debe incluir asistentes, orden del día, lugar y tiempo, puntos principales de las deliberaciones y acuerdos; el sistema preferente es la vídeo‑acta.",
+    "text": "Según el ROM, ¿qué elementos debe contener el acta de cada sesión plenaria y cuál es el sistema preferente de documentación?"
   },
   {
     "id": 82,
@@ -2211,7 +2292,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Régimen de sesiones",
     "pagina": 8953,
-    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple."
+    "answer": "Son nulos si se adoptan en sesiones extraordinarias sobre asuntos no incluidos; la excepción es la previa declaración de urgencia con mayoría simple.",
+    "text": "¿Cuándo son nulos los acuerdos del Pleno y qué excepción permite tratar asuntos no incluidos en el orden del día?"
   },
   {
     "id": 83,
@@ -2238,7 +2320,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Orden del día",
     "pagina": 8953,
-    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control."
+    "answer": "Un capítulo diferenciado con expedientes con eficacia jurídica directa y la parte de impulso, orientación política y control.",
+    "text": "¿Qué estructura mínima debe incluirse siempre en el orden del día de las sesiones ordinarias del Pleno?"
   },
   {
     "id": 84,
@@ -2265,7 +2348,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local."
+    "answer": "Regular el gobierno y la administración del Ayuntamiento de Córdoba en el marco de la legislación de régimen local.",
+    "text": "¿Cuál es el objeto del Título II del ROM respecto al Ayuntamiento de Córdoba?"
   },
   {
     "id": 85,
@@ -2292,7 +2376,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Capítulo I",
     "pagina": 8981,
-    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa."
+    "answer": "Debe servir con objetividad y eficacia los intereses generales, garantizando calidad y transparencia, y promoviendo coordinación y colaboración interadministrativa.",
+    "text": "Conforme a los principios generales del Título II, ¿cómo debe servir la Administración municipal y qué valores debe garantizar?"
   },
   {
     "id": 86,
@@ -2319,7 +2404,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas."
+    "answer": "Órgano que, bajo la presidencia de la Alcaldía, colabora colegiadamente en la dirección política y ejerce funciones ejecutivas y administrativas.",
+    "text": "¿Cómo define el ROM la naturaleza de la Junta de Gobierno Local?"
   },
   {
     "id": 87,
@@ -2346,7 +2432,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. Del Gobierno y de la Administración – Junta de Gobierno Local",
     "pagina": 8986,
-    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía."
+    "answer": "La Alcaldía los nombra y separa libremente; su número no puede exceder de un tercio del número legal de miembros del Pleno, además de la Alcaldía.",
+    "text": "¿Quién nombra y separa a los miembros de la Junta de Gobierno Local y cuál es el límite máximo de su número?"
   },
   {
     "id": 88,
@@ -2373,7 +2460,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Áreas de Gobierno",
     "pagina": 8992,
-    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados."
+    "answer": "No podrán exceder de diez y corresponde a la Alcaldía determinar su número, denominación, atribuciones y servicios integrados.",
+    "text": "Respecto a la organización municipal, ¿qué límite establece el ROM para el número de Áreas de Gobierno y a quién corresponde fijarlas?"
   },
   {
     "id": 89,
@@ -2400,7 +2488,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II. De la Administración del Ayuntamiento – Ordenación jerárquica",
     "pagina": 8992,
-    "answer": "A las Concejalías Delegadas."
+    "answer": "A las Concejalías Delegadas.",
+    "text": "Según la ordenación jerárquica, ¿a quién corresponde la dirección superior de las Áreas de Gobierno?"
   },
   {
     "id": 90,
@@ -2427,7 +2516,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Informes de Secretaría",
     "pagina": 8970,
-    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito."
+    "answer": "El plazo general es de diez días desde que obran los antecedentes; una vez emitido, no cabe otro informe de legalidad de órgano municipal distinto, salvo Intervención en su ámbito.",
+    "text": "En relación con los informes de la Secretaría General del Pleno, ¿cuál es el plazo general para su emisión y qué exclusividad se prevé?"
   },
   {
     "id": 91,
@@ -2454,7 +2544,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Sesiones",
     "pagina": 8963,
-    "answer": "Una vez al mes."
+    "answer": "Una vez al mes.",
+    "text": "La periodicidad de las sesiones ordinarias del Pleno del Ayuntamiento de Córdoba es:"
   },
   {
     "id": 92,
@@ -2481,7 +2572,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Sesiones",
     "pagina": 8964,
-    "answer": "El Alcalde o, en su caso, el Concejal en quien delegue o le sustituya legalmente."
+    "answer": "El Alcalde o, en su caso, el Concejal en quien delegue o le sustituya legalmente.",
+    "text": "¿Quién tiene la atribución para convocar y presidir las sesiones del Pleno?"
   },
   {
     "id": 93,
@@ -2508,7 +2600,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Sesiones",
     "pagina": 8964,
-    "answer": "Dos días hábiles."
+    "answer": "Dos días hábiles.",
+    "text": "Respecto a la convocatoria de las sesiones ordinarias del Pleno, ¿cuál es el plazo mínimo de antelación para notificar a los concejales?"
   },
   {
     "id": 94,
@@ -2535,7 +2628,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
     "pagina": 8970,
-    "answer": "El Secretario General del Pleno."
+    "answer": "El Secretario General del Pleno.",
+    "text": "¿Quién es el responsable de la custodia, integridad y autenticidad del acta de las sesiones del Pleno, según el ROM?"
   },
   {
     "id": 95,
@@ -2562,7 +2656,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Atribuciones",
     "pagina": 8961,
-    "answer": "El Pleno del Ayuntamiento."
+    "answer": "El Pleno del Ayuntamiento.",
+    "text": "¿Qué órgano ejerce la función de control y fiscalización del Gobierno, según el ROM?"
   },
   {
     "id": 96,
@@ -2589,7 +2684,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Ruegos y Preguntas",
     "pagina": 8968,
-    "answer": "En el plazo de la siguiente sesión ordinaria del Pleno."
+    "answer": "En el plazo de la siguiente sesión ordinaria del Pleno.",
+    "text": "¿En qué plazo deben ser contestadas las preguntas y ruegos formulados por los miembros del Pleno, si no se les ha dado respuesta en la sesión en que se formularon?"
   },
   {
     "id": 97,
@@ -2616,7 +2712,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Sesiones",
     "pagina": 8963,
-    "answer": "Un tercio del número legal de sus miembros, y en todo caso, un número no inferior a tres."
+    "answer": "Un tercio del número legal de sus miembros, y en todo caso, un número no inferior a tres.",
+    "text": "¿Cuál es el quórum necesario para la válida constitución de las sesiones del Pleno?"
   },
   {
     "id": 98,
@@ -2643,7 +2740,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Sesiones",
     "pagina": 8963,
-    "answer": "Media hora después."
+    "answer": "Media hora después.",
+    "text": "Si el Pleno no alcanzase el quórum en primera convocatoria, ¿cuánto tiempo después debe celebrarse la segunda convocatoria?"
   },
   {
     "id": 99,
@@ -2670,7 +2768,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Votaciones",
     "pagina": 8967,
-    "answer": "Mayoría absoluta del número legal de miembros de la Corporación."
+    "answer": "Mayoría absoluta del número legal de miembros de la Corporación.",
+    "text": "¿Qué mayoría se requiere para la aprobación de la reprobación del Alcalde o de algún miembro de la Junta de Gobierno Local?"
   },
   {
     "id": 100,
@@ -2697,7 +2796,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 3ª. Comisiones del Pleno",
     "pagina": 8971,
-    "answer": "Estudio, informe o consulta de los asuntos que hayan de ser sometidos a la decisión del Pleno y de seguimiento de la gestión del Alcalde y su equipo de gobierno."
+    "answer": "Estudio, informe o consulta de los asuntos que hayan de ser sometidos a la decisión del Pleno y de seguimiento de la gestión del Alcalde y su equipo de gobierno.",
+    "text": "¿Cuál es la finalidad de las Comisiones de Pleno según el ROM?"
   },
   {
     "id": 101,
@@ -2724,7 +2824,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Alcalde y de la Junta de Gobierno Local – Sección 1ª. El Alcalde",
     "pagina": 8974,
-    "answer": "El Alcalde."
+    "answer": "El Alcalde.",
+    "text": "¿Quién tiene la potestad de delegar las funciones ejecutivas propias de la Alcaldía en los Tenientes de Alcalde y, en su caso, en otros Concejales?"
   },
   {
     "id": 102,
@@ -2751,7 +2852,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Alcalde y de la Junta de Gobierno Local – Sección 2ª. La Junta de Gobierno Local",
     "pagina": 8975,
-    "answer": "El Alcalde y un número de Concejales no superior a un tercio del número legal de los mismos, nombrados y separados libremente por el Alcalde."
+    "answer": "El Alcalde y un número de Concejales no superior a un tercio del número legal de los mismos, nombrados y separados libremente por el Alcalde.",
+    "text": "¿Quién forma parte obligatoriamente de la Junta de Gobierno Local?"
   },
   {
     "id": 103,
@@ -2778,7 +2880,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Alcalde y de la Junta de Gobierno Local – Sección 2ª. La Junta de Gobierno Local",
     "pagina": 8975,
-    "answer": "El Secretario General del Pleno, o en su caso, el titular de la Asesoría Jurídica."
+    "answer": "El Secretario General del Pleno, o en su caso, el titular de la Asesoría Jurídica.",
+    "text": "¿Quién asiste a las sesiones de la Junta de Gobierno Local con voz pero sin voto?"
   },
   {
     "id": 104,
@@ -2805,7 +2908,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 4ª. Comisión Especial de Sugerencias y Reclamaciones",
     "pagina": 8973,
-    "answer": "30 días naturales, salvo que la complejidad requiera la prórroga por igual plazo."
+    "answer": "30 días naturales, salvo que la complejidad requiera la prórroga por igual plazo.",
+    "text": "¿Cuál es el plazo máximo para la resolución de reclamaciones o sugerencias presentadas ante la Comisión Especial de Sugerencias y Reclamaciones?"
   },
   {
     "id": 105,
@@ -2832,7 +2936,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Atribuciones",
     "pagina": 8961,
-    "answer": "El Pleno del Ayuntamiento."
+    "answer": "El Pleno del Ayuntamiento.",
+    "text": "¿Qué órgano colegiado tiene la atribución de aprobar el Presupuesto, la plantilla de personal y la relación de puestos de trabajo?"
   },
   {
     "id": 106,
@@ -2859,7 +2964,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. De los Grupos Políticos y la Participación Ciudadana – Sección 1ª. Grupos Políticos",
     "pagina": 8976,
-    "answer": "Garantizar la participación y la acción política de los miembros de la Corporación en el Ayuntamiento y facilitar su trabajo."
+    "answer": "Garantizar la participación y la acción política de los miembros de la Corporación en el Ayuntamiento y facilitar su trabajo.",
+    "text": "¿Cuál es la finalidad de los Grupos Políticos Municipales según el ROM?"
   },
   {
     "id": 107,
@@ -2886,7 +2992,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. De los Grupos Políticos y la Participación Ciudadana – Sección 1ª. Grupos Políticos",
     "pagina": 8977,
-    "answer": "Constituirse legalmente e inscribirse en el Libro Registro."
+    "answer": "Constituirse legalmente e inscribirse en el Libro Registro.",
+    "text": "¿Qué se requiere para que un Grupo Político pueda contar con medios personales y materiales?"
   },
   {
     "id": 108,
@@ -2913,7 +3020,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Secciones 3ª y 4ª",
     "pagina": "8971 y 8973",
-    "answer": "Comisión Especial de Cuentas, y Comisión Especial de Sugerencias y Reclamaciones."
+    "answer": "Comisión Especial de Cuentas, y Comisión Especial de Sugerencias y Reclamaciones.",
+    "text": "¿Qué tipo de Comisiones del Pleno deben constituirse obligatoriamente en el Ayuntamiento de Córdoba?"
   },
   {
     "id": 109,
@@ -2940,7 +3048,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 4ª. Comisión Especial de Sugerencias y Reclamaciones",
     "pagina": 8973,
-    "answer": "El órgano de Gobierno o Administración al que corresponda la competencia."
+    "answer": "El órgano de Gobierno o Administración al que corresponda la competencia.",
+    "text": "¿Quién resuelve las reclamaciones y sugerencias presentadas a la Comisión Especial de Sugerencias y Reclamaciones?"
   },
   {
     "id": 110,
@@ -2967,11 +3076,12 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Sesiones",
     "pagina": 8963,
-    "answer": "Mayoría absoluta del número legal de miembros de la Corporación."
+    "answer": "Mayoría absoluta del número legal de miembros de la Corporación.",
+    "text": "¿Cuál es la mayoría requerida para que el Pleno pueda modificar su régimen de sesiones ordinarias?"
   },
   {
     "id": 111,
-    "question": "¿Cuál de las siguientes atribuciones NO corresponde al Pleno, salvo delegación?",
+    "question": "¿Cuál de las siguientes atribuciones **NO** corresponde al Pleno, salvo delegación?",
     "options": [
       {
         "text": "La aprobación y modificación de los Reglamentos Orgánicos.",
@@ -2994,7 +3104,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Atribuciones",
     "pagina": 8961,
-    "answer": "La aprobación de la estructura orgánica de la Administración Municipal."
+    "answer": "La aprobación de la estructura orgánica de la Administración Municipal.",
+    "text": "¿Cuál de las siguientes atribuciones **NO** corresponde al Pleno, salvo delegación?"
   },
   {
     "id": 112,
@@ -3021,7 +3132,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. De los Grupos Políticos y la Participación Ciudadana – Sección 1ª. Grupos Políticos",
     "pagina": 8976,
-    "answer": "Adquiere la condición de Concejal no adscrito."
+    "answer": "Adquiere la condición de Concejal no adscrito.",
+    "text": "¿Qué ocurre si un Concejal cambia de Grupo Político o deja de pertenecer al que se integró?"
   },
   {
     "id": 113,
@@ -3048,7 +3160,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
     "pagina": 8970,
-    "answer": "Vídeo-acta."
+    "answer": "Vídeo-acta.",
+    "text": "¿Cuál es el sistema preferente de documentación de las sesiones plenarias, según el ROM?"
   },
   {
     "id": 114,
@@ -3075,7 +3188,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 2ª. Actas",
     "pagina": 8970,
-    "answer": "Una certificación de autenticidad e integridad."
+    "answer": "Una certificación de autenticidad e integridad.",
+    "text": "¿Qué documentación debe acompañar a la vídeo-acta de la sesión plenaria?"
   },
   {
     "id": 115,
@@ -3102,7 +3216,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Atribuciones",
     "pagina": 8961,
-    "answer": "El Pleno del Ayuntamiento."
+    "answer": "El Pleno del Ayuntamiento.",
+    "text": "¿Qué órgano colegiado conoce la aprobación inicial de las Ordenanzas y Reglamentos?"
   },
   {
     "id": 116,
@@ -3129,7 +3244,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Alcalde y de la Junta de Gobierno Local – Sección 1ª. El Alcalde",
     "pagina": 8974,
-    "answer": "Los Tenientes de Alcalde, por su orden de nombramiento."
+    "answer": "Los Tenientes de Alcalde, por su orden de nombramiento.",
+    "text": "En la sustitución del Alcalde por ausencia, ¿quién le sustituye?"
   },
   {
     "id": 117,
@@ -3156,7 +3272,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 4ª. Comisión Especial de Sugerencias y Reclamaciones",
     "pagina": 8973,
-    "answer": "El Reglamento Orgánico Municipal (ROM)."
+    "answer": "El Reglamento Orgánico Municipal (ROM).",
+    "text": "¿Qué norma debe regular la organización y el funcionamiento de la Comisión Especial de Sugerencias y Reclamaciones?"
   },
   {
     "id": 118,
@@ -3183,7 +3300,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Votaciones",
     "pagina": 8967,
-    "answer": "Moción de reconsideración motivada, presentada y firmada por la mayoría absoluta de los miembros de la Corporación que formen parte del Pleno, con anterioridad a la inclusión del asunto en el Orden del Día de la sesión en la que deba volverse a tratar."
+    "answer": "Moción de reconsideración motivada, presentada y firmada por la mayoría absoluta de los miembros de la Corporación que formen parte del Pleno, con anterioridad a la inclusión del asunto en el Orden del Día de la sesión en la que deba volverse a tratar.",
+    "text": "¿Cuál es el requisito para que un acuerdo del Pleno pueda ser objeto de reconsideración?"
   },
   {
     "id": 119,
@@ -3210,7 +3328,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Alcalde y de la Junta de Gobierno Local – Sección 1ª. El Alcalde",
     "pagina": 8974,
-    "answer": "En la sesión ordinaria inmediatamente posterior a dictarse, o en la que se celebre dentro del plazo máximo de un mes."
+    "answer": "En la sesión ordinaria inmediatamente posterior a dictarse, o en la que se celebre dentro del plazo máximo de un mes.",
+    "text": "¿En qué momento debe el Alcalde dar cuenta al Pleno de las resoluciones que dicte en ejercicio de sus atribuciones?"
   },
   {
     "id": 120,
@@ -3237,7 +3356,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I. Del Pleno y sus Comisiones – Sección 1ª. Votaciones",
     "pagina": 8967,
-    "answer": "El que decide el resultado en caso de empate, según lo previsto por la legislación de régimen local."
+    "answer": "El que decide el resultado en caso de empate, según lo previsto por la legislación de régimen local.",
+    "text": "¿Qué se entiende por \"Voto de calidad\" del Alcalde en las votaciones del Pleno?"
   },
   {
     "id": 121,
@@ -3264,7 +3384,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Orden del día",
     "pagina": 7,
-    "answer": "declaración previa de urgencia adoptada por mayoría simple antes de entrar en el fondo"
+    "answer": "declaración previa de urgencia adoptada por mayoría simple antes de entrar en el fondo",
+    "text": "Conforme al ROM, la inclusión de un asunto no previsto en el orden del día en sesión extraordinaria requiere"
   },
   {
     "id": 122,
@@ -3291,7 +3412,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Gobierno – Alcaldía",
     "pagina": 74,
-    "answer": "asistentes, lugar y tiempo, orden del día, puntos principales de las deliberaciones y acuerdos"
+    "answer": "asistentes, lugar y tiempo, orden del día, puntos principales de las deliberaciones y acuerdos",
+    "text": "El acta de la sesión debe recoger, como mínimo,"
   },
   {
     "id": 123,
@@ -3318,7 +3440,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Publicidad y transparencia",
     "pagina": 21,
-    "answer": "órgano colegiado que colabora en la dirección política y ejerce funciones ejecutivas y administrativas"
+    "answer": "órgano colegiado que colabora en la dirección política y ejerce funciones ejecutivas y administrativas",
+    "text": "La Junta de Gobierno Local se caracteriza por ser"
   },
   {
     "id": 124,
@@ -3345,7 +3468,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Transparencia y buen gobierno",
     "pagina": 67,
-    "answer": "segunda votación y, si persiste, decisión por voto de calidad de la Presidencia cuando proceda"
+    "answer": "segunda votación y, si persiste, decisión por voto de calidad de la Presidencia cuando proceda",
+    "text": "En caso de empate en votación del Pleno, el ROM prevé"
   },
   {
     "id": 125,
@@ -3372,7 +3496,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título V – Contratación y patrimonio",
     "pagina": 47,
-    "answer": "la presencia de la mayoría absoluta del número legal de miembros"
+    "answer": "la presencia de la mayoría absoluta del número legal de miembros",
+    "text": "Para la válida constitución del Pleno en primera convocatoria se requiere"
   },
   {
     "id": 126,
@@ -3399,7 +3524,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Impulso, orientación política y control",
     "pagina": 74,
-    "answer": "el Pleno"
+    "answer": "el Pleno",
+    "text": "La aprobación del presupuesto general municipal corresponde en todo caso a"
   },
   {
     "id": 127,
@@ -3426,7 +3552,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Régimen de sesiones",
     "pagina": 56,
-    "answer": "en la parte de impulso, orientación política y control"
+    "answer": "en la parte de impulso, orientación política y control",
+    "text": "Los ruegos y preguntas del Pleno se ubican"
   },
   {
     "id": 128,
@@ -3453,7 +3580,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título III – Procedimiento – Dación de cuenta",
     "pagina": 35,
-    "answer": "es exclusivo una vez emitido y no puede ser sustituido por otro de órgano municipal distinto, sin perjuicio del de Intervención en su ámbito"
+    "answer": "es exclusivo una vez emitido y no puede ser sustituido por otro de órgano municipal distinto, sin perjuicio del de Intervención en su ámbito",
+    "text": "El informe de legalidad de la Secretaría General del Pleno"
   },
   {
     "id": 129,
@@ -3480,7 +3608,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Participación ciudadana",
     "pagina": 37,
-    "answer": "diez, correspondiendo a la Alcaldía su determinación y estructura"
+    "answer": "diez, correspondiendo a la Alcaldía su determinación y estructura",
+    "text": "El número máximo de Áreas de Gobierno fijado por el ROM es"
   },
   {
     "id": 130,
@@ -3507,7 +3636,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Régimen de sesiones",
     "pagina": 49,
-    "answer": "la Alcaldía, con el límite de un tercio del número legal de miembros del Pleno, además de la propia Alcaldía"
+    "answer": "la Alcaldía, con el límite de un tercio del número legal de miembros del Pleno, además de la propia Alcaldía",
+    "text": "El nombramiento y cese de los miembros de la Junta de Gobierno Local corresponde a"
   },
   {
     "id": 131,
@@ -3534,7 +3664,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VII – Disposiciones finales y transitorias",
     "pagina": 32,
-    "answer": "la Secretaría General del Pleno"
+    "answer": "la Secretaría General del Pleno",
+    "text": "La fe pública de los actos y acuerdos del Pleno corresponde a"
   },
   {
     "id": 132,
@@ -3561,7 +3692,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Actas",
     "pagina": 52,
-    "answer": "estudio, informe o consulta sin atribuciones resolutorias"
+    "answer": "estudio, informe o consulta sin atribuciones resolutorias",
+    "text": "Las comisiones informativas tienen naturaleza"
   },
   {
     "id": 133,
@@ -3588,7 +3720,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Comisiones – Naturaleza y funciones",
     "pagina": 86,
-    "answer": "garantizar el control político y la transparencia de la gestión"
+    "answer": "garantizar el control político y la transparencia de la gestión",
+    "text": "La dación de cuenta de decretos de Alcaldía ante el Pleno tiene por objeto"
   },
   {
     "id": 134,
@@ -3615,7 +3748,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Régimen de sesiones",
     "pagina": 7,
-    "answer": "acuerdo previo motivado sobre la urgencia con mayoría simple"
+    "answer": "acuerdo previo motivado sobre la urgencia con mayoría simple",
+    "text": "La urgencia en la tramitación de un asunto exige"
   },
   {
     "id": 135,
@@ -3642,7 +3776,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Actas",
     "pagina": 78,
-    "answer": "con la periodicidad previamente fijada por el propio Pleno"
+    "answer": "con la periodicidad previamente fijada por el propio Pleno",
+    "text": "Las sesiones ordinarias del Pleno deben celebrarse"
   },
   {
     "id": 136,
@@ -3669,7 +3804,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Orden del día",
     "pagina": 58,
-    "answer": "la votación ordinaria salvo previsión distinta del ROM o acuerdo nominal"
+    "answer": "la votación ordinaria salvo previsión distinta del ROM o acuerdo nominal",
+    "text": "El régimen de votaciones del Pleno establece como regla general"
   },
   {
     "id": 137,
@@ -3696,7 +3832,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título V – Convenios y encomiendas",
     "pagina": 2,
-    "answer": "en capítulo diferenciado del orden del día, con informes preceptivos"
+    "answer": "en capítulo diferenciado del orden del día, con informes preceptivos",
+    "text": "Los expedientes con eficacia jurídica directa deben incluirse"
   },
   {
     "id": 138,
@@ -3723,7 +3860,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título III – Procedimiento – Urgencia",
     "pagina": 72,
-    "answer": "puede acordarse para mejor información dentro de su ámbito"
+    "answer": "puede acordarse para mejor información dentro de su ámbito",
+    "text": "La comparecencia de responsables ante una comisión informativa"
   },
   {
     "id": 139,
@@ -3750,7 +3888,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Control interno y fiscalización",
     "pagina": 38,
-    "answer": "conforme a las reglas del ROM y ejercen derechos de participación política"
+    "answer": "conforme a las reglas del ROM y ejercen derechos de participación política",
+    "text": "Los grupos municipales se constituyen"
   },
   {
     "id": 140,
@@ -3777,7 +3916,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título III – Procedimiento – Dación de cuenta",
     "pagina": 19,
-    "answer": "público salvo los casos legalmente excepcionados"
+    "answer": "público salvo los casos legalmente excepcionados",
+    "text": "La publicidad de las sesiones del Pleno tiene carácter"
   },
   {
     "id": 141,
@@ -3804,7 +3944,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Transparencia y buen gobierno",
     "pagina": 36,
-    "answer": "debe facilitarse en plazo y forma, pudiendo condicionarse por protección de datos y secreto legal"
+    "answer": "debe facilitarse en plazo y forma, pudiendo condicionarse por protección de datos y secreto legal",
+    "text": "El derecho de acceso de los concejales a la información"
   },
   {
     "id": 142,
@@ -3831,7 +3972,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Orden del día",
     "pagina": 36,
-    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia"
+    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia",
+    "text": "La modificación del orden del día en sesión"
   },
   {
     "id": 143,
@@ -3858,7 +4000,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Grupos Municipales y Portavoces",
     "pagina": 29,
-    "answer": "la legislación básica y al procedimiento establecido, con informes cuando procedan"
+    "answer": "la legislación básica y al procedimiento establecido, con informes cuando procedan",
+    "text": "El régimen disciplinario del personal se sujeta a"
   },
   {
     "id": 144,
@@ -3885,7 +4028,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título III – Procedimiento – Urgencia",
     "pagina": 59,
-    "answer": "ajuste a la legislación básica, con control y dación de cuenta en los términos previstos"
+    "answer": "ajuste a la legislación básica, con control y dación de cuenta en los términos previstos",
+    "text": "En contratación y patrimonio, el ROM prevé"
   },
   {
     "id": 145,
@@ -3912,7 +4056,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Control interno y fiscalización",
     "pagina": 62,
-    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria"
+    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria",
+    "text": "La Intervención municipal ejerce"
   },
   {
     "id": 146,
@@ -3939,7 +4084,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Participación ciudadana",
     "pagina": 4,
-    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria"
+    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria",
+    "text": "La Intervención municipal ejerce"
   },
   {
     "id": 147,
@@ -3966,7 +4112,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Régimen económico y presupuestario",
     "pagina": 68,
-    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno"
+    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno",
+    "text": "En materia de participación ciudadana, el ROM prevé que"
   },
   {
     "id": 148,
@@ -3993,7 +4140,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Votaciones",
     "pagina": 29,
-    "answer": "la legislación básica y al procedimiento establecido, con informes cuando procedan"
+    "answer": "la legislación básica y al procedimiento establecido, con informes cuando procedan",
+    "text": "El régimen disciplinario del personal se sujeta a"
   },
   {
     "id": 149,
@@ -4020,7 +4168,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VII – Disposiciones finales y transitorias",
     "pagina": 63,
-    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias"
+    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias",
+    "text": "La adopción de acuerdos en la JGL"
   },
   {
     "id": 150,
@@ -4047,7 +4196,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Participación ciudadana",
     "pagina": 7,
-    "answer": "debe facilitarse en plazo y forma, pudiendo condicionarse por protección de datos y secreto legal"
+    "answer": "debe facilitarse en plazo y forma, pudiendo condicionarse por protección de datos y secreto legal",
+    "text": "El derecho de acceso de los concejales a la información"
   },
   {
     "id": 151,
@@ -4074,7 +4224,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título III – Procedimiento – Dación de cuenta",
     "pagina": 30,
-    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia"
+    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia",
+    "text": "La modificación del orden del día en sesión"
   },
   {
     "id": 152,
@@ -4101,7 +4252,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Publicidad y transparencia",
     "pagina": 5,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 153,
@@ -4128,7 +4280,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Transparencia y buen gobierno",
     "pagina": 53,
-    "answer": "la legislación básica y al procedimiento establecido, con informes cuando procedan"
+    "answer": "la legislación básica y al procedimiento establecido, con informes cuando procedan",
+    "text": "El régimen disciplinario del personal se sujeta a"
   },
   {
     "id": 154,
@@ -4155,7 +4308,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Votaciones",
     "pagina": 25,
-    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias"
+    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias",
+    "text": "La adopción de acuerdos en la JGL"
   },
   {
     "id": 155,
@@ -4182,7 +4336,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Votaciones",
     "pagina": 9,
-    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia"
+    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia",
+    "text": "La modificación del orden del día en sesión"
   },
   {
     "id": 156,
@@ -4209,7 +4364,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Control interno y fiscalización",
     "pagina": 69,
-    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno"
+    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno",
+    "text": "En materia de participación ciudadana, el ROM prevé que"
   },
   {
     "id": 157,
@@ -4236,7 +4392,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Áreas y Direcciones",
     "pagina": 11,
-    "answer": "son revocables y avocables en los términos del ROM y la legislación básica"
+    "answer": "son revocables y avocables en los términos del ROM y la legislación básica",
+    "text": "Las delegaciones conferidas por el Pleno"
   },
   {
     "id": 158,
@@ -4263,7 +4420,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título III – Procedimiento – Dación de cuenta",
     "pagina": 76,
-    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria"
+    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria",
+    "text": "La Intervención municipal ejerce"
   },
   {
     "id": 159,
@@ -4290,7 +4448,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Comisiones – Naturaleza y funciones",
     "pagina": 14,
-    "answer": "debe facilitarse en plazo y forma, pudiendo condicionarse por protección de datos y secreto legal"
+    "answer": "debe facilitarse en plazo y forma, pudiendo condicionarse por protección de datos y secreto legal",
+    "text": "El derecho de acceso de los concejales a la información"
   },
   {
     "id": 160,
@@ -4317,7 +4476,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título III – Procedimiento – Dación de cuenta",
     "pagina": 17,
-    "answer": "son revocables y avocables en los términos del ROM y la legislación básica"
+    "answer": "son revocables y avocables en los términos del ROM y la legislación básica",
+    "text": "Las delegaciones conferidas por el Pleno"
   },
   {
     "id": 161,
@@ -4344,7 +4504,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Actas",
     "pagina": 7,
-    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria"
+    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria",
+    "text": "La Intervención municipal ejerce"
   },
   {
     "id": 162,
@@ -4371,7 +4532,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Personal directivo",
     "pagina": 14,
-    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria"
+    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria",
+    "text": "La Intervención municipal ejerce"
   },
   {
     "id": 163,
@@ -4398,7 +4560,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Personal directivo",
     "pagina": 82,
-    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía"
+    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía",
+    "text": "Sobre órganos directivos, el ROM contempla que"
   },
   {
     "id": 164,
@@ -4425,7 +4588,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Gobierno – Alcaldía",
     "pagina": 67,
-    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno"
+    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno",
+    "text": "En materia de participación ciudadana, el ROM prevé que"
   },
   {
     "id": 165,
@@ -4452,7 +4616,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Gobierno – Alcaldía",
     "pagina": 79,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 166,
@@ -4479,7 +4644,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Orden del día",
     "pagina": 33,
-    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria"
+    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria",
+    "text": "La Intervención municipal ejerce"
   },
   {
     "id": 167,
@@ -4506,7 +4672,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Participación ciudadana",
     "pagina": 8,
-    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias"
+    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias",
+    "text": "La adopción de acuerdos en la JGL"
   },
   {
     "id": 168,
@@ -4533,7 +4700,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Orden del día",
     "pagina": 24,
-    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia"
+    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia",
+    "text": "La modificación del orden del día en sesión"
   },
   {
     "id": 169,
@@ -4560,7 +4728,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Gobierno – Junta de Gobierno Local",
     "pagina": 13,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 170,
@@ -4587,7 +4756,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Publicidad y transparencia",
     "pagina": 54,
-    "answer": "son revocables y avocables en los términos del ROM y la legislación básica"
+    "answer": "son revocables y avocables en los términos del ROM y la legislación básica",
+    "text": "Las delegaciones conferidas por el Pleno"
   },
   {
     "id": 171,
@@ -4614,7 +4784,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Organización interna",
     "pagina": 56,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 172,
@@ -4641,7 +4812,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Gobierno – Junta de Gobierno Local",
     "pagina": 60,
-    "answer": "ajuste a la legislación básica, con control y dación de cuenta en los términos previstos"
+    "answer": "ajuste a la legislación básica, con control y dación de cuenta en los términos previstos",
+    "text": "En contratación y patrimonio, el ROM prevé"
   },
   {
     "id": 173,
@@ -4668,7 +4840,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título III – Procedimiento – Dación de cuenta",
     "pagina": 50,
-    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía"
+    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía",
+    "text": "Sobre órganos directivos, el ROM contempla que"
   },
   {
     "id": 174,
@@ -4695,7 +4868,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Orden del día",
     "pagina": 42,
-    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía"
+    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía",
+    "text": "Sobre órganos directivos, el ROM contempla que"
   },
   {
     "id": 175,
@@ -4722,7 +4896,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Control interno y fiscalización",
     "pagina": 4,
-    "answer": "son revocables y avocables en los términos del ROM y la legislación básica"
+    "answer": "son revocables y avocables en los términos del ROM y la legislación básica",
+    "text": "Las delegaciones conferidas por el Pleno"
   },
   {
     "id": 176,
@@ -4749,7 +4924,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Transparencia y buen gobierno",
     "pagina": 18,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 177,
@@ -4776,7 +4952,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título V – Convenios y encomiendas",
     "pagina": 77,
-    "answer": "ajuste a la legislación básica, con control y dación de cuenta en los términos previstos"
+    "answer": "ajuste a la legislación básica, con control y dación de cuenta en los términos previstos",
+    "text": "En contratación y patrimonio, el ROM prevé"
   },
   {
     "id": 178,
@@ -4803,7 +4980,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Votaciones",
     "pagina": 3,
-    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía"
+    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía",
+    "text": "Sobre órganos directivos, el ROM contempla que"
   },
   {
     "id": 179,
@@ -4830,7 +5008,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Áreas y Direcciones",
     "pagina": 66,
-    "answer": "son revocables y avocables en los términos del ROM y la legislación básica"
+    "answer": "son revocables y avocables en los términos del ROM y la legislación básica",
+    "text": "Las delegaciones conferidas por el Pleno"
   },
   {
     "id": 180,
@@ -4857,7 +5036,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Gobierno – Junta de Gobierno Local",
     "pagina": 69,
-    "answer": "ajuste a la legislación básica, con control y dación de cuenta en los términos previstos"
+    "answer": "ajuste a la legislación básica, con control y dación de cuenta en los términos previstos",
+    "text": "En contratación y patrimonio, el ROM prevé"
   },
   {
     "id": 181,
@@ -4884,7 +5064,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Régimen de sesiones",
     "pagina": 41,
-    "answer": "la legislación básica y al procedimiento establecido, con informes cuando procedan"
+    "answer": "la legislación básica y al procedimiento establecido, con informes cuando procedan",
+    "text": "El régimen disciplinario del personal se sujeta a"
   },
   {
     "id": 182,
@@ -4911,7 +5092,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Áreas y Direcciones",
     "pagina": 21,
-    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno"
+    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno",
+    "text": "En materia de participación ciudadana, el ROM prevé que"
   },
   {
     "id": 183,
@@ -4938,7 +5120,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Participación ciudadana",
     "pagina": 51,
-    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía"
+    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía",
+    "text": "Sobre órganos directivos, el ROM contempla que"
   },
   {
     "id": 184,
@@ -4965,7 +5148,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Régimen económico y presupuestario",
     "pagina": 89,
-    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno"
+    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno",
+    "text": "En materia de participación ciudadana, el ROM prevé que"
   },
   {
     "id": 185,
@@ -4992,7 +5176,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Impulso, orientación política y control",
     "pagina": 42,
-    "answer": "son revocables y avocables en los términos del ROM y la legislación básica"
+    "answer": "son revocables y avocables en los términos del ROM y la legislación básica",
+    "text": "Las delegaciones conferidas por el Pleno"
   },
   {
     "id": 186,
@@ -5019,7 +5204,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título V – Convenios y encomiendas",
     "pagina": 23,
-    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno"
+    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno",
+    "text": "En materia de participación ciudadana, el ROM prevé que"
   },
   {
     "id": 187,
@@ -5046,7 +5232,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Transparencia y buen gobierno",
     "pagina": 3,
-    "answer": "son revocables y avocables en los términos del ROM y la legislación básica"
+    "answer": "son revocables y avocables en los términos del ROM y la legislación básica",
+    "text": "Las delegaciones conferidas por el Pleno"
   },
   {
     "id": 188,
@@ -5073,7 +5260,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Votaciones",
     "pagina": 35,
-    "answer": "debe facilitarse en plazo y forma, pudiendo condicionarse por protección de datos y secreto legal"
+    "answer": "debe facilitarse en plazo y forma, pudiendo condicionarse por protección de datos y secreto legal",
+    "text": "El derecho de acceso de los concejales a la información"
   },
   {
     "id": 189,
@@ -5100,7 +5288,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título III – Procedimiento – Urgencia",
     "pagina": 88,
-    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria"
+    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria",
+    "text": "La Intervención municipal ejerce"
   },
   {
     "id": 190,
@@ -5127,7 +5316,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Comisiones – Naturaleza y funciones",
     "pagina": 87,
-    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno"
+    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno",
+    "text": "En materia de participación ciudadana, el ROM prevé que"
   },
   {
     "id": 191,
@@ -5154,7 +5344,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Control interno y fiscalización",
     "pagina": 36,
-    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía"
+    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía",
+    "text": "Sobre órganos directivos, el ROM contempla que"
   },
   {
     "id": 192,
@@ -5181,7 +5372,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Control interno y fiscalización",
     "pagina": 86,
-    "answer": "son revocables y avocables en los términos del ROM y la legislación básica"
+    "answer": "son revocables y avocables en los términos del ROM y la legislación básica",
+    "text": "Las delegaciones conferidas por el Pleno"
   },
   {
     "id": 193,
@@ -5208,7 +5400,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Áreas y Direcciones",
     "pagina": 27,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 194,
@@ -5235,7 +5428,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Régimen económico y presupuestario",
     "pagina": 26,
-    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia"
+    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia",
+    "text": "La modificación del orden del día en sesión"
   },
   {
     "id": 195,
@@ -5262,7 +5456,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VII – Disposiciones finales y transitorias",
     "pagina": 46,
-    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno"
+    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno",
+    "text": "En materia de participación ciudadana, el ROM prevé que"
   },
   {
     "id": 196,
@@ -5289,7 +5484,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Personal directivo",
     "pagina": 52,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 197,
@@ -5316,7 +5512,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Control interno y fiscalización",
     "pagina": 13,
-    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia"
+    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia",
+    "text": "La modificación del orden del día en sesión"
   },
   {
     "id": 198,
@@ -5343,7 +5540,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Personal directivo",
     "pagina": 34,
-    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía"
+    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía",
+    "text": "Sobre órganos directivos, el ROM contempla que"
   },
   {
     "id": 199,
@@ -5370,7 +5568,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Régimen económico y presupuestario",
     "pagina": 2,
-    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía"
+    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía",
+    "text": "Sobre órganos directivos, el ROM contempla que"
   },
   {
     "id": 200,
@@ -5397,7 +5596,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Grupos Municipales y Portavoces",
     "pagina": 4,
-    "answer": "la legislación básica y al procedimiento establecido, con informes cuando procedan"
+    "answer": "la legislación básica y al procedimiento establecido, con informes cuando procedan",
+    "text": "El régimen disciplinario del personal se sujeta a"
   },
   {
     "id": 201,
@@ -5424,7 +5624,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Transparencia y buen gobierno",
     "pagina": 44,
-    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno"
+    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno",
+    "text": "En materia de participación ciudadana, el ROM prevé que"
   },
   {
     "id": 202,
@@ -5451,7 +5652,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Áreas y Direcciones",
     "pagina": 39,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 203,
@@ -5478,7 +5680,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Organización interna",
     "pagina": 32,
-    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria"
+    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria",
+    "text": "La Intervención municipal ejerce"
   },
   {
     "id": 204,
@@ -5505,7 +5708,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Áreas y Direcciones",
     "pagina": 23,
-    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias"
+    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias",
+    "text": "La adopción de acuerdos en la JGL"
   },
   {
     "id": 205,
@@ -5532,7 +5736,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Participación ciudadana",
     "pagina": 86,
-    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno"
+    "answer": "pueden articularse turnos o mecanismos reglados sin alterar la naturaleza decisoria del Pleno",
+    "text": "En materia de participación ciudadana, el ROM prevé que"
   },
   {
     "id": 206,
@@ -5559,7 +5764,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Administración – Organización interna",
     "pagina": 5,
-    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias"
+    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias",
+    "text": "La adopción de acuerdos en la JGL"
   },
   {
     "id": 207,
@@ -5586,7 +5792,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título III – Procedimiento – Expedientes e informes",
     "pagina": 62,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 208,
@@ -5613,7 +5820,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Régimen económico y presupuestario",
     "pagina": 64,
-    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia"
+    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia",
+    "text": "La modificación del orden del día en sesión"
   },
   {
     "id": 209,
@@ -5640,7 +5848,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título V – Convenios y encomiendas",
     "pagina": 45,
-    "answer": "debe facilitarse en plazo y forma, pudiendo condicionarse por protección de datos y secreto legal"
+    "answer": "debe facilitarse en plazo y forma, pudiendo condicionarse por protección de datos y secreto legal",
+    "text": "El derecho de acceso de los concejales a la información"
   },
   {
     "id": 210,
@@ -5667,7 +5876,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Participación ciudadana",
     "pagina": 68,
-    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias"
+    "answer": "requiere quorum y mayorías establecidas; sus decisiones son ejecutivas dentro de sus competencias",
+    "text": "La adopción de acuerdos en la JGL"
   },
   {
     "id": 211,
@@ -5694,7 +5904,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Impulso, orientación política y control",
     "pagina": 2,
-    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía"
+    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía",
+    "text": "Sobre órganos directivos, el ROM contempla que"
   },
   {
     "id": 212,
@@ -5721,7 +5932,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título II – Gobierno – Alcaldía",
     "pagina": 40,
-    "answer": "son revocables y avocables en los términos del ROM y la legislación básica"
+    "answer": "son revocables y avocables en los términos del ROM y la legislación básica",
+    "text": "Las delegaciones conferidas por el Pleno"
   },
   {
     "id": 213,
@@ -5748,7 +5960,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Grupos Municipales y Portavoces",
     "pagina": 86,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 214,
@@ -5775,7 +5988,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VI – Participación ciudadana",
     "pagina": 45,
-    "answer": "son revocables y avocables en los términos del ROM y la legislación básica"
+    "answer": "son revocables y avocables en los términos del ROM y la legislación básica",
+    "text": "Las delegaciones conferidas por el Pleno"
   },
   {
     "id": 215,
@@ -5802,7 +6016,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Control interno y fiscalización",
     "pagina": 88,
-    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía"
+    "answer": "su creación/modificación requiere acuerdo del Pleno a propuesta de la Alcaldía",
+    "text": "Sobre órganos directivos, el ROM contempla que"
   },
   {
     "id": 216,
@@ -5829,7 +6044,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Votaciones",
     "pagina": 7,
-    "answer": "publicidad activa de información institucional y organizativa con los límites legales"
+    "answer": "publicidad activa de información institucional y organizativa con los límites legales",
+    "text": "Respecto a transparencia y buen gobierno, el ROM exige"
   },
   {
     "id": 217,
@@ -5856,7 +6072,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título VII – Disposiciones finales y transitorias",
     "pagina": 57,
-    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia"
+    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia",
+    "text": "La modificación del orden del día en sesión"
   },
   {
     "id": 218,
@@ -5883,7 +6100,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Pleno – Actas",
     "pagina": 91,
-    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria"
+    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria",
+    "text": "La Intervención municipal ejerce"
   },
   {
     "id": 219,
@@ -5910,7 +6128,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título I – Grupos Municipales y Portavoces",
     "pagina": 8,
-    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria"
+    "answer": "control interno y fiscalización de la gestión económico‑presupuestaria",
+    "text": "La Intervención municipal ejerce"
   },
   {
     "id": 220,
@@ -5937,7 +6156,8 @@
     "source": "ROM Ayuntamiento de Córdoba (BOP Nº 116, 18/06/2025)",
     "epigrafe": "Título IV – Régimen económico y presupuestario",
     "pagina": 74,
-    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia"
+    "answer": "puede acordarse, y la inclusión sobrevenida exige declaración previa de urgencia",
+    "text": "La modificación del orden del día en sesión"
   },
   {
     "id": 221,
@@ -5964,11 +6184,11 @@
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 107. Competencias de las Comisiones Permanentes.",
     "pagina": 52,
-    "answer": "Implica que la Comisión ejerce una función de filtro y coordinación que limita el debate del Pleno a aspectos no cubiertos por el dictamen, a menos que el informe jurídico lo contradiga."
+    "text": "¿Cuál es la implicación práctica de que la Comisión Permanente de Presidencia y Políticas Transversales emita un dictamen previo y vinculante, según el ROM, respecto a una iniciativa que afecte simultáneamente la organización municipal y la planificación estratégica de un área específica?"
   },
   {
     "id": 222,
-    "question": "En el contexto de una 'vídeo-acta' como sistema preferente de documentación del Pleno, ¿qué elemento confiere la autenticidad e integridad legal necesaria a la grabación digital, minimizando la ambigüedad sobre su contenido?",
+    "question": "En el contexto de una 'vídeo-acta' como sistema preferente de documentación del Pleno, ¿qué elemento confiere la **autenticidad e integridad** legal necesaria a la grabación digital, minimizando la ambigüedad sobre su contenido?",
     "options": [
       {
         "text": "El certificado emitido por el Alcalde-Presidente, que garantiza la fidelidad del sonido respecto al debate.",
@@ -5987,15 +6207,15 @@
         "is_correct": false
       }
     ],
-    "explanation": "El ROM establece la vídeo-acta, pero su valor legal se basa en la certificación de la Secretaría General del Pleno (la fe pública), que debe garantizar la autenticidad e integridad del registro digital mediante mecanismos de seguridad como el sello de tiempo y la firma digital, conforme a la legislación de Administración Electrónica. La ambigüedad se disipa al entender que el medio (vídeo) es preferente, pero la forma legal es el certificado electrónico.",
+    "explanation": "El ROM establece la vídeo-acta, pero su valor legal se basa en la **certificación de la Secretaría General del Pleno** (la fe pública), que debe garantizar la autenticidad e integridad del registro digital mediante mecanismos de seguridad como el sello de tiempo y la firma digital, conforme a la legislación de Administración Electrónica. La ambigüedad se disipa al entender que el medio (vídeo) es preferente, pero la forma legal es el certificado electrónico.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 99. Contenido de las actas.",
     "pagina": 49,
-    "answer": "La certificación electrónica de la Secretaría General del Pleno, que incluye un sello de tiempo y una firma digital cualificada."
+    "text": "En el contexto de una 'vídeo-acta' como sistema preferente de documentación del Pleno, ¿qué elemento confiere la **autenticidad e integridad** legal necesaria a la grabación digital, minimizando la ambigüedad sobre su contenido?"
   },
   {
     "id": 223,
-    "question": "¿Qué implicación se deriva del principio de 'intervención mínima y gradual' de la Presidencia en las deliberaciones del Pleno, respecto a la libertad de expresión de los Concejales y la ordenación del debate?",
+    "question": "¿Qué implicación se deriva del principio de **'intervención mínima y gradual'** de la Presidencia en las deliberaciones del Pleno, respecto a la **libertad de expresión** de los Concejales y la **ordenación del debate**?",
     "options": [
       {
         "text": "Que la Presidencia debe esperar a que el debate se desvíe completamente del punto para actuar, priorizando la absoluta libertad de los intervinientes sin límite de tiempo.",
@@ -6018,11 +6238,11 @@
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 62. Ordenación de los Debates.",
     "pagina": 34,
-    "answer": "Que las llamadas al orden deben ser excepcionales, limitándose a garantizar que el debate se ciña al punto y evitando coartar la crítica política, sin recurrir a la expulsión."
+    "text": "¿Qué implicación se deriva del principio de **'intervención mínima y gradual'** de la Presidencia en las deliberaciones del Pleno, respecto a la **libertad de expresión** de los Concejales y la **ordenación del debate**?"
   },
   {
     "id": 224,
-    "question": "En caso de conflicto entre la normativa específica municipal (ordenanzas) y el Reglamento Orgánico Municipal (ROM) en lo que respecta a la participación ciudadana en un trámite concreto, ¿qué criterio de prevalencia o interpretación debería aplicarse preferentemente?",
+    "question": "En caso de conflicto entre la **normativa específica municipal (ordenanzas)** y el **Reglamento Orgánico Municipal (ROM)** en lo que respecta a la **participación ciudadana** en un trámite concreto, ¿qué criterio de prevalencia o interpretación debería aplicarse preferentemente?",
     "options": [
       {
         "text": "Prevalece siempre el ROM por su carácter orgánico y normativo superior, anulando de oficio cualquier disposición contraria de la ordenanza.",
@@ -6045,11 +6265,11 @@
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 2. Jerarquía Normativa.",
     "pagina": 11,
-    "answer": "Prevalece la ordenanza específica, salvo que la disposición del ROM desarrolle un derecho fundamental de participación reconocido en la ley de régimen local."
+    "text": "En caso de conflicto entre la **normativa específica municipal (ordenanzas)** y el **Reglamento Orgánico Municipal (ROM)** en lo que respecta a la **participación ciudadana** en un trámite concreto, ¿qué criterio de prevalencia o interpretación debería aplicarse preferentemente?"
   },
   {
     "id": 225,
-    "question": "¿Cómo interpreta el ROM el concepto de 'informe previo, completo y actualizado' del Secretario General del Pleno para el estudio de un asunto, buscando la ambigüedad entre legalidad y oportunidad?",
+    "question": "¿Cómo interpreta el ROM el concepto de **'informe previo, completo y actualizado'** del Secretario General del Pleno para el estudio de un asunto, buscando la ambigüedad entre **legalidad y oportunidad**?",
     "options": [
       {
         "text": "Se limita a la revisión de la legalidad formal del procedimiento, excluyendo valoraciones sobre la conveniencia política o económica de la propuesta.",
@@ -6068,22 +6288,22 @@
         "is_correct": false
       }
     ],
-    "explanation": "El informe del Secretario es esencialmente de legalidad. Sin embargo, la exigencia de ser 'completo y actualizado' introduce la ambigüedad, sugiriendo que debe contextualizar el asunto, lo que puede llevar a incluir 'advertencias' o 'reservas' sobre la coherencia procedimental o la oportunidad en el marco normativo, sin que ello signifique una intromisión en el fondo de la decisión (discrecionalidad política).",
+    "explanation": "El informe del Secretario es esencialmente de **legalidad**. Sin embargo, la exigencia de ser **'completo y actualizado'** introduce la ambigüedad, sugiriendo que debe contextualizar el asunto, lo que puede llevar a incluir 'advertencias' o 'reservas' sobre la coherencia procedimental o la oportunidad en el marco normativo, sin que ello signifique una intromisión en el fondo de la decisión (discrecionalidad política).",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 98. Informes de la Secretaría General del Pleno.",
     "pagina": 49,
-    "answer": "Debe incluir un análisis exhaustivo de la legalidad, pero también puede incluir advertencias o reservas sobre la oportunidad procedimental, sin invadir la discrecionalidad política."
+    "text": "¿Cómo interpreta el ROM el concepto de **'informe previo, completo y actualizado'** del Secretario General del Pleno para el estudio de un asunto, buscando la ambigüedad entre **legalidad y oportunidad**?"
   },
   {
     "id": 226,
-    "question": "Si una Moción de Urgencia presentada al Pleno es rechazada por la Presidencia por no apreciar la urgencia, ¿cuál es el mecanismo más ambiguo y complejo que tiene el Grupo Municipal proponente para intentar revertir esta decisión?",
+    "question": "Si una **Moción de Urgencia** presentada al Pleno es **rechazada por la Presidencia** por no apreciar la urgencia, ¿cuál es el mecanismo más **ambiguo** y complejo que tiene el Grupo Municipal proponente para intentar revertir esta decisión?",
     "options": [
       {
         "text": "Presentar un recurso de reposición en la siguiente sesión plenaria, solicitando al Pleno la revisión de la decisión de Presidencia.",
         "is_correct": false
       },
       {
-        "text": "Solicitar la votación del Pleno sobre la declaración de urgencia, lo que de facto convierte una decisión de la Presidencia en una cuestión política de la mayoría.",
+        "text": "Solicitar la **votación del Pleno** sobre la declaración de urgencia, lo que de facto convierte una decisión de la Presidencia en una cuestión política de la mayoría.",
         "is_correct": true
       },
       {
@@ -6095,22 +6315,22 @@
         "is_correct": false
       }
     ],
-    "explanation": "La Moción de Urgencia es discrecional de la Presidencia, pero el ROM (y la legislación de régimen local) permite someter la decisión de urgencia a la votación del Pleno. Esta es la vía más 'ambigua' y 'compleja' porque transforma un criterio técnico/presidencial en una decisión política de la mayoría. El Pleno, por mayoría simple, puede contradecir a su Presidencia sobre si el asunto 'es urgente'.",
+    "explanation": "La Moción de Urgencia es discrecional de la Presidencia, pero el ROM (y la legislación de régimen local) permite someter la decisión de urgencia a la votación del Pleno. Esta es la vía más 'ambigua' y 'compleja' porque transforma un criterio técnico/presidencial en una **decisión política** de la mayoría. El Pleno, por mayoría simple, puede contradecir a su Presidencia sobre si el asunto 'es urgente'.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 69. Asuntos de urgencia.",
     "pagina": 38,
-    "answer": "Solicitar la votación del Pleno sobre la declaración de urgencia, lo que de facto convierte una decisión de la Presidencia en una cuestión política de la mayoría."
+    "text": "Si una **Moción de Urgencia** presentada al Pleno es **rechazada por la Presidencia** por no apreciar la urgencia, ¿cuál es el mecanismo más **ambiguo** y complejo que tiene el Grupo Municipal proponente para intentar revertir esta decisión?"
   },
   {
     "id": 227,
-    "question": "Respecto a la delegación de competencias del Pleno al Alcalde en el ámbito del Patrimonio Municipal, ¿qué aspecto genera mayor ambigüedad en la interpretación de los límites de la delegación?",
+    "question": "Respecto a la **delegación de competencias del Pleno al Alcalde** en el ámbito del **Patrimonio Municipal**, ¿qué aspecto genera mayor ambigüedad en la interpretación de los límites de la delegación?",
     "options": [
       {
         "text": "La delegación nunca puede incluir la enajenación de bienes inmuebles, independientemente de su valor o uso.",
         "is_correct": false
       },
       {
-        "text": "La ambigüedad reside en la definición de 'bienes de dominio público' susceptibles de desafectación por el Pleno, frente a los 'bienes patrimoniales' cuya gestión es delegable.",
+        "text": "La ambigüedad reside en la definición de **'bienes de dominio público'** susceptibles de desafectación por el Pleno, frente a los 'bienes patrimoniales' cuya gestión es delegable.",
         "is_correct": true
       },
       {
@@ -6122,15 +6342,15 @@
         "is_correct": false
       }
     ],
-    "explanation": "La ley establece competencias indelegables del Pleno. La principal ambigüedad en Patrimonio surge de la distinción entre bienes de dominio público (inalienables, salvo desafectación, siempre Pleno) y bienes patrimoniales (cuya gestión es delegable, con límites de valor o afectación). La definición precisa de cuándo un bien pasa de uno a otro (desafectación) es la clave del conflicto competencial y la ambigüedad en la delegación.",
+    "explanation": "La ley establece competencias indelegables del Pleno. La principal ambigüedad en Patrimonio surge de la distinción entre **bienes de dominio público** (inalienables, salvo desafectación, siempre Pleno) y **bienes patrimoniales** (cuya gestión es delegable, con límites de valor o afectación). La definición precisa de cuándo un bien pasa de uno a otro (desafectación) es la clave del conflicto competencial y la ambigüedad en la delegación.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 37. Competencias del Pleno.",
     "pagina": 25,
-    "answer": "La ambigüedad reside en la definición de 'bienes de dominio público' susceptibles de desafectación por el Pleno, frente a los 'bienes patrimoniales' cuya gestión es delegable."
+    "text": "Respecto a la **delegación de competencias del Pleno al Alcalde** en el ámbito del **Patrimonio Municipal**, ¿qué aspecto genera mayor ambigüedad en la interpretación de los límites de la delegación?"
   },
   {
     "id": 228,
-    "question": "¿Cuál es el efecto más relevante del silencio administrativo positivo en el ámbito de la aprobación definitiva de un Reglamento Municipal, buscando la ambigüedad legal?",
+    "question": "¿Cuál es el efecto más relevante del **silencio administrativo positivo** en el ámbito de la **aprobación definitiva** de un Reglamento Municipal, buscando la ambigüedad legal?",
     "options": [
       {
         "text": "No se aplica nunca en la aprobación de Reglamentos, ya que la Ley exige un acto expreso por su naturaleza de norma general.",
@@ -6149,22 +6369,22 @@
         "is_correct": false
       }
     ],
-    "explanation": "La Ley de Régimen Local exige la aprobación expresa de los Reglamentos. Sin embargo, en el ámbito de la ambigüedad legal, el silencio administrativo (positivo o negativo) solo aplica a procedimientos iniciados 'a solicitud del interesado'. Aplicar el silencio positivo a un acto normativo (Reglamento) es una contradicción legal. La respuesta correcta señala esta ambigüedad legal al forzar la aplicación de una figura pensada para actos singulares a una norma general.",
+    "explanation": "La Ley de Régimen Local exige la aprobación expresa de los Reglamentos. Sin embargo, en el ámbito de la ambigüedad legal, el silencio administrativo (positivo o negativo) solo aplica a procedimientos iniciados 'a solicitud del interesado'. Aplicar el silencio positivo a un acto normativo (Reglamento) es una **contradicción** legal. La respuesta correcta señala esta ambigüedad legal al forzar la aplicación de una figura pensada para actos singulares a una norma general.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 2. Jerarquía Normativa.",
     "pagina": 11,
-    "answer": "Podría generar una aprobación tácita en la fase final de tramitación si se interpretase como un 'procedimiento iniciado a solicitud del interesado', lo cual es legalmente ambiguo por su naturaleza normativa."
+    "text": "¿Cuál es el efecto más relevante del **silencio administrativo positivo** en el ámbito de la **aprobación definitiva** de un Reglamento Municipal, buscando la ambigüedad legal?"
   },
   {
     "id": 229,
-    "question": "El ROM establece que la Comisión Especial de Cuentas informará previamente al Pleno. ¿Cuál es la principal limitación o ambigüedad de este informe en relación con la discrecionalidad política de la aprobación de las cuentas?",
+    "question": "El ROM establece que la **Comisión Especial de Cuentas** informará previamente al Pleno. ¿Cuál es la principal **limitación** o ambigüedad de este informe en relación con la **discrecionalidad política** de la aprobación de las cuentas?",
     "options": [
       {
         "text": "Que el informe debe ser validado por la Intervención General para poder ser presentado, limitando la autonomía de la Comisión.",
         "is_correct": false
       },
       {
-        "text": "Que el informe se centra en la legalidad y fidelidad contable, pero no puede prejuzgar la oportunidad o eficacia de la gestión económica subyacente, que es un juicio político del Pleno.",
+        "text": "Que el informe se centra en la legalidad y fidelidad contable, pero no puede prejuzgar la **oportunidad** o **eficacia** de la gestión económica subyacente, que es un juicio político del Pleno.",
         "is_correct": true
       },
       {
@@ -6176,15 +6396,15 @@
         "is_correct": false
       }
     ],
-    "explanation": "El informe de la Comisión de Cuentas, como órgano de fiscalización, se enfoca en la legalidad, exactitud y coherencia contable. La ambigüedad reside en que el Pleno, al votar las cuentas, está haciendo un juicio político sobre la gestión (oportunidad, eficacia), un aspecto que el informe técnico de la Comisión (o el de la Intervención) no puede suplantar.",
+    "explanation": "El informe de la Comisión de Cuentas, como órgano de fiscalización, se enfoca en la **legalidad, exactitud y coherencia contable**. La ambigüedad reside en que el Pleno, al votar las cuentas, está haciendo un **juicio político** sobre la gestión (oportunidad, eficacia), un aspecto que el informe técnico de la Comisión (o el de la Intervención) no puede suplantar.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Capítulo VII. Impulso, Control y Fiscalización por el Pleno de la Actuación de Demás Órganos de Gobierno.",
     "pagina": 45,
-    "answer": "Que el informe se centra en la legalidad y fidelidad contable, pero no puede prejuzgar la oportunidad o eficacia de la gestión económica subyacente, que es un juicio político del Pleno."
+    "text": "El ROM establece que la **Comisión Especial de Cuentas** informará previamente al Pleno. ¿Cuál es la principal **limitación** o ambigüedad de este informe en relación con la **discrecionalidad política** de la aprobación de las cuentas?"
   },
   {
     "id": 230,
-    "question": "¿En qué condición el ROM permite que un Concejal no adscrito ejerza un derecho de control político que se asemeje más al de un Grupo Municipal, generando ambigüedad sobre su estatus?",
+    "question": "¿En qué condición el ROM permite que un **Concejal no adscrito** ejerza un derecho de control político que se asemeje más al de un Grupo Municipal, generando ambigüedad sobre su estatus?",
     "options": [
       {
         "text": "Nunca puede asimilarse a un Grupo; su derecho de control se limita a la presentación de Ruegos o Preguntas personales.",
@@ -6195,7 +6415,7 @@
         "is_correct": false
       },
       {
-        "text": "Cuando el ROM permite la presentación de Mociones o Proposiciones por un número mínimo de concejales (que el no adscrito alcanza en solitario) sin distinguir su adscripción, aunque su límite de tiempo sea menor.",
+        "text": "Cuando el ROM permite la presentación de **Mociones** o **Proposiciones** por un número mínimo de concejales (que el no adscrito alcanza en solitario) sin distinguir su adscripción, aunque su límite de tiempo sea menor.",
         "is_correct": true
       },
       {
@@ -6203,22 +6423,22 @@
         "is_correct": false
       }
     ],
-    "explanation": "El estatuto del Concejal No Adscrito es restrictivo. La ambigüedad surge si el ROM permite que cualquier número mínimo de Concejales (por ejemplo, uno) pueda presentar una Moción o Proposición. Si el ROM lo permite sin excluir expresamente a los no adscritos, estos podrían ejercer ese derecho. La dificultad y ambigüedad está en si el ROM usa la figura de 'Grupo Municipal' o de 'Concejales' para la legitimación activa.",
+    "explanation": "El estatuto del Concejal No Adscrito es restrictivo. La ambigüedad surge si el ROM permite que **cualquier número mínimo de Concejales** (por ejemplo, uno) pueda presentar una Moción o Proposición. Si el ROM lo permite sin excluir expresamente a los no adscritos, estos podrían ejercer ese derecho. La dificultad y ambigüedad está en si el ROM usa la figura de 'Grupo Municipal' o de 'Concejales' para la legitimación activa.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 71. Intervenciones de los miembros no adscritos.",
     "pagina": 41,
-    "answer": "Cuando el ROM permite la presentación de Mociones o Proposiciones por un número mínimo de concejales (que el no adscrito alcanza en solitario) sin distinguir su adscripción, aunque su límite de tiempo sea menor."
+    "text": "¿En qué condición el ROM permite que un **Concejal no adscrito** ejerza un derecho de control político que se asemeje más al de un Grupo Municipal, generando ambigüedad sobre su estatus?"
   },
   {
     "id": 231,
-    "question": "¿Qué implicación se deriva de la obligación de la Presidencia de 'garantizar la adecuada difusión' de las actuaciones del Pleno, más allá de la mera publicación en el BOP, respecto al uso de la tecnología?",
+    "question": "¿Qué implicación se deriva de la obligación de la Presidencia de **'garantizar la adecuada difusión'** de las actuaciones del Pleno, más allá de la mera publicación en el BOP, respecto al **uso de la tecnología**?",
     "options": [
       {
         "text": "Exige la transmisión por radio y televisión de todas las sesiones, garantizando la máxima audiencia.",
         "is_correct": false
       },
       {
-        "text": "Implica la necesidad de mantener un repositorio digital abierto y accesible de las vídeo-actas y documentos anexos, en un formato que garantice su reutilización y búsqueda (datos abiertos).",
+        "text": "Implica la necesidad de mantener un **repositorio digital abierto y accesible** de las vídeo-actas y documentos anexos, en un formato que garantice su reutilización y búsqueda (datos abiertos).",
         "is_correct": true
       },
       {
@@ -6234,18 +6454,18 @@
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 53. Difusión de las sesiones.",
     "pagina": 31,
-    "answer": "Implica la necesidad de mantener un repositorio digital abierto y accesible de las vídeo-actas y documentos anexos, en un formato que garantice su reutilización y búsqueda (datos abiertos)."
+    "text": "¿Qué implicación se deriva de la obligación de la Presidencia de **'garantizar la adecuada difusión'** de las actuaciones del Pleno, más allá de la mera publicación en el BOP, respecto al **uso de la tecnología**?"
   },
   {
     "id": 232,
-    "question": "En caso de empate en una votación plenaria, y tras el segundo intento infructuoso, ¿cuál es el mecanismo de resolución más ambiguo que puede alterar la voluntad inicial del Pleno en el fondo del asunto?",
+    "question": "En caso de **empate en una votación plenaria**, y tras el segundo intento infructuoso, ¿cuál es el mecanismo de resolución más ambiguo que puede **alterar la voluntad inicial del Pleno** en el fondo del asunto?",
     "options": [
       {
         "text": "La Presidencia aplica el voto de calidad, lo que, al ser un solo voto, no altera la paridad sino que la rompe a favor de una opción.",
         "is_correct": false
       },
       {
-        "text": "Se requiere que el punto sea pospuesto a la siguiente sesión y se incorpore un informe jurídico complementario que puede influir en la decisión de los concejales.",
+        "text": "Se requiere que el punto sea **pospuesto** a la siguiente sesión y se incorpore un **informe jurídico complementario** que puede influir en la decisión de los concejales.",
         "is_correct": true
       },
       {
@@ -6257,22 +6477,22 @@
         "is_correct": false
       }
     ],
-    "explanation": "La resolución del empate mediante el voto de calidad (Presidencia) o la desestimación son procesos claros. La ambigüedad y la 'alteración' real se produce cuando el asunto se pospone a la siguiente sesión. El tiempo extra permite la negociación política y, crucialmente, la adición de un informe jurídico o técnico que puede modificar la postura inicial de los concejales, alterando el resultado en la nueva votación.",
+    "explanation": "La resolución del empate mediante el voto de calidad (Presidencia) o la desestimación son procesos claros. La ambigüedad y la 'alteración' real se produce cuando el asunto se pospone a la siguiente sesión. El tiempo extra permite la negociación política y, crucialmente, la adición de un **informe jurídico o técnico** que puede modificar la postura inicial de los concejales, alterando el resultado en la nueva votación.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 83. Empates.",
     "pagina": 44,
-    "answer": "Se requiere que el punto sea pospuesto a la siguiente sesión y se incorpore un informe jurídico complementario que puede influir en la decisión de los concejales."
+    "text": "En caso de **empate en una votación plenaria**, y tras el segundo intento infructuoso, ¿cuál es el mecanismo de resolución más ambiguo que puede **alterar la voluntad inicial del Pleno** en el fondo del asunto?"
   },
   {
     "id": 233,
-    "question": "Respecto a la información reservada que se facilita a los Concejales, ¿qué ambigüedad surge en la aplicación del principio de 'secreto' frente al derecho de los Concejales a la información para el ejercicio de su función?",
+    "question": "Respecto a la **información reservada** que se facilita a los Concejales, ¿qué ambigüedad surge en la aplicación del principio de **'secreto'** frente al derecho de los Concejales a la **información** para el ejercicio de su función?",
     "options": [
       {
         "text": "La Presidencia tiene la potestad discrecional de clasificar un documento como 'reservado' sin necesidad de justificación formal, limitando el derecho de acceso.",
         "is_correct": false
       },
       {
-        "text": "La ambigüedad reside en el límite: el Concejal puede usar la información para su función, pero su deber de secreto no está claramente definido respecto a su uso en el debate público sin desvelar la fuente.",
+        "text": "La ambigüedad reside en el límite: el Concejal puede usar la información para su función, pero su **deber de secreto** no está claramente definido respecto a su uso en el **debate público** sin desvelar la fuente.",
         "is_correct": true
       },
       {
@@ -6284,15 +6504,15 @@
         "is_correct": false
       }
     ],
-    "explanation": "Los Concejales tienen derecho a acceder a toda la información, pero su uso puede estar limitado por el deber de secreto. La ambigüedad se genera en cómo conciliar el deber de secreto (no revelar la información reservada) con el derecho a la crítica política (usar esa información en el debate público para cuestionar la gestión, sin revelar detalles clasificados).",
+    "explanation": "Los Concejales tienen derecho a acceder a toda la información, pero su uso puede estar limitado por el deber de secreto. La ambigüedad se genera en cómo conciliar el **deber de secreto** (no revelar la información reservada) con el **derecho a la crítica política** (usar esa información en el debate público para cuestionar la gestión, sin revelar detalles clasificados).",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 17. Ejercicio general del derecho [a la información].",
     "pagina": 17,
-    "answer": "La ambigüedad reside en el límite: el Concejal puede usar la información para su función, pero su deber de secreto no está claramente definido respecto a su uso en el debate público sin desvelar la fuente."
+    "text": "Respecto a la **información reservada** que se facilita a los Concejales, ¿qué ambigüedad surge en la aplicación del principio de **'secreto'** frente al derecho de los Concejales a la **información** para el ejercicio de su función?"
   },
   {
     "id": 234,
-    "question": "¿Cómo se resuelve la ambigüedad entre la autonomía de las Comisiones Informativas y el principio de unidad de acción de la Corporación en la fase de dictamen?",
+    "question": "¿Cómo se resuelve la ambigüedad entre la **autonomía de las Comisiones Informativas** y el **principio de unidad de acción de la Corporación** en la fase de **dictamen**?",
     "options": [
       {
         "text": "El dictamen de la Comisión es siempre de carácter consultivo, y solo se convierte en vinculante si es aprobado por la mayoría absoluta de sus miembros.",
@@ -6311,22 +6531,22 @@
         "is_correct": false
       }
     ],
-    "explanation": "Las Comisiones tienen autonomía para reflejar el debate político y las minorías (Votos Particulares). Sin embargo, el Pleno (órgano supremo) solo vota el dictamen mayoritario (el de la Comisión en su conjunto). La ambigüedad se resuelve en el Pleno: se respeta la autonomía de la Comisión al registrar el Voto Particular, pero se garantiza la unidad de acción al forzar al Pleno a votar sobre una única propuesta de acuerdo (el dictamen mayoritario).",
+    "explanation": "Las Comisiones tienen autonomía para reflejar el debate político y las minorías (Votos Particulares). Sin embargo, el **Pleno** (órgano supremo) solo vota el **dictamen mayoritario** (el de la Comisión en su conjunto). La ambigüedad se resuelve en el Pleno: se respeta la autonomía de la Comisión al registrar el Voto Particular, pero se garantiza la **unidad de acción** al forzar al Pleno a votar sobre una única propuesta de acuerdo (el dictamen mayoritario).",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 120. Voto Particular.",
     "pagina": 57,
-    "answer": "La Comisión, en su dictamen, puede incluir Votos Particulares, pero el Pleno solo votará el dictamen mayoritario, reforzando la unidad de la acción final."
+    "text": "¿Cómo se resuelve la ambigüedad entre la **autonomía de las Comisiones Informativas** y el **principio de unidad de acción de la Corporación** en la fase de **dictamen**?"
   },
   {
     "id": 235,
-    "question": "En el supuesto de que el Pleno acuerde la delegación de la gestión de un servicio público a una entidad pública empresarial municipal, ¿qué elemento del proceso genera mayor ambigüedad jurídica respecto al control político?",
+    "question": "En el supuesto de que el Pleno acuerde la **delegación de la gestión de un servicio público** a una entidad pública empresarial municipal, ¿qué elemento del proceso genera mayor **ambigüedad jurídica** respecto al **control político**?",
     "options": [
       {
         "text": "El carácter vinculante de los informes de la Intervención sobre los presupuestos de la entidad, limitando la discrecionalidad.",
         "is_correct": false
       },
       {
-        "text": "La dificultad de compatibilizar la autonomía de gestión de la entidad con el control jerárquico de los órganos municipales (Pleno y Junta de Gobierno) sobre las decisiones operativas.",
+        "text": "La dificultad de **compatibilizar** la autonomía de gestión de la entidad con el **control jerárquico** de los órganos municipales (Pleno y Junta de Gobierno) sobre las decisiones operativas.",
         "is_correct": true
       },
       {
@@ -6338,15 +6558,15 @@
         "is_correct": false
       }
     ],
-    "explanation": "La delegación busca eficiencia (autonomía de gestión). Sin embargo, el Ayuntamiento mantiene la titularidad y, por tanto, el control político. La ambigüedad surge al intentar definir el límite entre la 'autonomía técnica' de la entidad y el 'control político-jerárquico' que el Pleno y la Junta de Gobierno deben mantener para asegurar la adecuada prestación del servicio, a menudo colisionando en decisiones operativas.",
+    "explanation": "La delegación busca eficiencia (autonomía de gestión). Sin embargo, el Ayuntamiento mantiene la titularidad y, por tanto, el control político. La ambigüedad surge al intentar definir el **límite entre la 'autonomía técnica' de la entidad y el 'control político-jerárquico'** que el Pleno y la Junta de Gobierno deben mantener para asegurar la adecuada prestación del servicio, a menudo colisionando en decisiones operativas.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Capítulo VII. Impulso, Control y Fiscalización por el Pleno de la Actuación de Demás Órganos de Gobierno.",
     "pagina": 45,
-    "answer": "La dificultad de compatibilizar la autonomía de gestión de la entidad con el control jerárquico de los órganos municipales (Pleno y Junta de Gobierno) sobre las decisiones operativas."
+    "text": "En el supuesto de que el Pleno acuerde la **delegación de la gestión de un servicio público** a una entidad pública empresarial municipal, ¿qué elemento del proceso genera mayor **ambigüedad jurídica** respecto al **control político**?"
   },
   {
     "id": 236,
-    "question": "¿Cuál es la principal ambigüedad respecto al régimen de incompatibilidades de los Concejales en el ROM, en relación con la participación en debates sobre asuntos que les afecten?",
+    "question": "¿Cuál es la principal ambigüedad respecto al **régimen de incompatibilidades** de los Concejales en el ROM, en relación con la **participación en debates** sobre asuntos que les afecten?",
     "options": [
       {
         "text": "La ambigüedad está en definir cuándo una 'relación laboral' con un contratista municipal se considera 'interés particular' y requiere la abstención.",
@@ -6365,22 +6585,22 @@
         "is_correct": false
       }
     ],
-    "explanation": "El concepto de 'interés particular' que obliga a la abstención es la principal fuente de ambigüedad. La ley (y el ROM) lo define de forma amplia. La dificultad reside en trazar el límite, especialmente en las relaciones indirectas (familiares, laborales, empresariales). La relación laboral con un contratista es un ejemplo clásico de un interés que puede ser ambiguo.",
+    "explanation": "El concepto de **'interés particular'** que obliga a la abstención es la principal fuente de ambigüedad. La ley (y el ROM) lo define de forma amplia. La dificultad reside en trazar el límite, especialmente en las relaciones indirectas (familiares, laborales, empresariales). La relación laboral con un contratista es un ejemplo clásico de un interés que puede ser ambiguo.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 68. Abstención.",
     "pagina": 38,
-    "answer": "La ambigüedad está en definir cuándo una 'relación laboral' con un contratista municipal se considera 'interés particular' y requiere la abstención."
+    "text": "¿Cuál es la principal ambigüedad respecto al **régimen de incompatibilidades** de los Concejales en el ROM, en relación con la **participación en debates** sobre asuntos que les afecten?"
   },
   {
     "id": 237,
-    "question": "Si el Alcalde decide modificar la delegación de competencias a un Teniente de Alcalde, ¿cuál es el requisito formal cuya omisión podría generar mayor ambigüedad legal sobre la validez de las actuaciones del Teniente de Alcalde?",
+    "question": "Si el Alcalde decide **modificar la delegación de competencias** a un Teniente de Alcalde, ¿cuál es el requisito formal cuya omisión podría generar mayor ambigüedad legal sobre la **validez** de las actuaciones del Teniente de Alcalde?",
     "options": [
       {
         "text": "Que la modificación se notifique a todos los Concejales, sin necesidad de publicación oficial.",
         "is_correct": false
       },
       {
-        "text": "La publicación de la modificación en el Boletín Oficial de la Provincia, ya que la ausencia de publicidad formal podría ser utilizada para impugnar actos posteriores del Teniente de Alcalde.",
+        "text": "La **publicación de la modificación** en el Boletín Oficial de la Provincia, ya que la ausencia de publicidad formal podría ser utilizada para impugnar actos posteriores del Teniente de Alcalde.",
         "is_correct": true
       },
       {
@@ -6396,11 +6616,11 @@
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 140. Delegación de competencias.",
     "pagina": 65,
-    "answer": "La publicación de la modificación en el Boletín Oficial de la Provincia, ya que la ausencia de publicidad formal podría ser utilizada para impugnar actos posteriores del Teniente de Alcalde."
+    "text": "Si el Alcalde decide **modificar la delegación de competencias** a un Teniente de Alcalde, ¿cuál es el requisito formal cuya omisión podría generar mayor ambigüedad legal sobre la **validez** de las actuaciones del Teniente de Alcalde?"
   },
   {
     "id": 238,
-    "question": "En la regulación de la sesión extraordinaria del Pleno a solicitud de la cuarta parte de los Concejales, ¿qué ambigüedad temporal genera un conflicto potencial entre el derecho de la Minoría y la eficacia administrativa?",
+    "question": "En la regulación de la **sesión extraordinaria del Pleno a solicitud de la cuarta parte de los Concejales**, ¿qué ambigüedad temporal genera un conflicto potencial entre el **derecho de la Minoría** y la **eficacia administrativa**?",
     "options": [
       {
         "text": "El Pleno se convoca automáticamente, pero no se establece un límite de tiempo para la inclusión del punto en el Orden del Día, permitiendo demoras injustificadas.",
@@ -6419,22 +6639,22 @@
         "is_correct": false
       }
     ],
-    "explanation": "El ROM (siguiendo la LBRL) establece un plazo para la convocatoria. La ambigüedad surge si la Presidencia incumple ese plazo. ¿El derecho de la minoría caduca? ¿Pueden convocarla ellos mismos? La ley no siempre establece el mecanismo de 'caducidad' o de 'autodeterminación de la convocatoria', forzando una ambigüedad que desprotege el derecho de la minoría.",
+    "explanation": "El ROM (siguiendo la LBRL) establece un plazo para la convocatoria. La ambigüedad surge si la Presidencia **incumple** ese plazo. ¿El derecho de la minoría caduca? ¿Pueden convocarla ellos mismos? La ley no siempre establece el mecanismo de 'caducidad' o de 'autodeterminación de la convocatoria', forzando una ambigüedad que desprotege el derecho de la minoría.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 42. Sesiones extraordinarias.",
     "pagina": 27,
-    "answer": "El Pleno debe convocarse dentro de un plazo tasado (ej. 15 días), pero no se establece el plazo de caducidad para la celebración de la sesión si la Presidencia no la convoca a tiempo, forzando la ambigüedad."
+    "text": "En la regulación de la **sesión extraordinaria del Pleno a solicitud de la cuarta parte de los Concejales**, ¿qué ambigüedad temporal genera un conflicto potencial entre el **derecho de la Minoría** y la **eficacia administrativa**?"
   },
   {
     "id": 239,
-    "question": "¿Cuál es la ambigüedad más significativa en el ROM respecto a la competencia de la Junta de Gobierno Local (JGL) sobre asuntos que afecten indirectamente a la organización interna del Ayuntamiento?",
+    "question": "¿Cuál es la ambigüedad más significativa en el ROM respecto a la **competencia de la Junta de Gobierno Local (JGL)** sobre asuntos que **afecten indirectamente** a la organización interna del Ayuntamiento?",
     "options": [
       {
         "text": "La JGL puede aprobar los expedientes de contratación, pero no las bases de las oposiciones, siendo esta una competencia clara del Pleno.",
         "is_correct": false
       },
       {
-        "text": "La ambigüedad reside en la delimitación de 'asuntos de gestión interna' (JGL) frente a 'asuntos de organización fundamental' (Pleno), especialmente en la modificación de relaciones de puestos de trabajo (RPT) que la JGL gestiona, pero que afectan al Pleno.",
+        "text": "La ambigüedad reside en la delimitación de 'asuntos de gestión interna' (JGL) frente a 'asuntos de organización fundamental' (Pleno), especialmente en la **modificación de relaciones de puestos de trabajo** (RPT) que la JGL gestiona, pero que afectan al Pleno.",
         "is_correct": true
       },
       {
@@ -6446,22 +6666,22 @@
         "is_correct": false
       }
     ],
-    "explanation": "Las competencias de la JGL son principalmente de gestión y administración. El Pleno se reserva la organización fundamental. La ambigüedad surge con instrumentos como la RPT, cuya aprobación inicial es del Pleno, pero cuya gestión y ciertas modificaciones pueden recaer en la JGL por delegación o interpretación extensiva de sus funciones de gestión, generando un conflicto de competencia sobre el ámbito organizativo.",
+    "explanation": "Las competencias de la JGL son principalmente de **gestión y administración**. El Pleno se reserva la **organización fundamental**. La ambigüedad surge con instrumentos como la **RPT**, cuya aprobación inicial es del Pleno, pero cuya gestión y ciertas modificaciones pueden recaer en la JGL por delegación o interpretación extensiva de sus funciones de gestión, generando un conflicto de competencia sobre el ámbito organizativo.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 149. Competencias y delegación.",
     "pagina": 68,
-    "answer": "La ambigüedad reside en la delimitación de 'asuntos de gestión interna' (JGL) frente a 'asuntos de organización fundamental' (Pleno), especialmente en la modificación de relaciones de puestos de trabajo (RPT) que la JGL gestiona, pero que afectan al Pleno."
+    "text": "¿Cuál es la ambigüedad más significativa en el ROM respecto a la **competencia de la Junta de Gobierno Local (JGL)** sobre asuntos que **afecten indirectamente** a la organización interna del Ayuntamiento?"
   },
   {
     "id": 240,
-    "question": "¿Qué consecuencia de la revisión de oficio de un acuerdo plenario, según el ROM, genera la mayor ambigüedad en el principio de seguridad jurídica de los ciudadanos afectados?",
+    "question": "¿Qué consecuencia de la **revisión de oficio** de un acuerdo plenario, según el ROM, genera la mayor ambigüedad en el principio de **seguridad jurídica** de los ciudadanos afectados?",
     "options": [
       {
         "text": "La revisión de oficio solo puede iniciarse a instancia de la Intervención y requiere un informe del Consejo Consultivo de Andalucía, lo que elimina la ambigüedad.",
         "is_correct": false
       },
       {
-        "text": "La ambigüedad se genera por la retroactividad de la declaración de nulidad, que puede afectar derechos de terceros que actuaron de buena fe, haciendo prevalecer la legalidad sobre la seguridad jurídica en casos extremos.",
+        "text": "La ambigüedad se genera por la **retroactividad** de la declaración de nulidad, que puede afectar derechos de terceros que actuaron de buena fe, haciendo prevalecer la legalidad sobre la seguridad jurídica en casos extremos.",
         "is_correct": true
       },
       {
@@ -6473,10 +6693,10 @@
         "is_correct": false
       }
     ],
-    "explanation": "La revisión de oficio busca anular acuerdos radicalmente nulos (legalidad). La ambigüedad y el conflicto surgen cuando esa anulación (que opera *ex tunc*, desde el origen) afecta a derechos adquiridos por terceros de buena fe (seguridad jurídica). La ley obliga a que la legalidad prevalezca, pero esto es un sacrificio a la seguridad jurídica, y el ROM debe reflejar este conflicto de principios.",
+    "explanation": "La revisión de oficio busca anular acuerdos **radicalmente nulos** (legalidad). La ambigüedad y el conflicto surgen cuando esa anulación (que opera *ex tunc*, desde el origen) afecta a derechos adquiridos por terceros de buena fe (seguridad jurídica). La ley obliga a que la legalidad prevalezca, pero esto es un sacrificio a la seguridad jurídica, y el ROM debe reflejar este conflicto de principios.",
     "source": "ROM Ayuntamiento de Córdoba",
     "epigrafe": "Artículo 2. Jerarquía Normativa.",
     "pagina": 11,
-    "answer": "La ambigüedad se genera por la retroactividad de la declaración de nulidad, que puede afectar derechos de terceros que actuaron de buena fe, haciendo prevalecer la legalidad sobre la seguridad jurídica en casos extremos."
+    "text": "¿Qué consecuencia de la **revisión de oficio** de un acuerdo plenario, según el ROM, genera la mayor ambigüedad en el principio de **seguridad jurídica** de los ciudadanos afectados?"
   }
 ]
