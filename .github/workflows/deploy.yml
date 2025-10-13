@@ -3,7 +3,7 @@ name: 🚀 Deploy to Alwaysdata
 on:
   push:
     branches:
-      - main  # Cambia si usas otra rama
+      - main
 
 jobs:
   deploy:
@@ -23,3 +23,4 @@ jobs:
           local-dir: ./backend/
           protocol: ftps
           port: 21
+          security: explicit   # ⚡ FTPS explícito requerido por Alwaysdata
