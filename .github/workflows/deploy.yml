@@ -16,7 +16,7 @@ jobs:
       - name: Upload files via FTP to Alwaysdata
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp.mascu.alwaysdata.net
+          server: ftp-mascu.alwaysdata.net
           username: ${{ secrets.ALWAYSDATA_FTP_USER }}
           password: ${{ secrets.ALWAYSDATA_FTP_PASS }}
           server-dir: /www/quiz/backend/   # Directorio exacto en Alwaysdata
