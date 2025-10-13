@@ -1,26 +1,26 @@
-name: 🚀 Deploy Opoquiz via SSH
+name: Deploy to Alwaysdata (via SSH)
 
 on:
   push:
     branches:
-      - main
+      - main  # o la rama que uses
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout del código
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # 2️⃣ Configurar clave SSH
       - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.8.1
+        uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      # 3️⃣ Subir archivos con SCP
-      - name: Deploy via SCP
+      - name: Deploy via rsync over SSH
         run: |
-          scp -r backend/* mascu@ssh-mascu.alwaysdata.net:/www/quiz/backend/
+          rsync -avz --delete \
+            --exclude '.git*' \
+            --exclude 'node_modules' \
+            ./backend/ mascu@ssh-mascu.alwaysdata.net:/home/mascu/www/quiz/backend/
