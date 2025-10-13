@@ -18,7 +18,7 @@ jobs:
       - name: Deploy to Alwaysdata via SFTP
         uses: appleboy/scp-action@master
         with:
-          host: ftp-mascu.alwaysdata.net       # Host SFTP de Alwaysdata
+          host: sftp-mascu.alwaysdata.net       # Host SFTP de Alwaysdata
           username: ${{ secrets.ALWAYSDATA_FTP_USER }}  # Usuario FTP
           password: ${{ secrets.ALWAYSDATA_FTP_PASS }}  # Contraseña FTP
           port: 22                             # Puerto SFTP
