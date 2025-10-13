@@ -25,3 +25,4 @@ jobs:
           source: "backend/*"                  # Carpeta local que quieres subir
           target: "/www/quiz/backend/"         # Carpeta destino en Alwaysdata
           strip_components: 1                  # Opcional: elimina la carpeta raíz 'backend' al subir
+          debug: true                          # Opcional: activa el modo debug para ver más detalles
