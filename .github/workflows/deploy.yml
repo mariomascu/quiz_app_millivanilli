@@ -1,26 +1,24 @@
-name: 🚀 Deploy to Alwaysdata
+name: 🚀 Deploy to Alwaysdata via SFTP
 
 on:
   push:
     branches:
-      - main  # Cambia si usas otra rama
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Upload files via FTPS to Alwaysdata
+      - name: Upload files via SFTP to Alwaysdata
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp-mascu.alwaysdata.net       # verifica que sea el host correcto
+          server: ftp-mascu.alwaysdata.net   # verifica host SFTP
+          protocol: sftp
+          port: 22
           username: ${{ secrets.ALWAYSDATA_FTP_USER }}
           password: ${{ secrets.ALWAYSDATA_FTP_PASS }}
           server-dir: /www/quiz/backend/
           local-dir: ./backend/
-          protocol: ftps
-          port: 21
-          security: loose   # ✅ valor válido para FTPS desde GitHub Actions
