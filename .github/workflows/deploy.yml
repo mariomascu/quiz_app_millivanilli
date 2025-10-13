@@ -3,7 +3,7 @@ name: 🚀 Deploy to Alwaysdata
 on:
   push:
     branches:
-      - main  # Cambia si usas otra rama
+      - main  # Ajusta si usas otra rama
 
 jobs:
   deploy:
@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Upload files via FTP to Alwaysdata
-        uses: SamKirkland/FTP-Deploy-Action@v4.5.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ftp.mascu.alwaysdata.net
           username: ${{ secrets.ALWAYSDATA_FTP_USER }}
           password: ${{ secrets.ALWAYSDATA_FTP_PASS }}
-          server-dir: /www/quiz/
-          local-dir: ./backend
+          server-dir: /www/quiz/backend/   # Directorio exacto en Alwaysdata
+          local-dir: ./backend            # Carpeta local que quieres subir
