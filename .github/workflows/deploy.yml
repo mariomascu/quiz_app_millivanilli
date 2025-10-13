@@ -1,24 +1,31 @@
-name: Deploy to Alwaysdata (via SSH)
+name: Deploy Opoquiz to Alwaysdata
 
 on:
   push:
     branches:
-      - main  # o la rama que uses
+      - main  # o tu rama principal
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Clonar el repositorio
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2️⃣ Configurar SSH con la clave privada
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Deploy via rsync over SSH
+      # 3️⃣ Comprobar conexión (opcional, para depuración)
+      - name: Test SSH connection
+        run: ssh -o StrictHostKeyChecking=no mascu@ssh-mascu.alwaysdata.net "echo ✅ Conexión SSH exitosa"
+
+      # 4️⃣ Subir archivos del proyecto
+      - name: Deploy via rsync
         run: |
           rsync -avz --delete \
             --exclude '.git*' \
