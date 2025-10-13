@@ -20,4 +20,4 @@ jobs:
           username: ${{ secrets.ALWAYSDATA_FTP_USER }}
           password: ${{ secrets.ALWAYSDATA_FTP_PASS }}
           server-dir: /www/quiz/backend/   # Directorio exacto en Alwaysdata
-          local-dir: ./backend            # Carpeta local que quieres subir
+          local-dir: ./backend/            # Carpeta local que quieres subir
