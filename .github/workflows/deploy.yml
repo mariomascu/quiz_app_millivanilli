@@ -23,5 +23,5 @@ jobs:
           server: ftp.mascu.alwaysdata.net
           username: ${{ secrets.ALWAYSDATA_FTP_USER }}
           password: ${{ secrets.ALWAYSDATA_FTP_PASS }}
-          server-dir: /www/  # cambia si tu sitio usa /www/opoquiz/
+          server-dir: /www/quiz/backend
           local-dir: ./      # carpeta local del proyecto
