@@ -3,7 +3,7 @@ name: 🚀 Deploy to Alwaysdata
 on:
   push:
     branches:
-      - main  # Ajusta si usas otra rama
+      - main
 
 jobs:
   deploy:
@@ -13,11 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Upload files via FTP to Alwaysdata
+      - name: Upload files via FTPS to Alwaysdata
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp-mascu.alwaysdata.net
+          server: ftp-mascu.alwaysdata.net  # Reemplaza si tu host FTP es otro
           username: ${{ secrets.ALWAYSDATA_FTP_USER }}
           password: ${{ secrets.ALWAYSDATA_FTP_PASS }}
-          server-dir: /www/quiz/backend/   # Directorio exacto en Alwaysdata
-          local-dir: ./backend/            # Carpeta local que quieres subir
+          server-dir: /www/quiz/backend/
+          local-dir: ./backend/
+          secure: true      # ⚡ Esta línea habilita SSL/TLS
