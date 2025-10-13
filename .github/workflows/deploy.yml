@@ -3,7 +3,7 @@ name: 🚀 Deploy to Alwaysdata
 on:
   push:
     branches:
-      - main
+      - main  # Cambia si usas otra rama
 
 jobs:
   deploy:
@@ -16,11 +16,11 @@ jobs:
       - name: Upload files via FTPS to Alwaysdata
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp-mascu.alwaysdata.net
+          server: ftp-mascu.alwaysdata.net       # verifica que sea el host correcto
           username: ${{ secrets.ALWAYSDATA_FTP_USER }}
           password: ${{ secrets.ALWAYSDATA_FTP_PASS }}
           server-dir: /www/quiz/backend/
           local-dir: ./backend/
           protocol: ftps
           port: 21
-          security: explicit   # ⚡ FTPS explícito requerido por Alwaysdata
+          security: loose   # ✅ valor válido para FTPS desde GitHub Actions
