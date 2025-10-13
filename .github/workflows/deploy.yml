@@ -1,28 +1,26 @@
-name: 🚀 Deploy Opoquiz via SFTP
+name: 🚀 Deploy Opoquiz via SSH
 
 on:
   push:
     branches:
-      - main  # Cambia si usas otra rama principal
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Descargar el código
+      # 1️⃣ Checkout del código
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2️⃣ Subir archivos vía SFTP
-      - name: Deploy to Alwaysdata via SFTP
-        uses: appleboy/scp-action@master
+      # 2️⃣ Configurar clave SSH
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.8.1
         with:
-          host: sftp-mascu.alwaysdata.net       # Host SFTP de Alwaysdata
-          username: ${{ secrets.ALWAYSDATA_FTP_USER }}  # Usuario FTP
-          password: ${{ secrets.ALWAYSDATA_FTP_PASS }}  # Contraseña FTP
-          port: 22                             # Puerto SFTP
-          source: "backend/*"                  # Carpeta local que quieres subir
-          target: "/www/quiz/backend/"         # Carpeta destino en Alwaysdata
-          strip_components: 1                  # Opcional: elimina la carpeta raíz 'backend' al subir
-          debug: true                          # Opcional: activa el modo debug para ver más detalles
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # 3️⃣ Subir archivos con SCP
+      - name: Deploy via SCP
+        run: |
+          scp -r backend/* mascu@ssh-mascu.alwaysdata.net:/www/quiz/backend/
