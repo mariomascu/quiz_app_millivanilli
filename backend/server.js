@@ -147,33 +147,50 @@ app.get('/api/questions', async (_req, res) => {
   }
 });
 
-app.post('/api/submit', (req, res) => {
-  if (!CACHE) CACHE = loadQuestions();
-  const answers = req.body?.answers || {}; // { "id": "texto opción elegida" }
-  let correct = 0;
+app.post('/api/submit', async (req, res) => {
+  try {
+    const answers = req.body?.answers || {}; // { "id": "texto opción elegida" }
+    let questionsSource = null;
 
-  const breakdown = CACHE.map(q => {
-    const user = answers[String(q.id)] ?? null;
-    const correctOpt = q.options.find(o => o.is_correct);
-    const ok = user === (correctOpt?.text ?? null);
-    if (ok) correct++;
-    return {
-      id: q.id,
-      question: q.question,
-      userAnswer: user,
-      correctAnswer: correctOpt?.text ?? null,
-      correct: ok,
-      explanation: q.explanation || null,
-      epigrafe: q.epigrafe || null,
-      pagina: q.pagina || null
-    };
-  });
+    if (USE_DB) {
+      // Cargar desde DB
+      questionsSource = await loadQuestionsFromDb();
+    } else {
+      if (!CACHE) CACHE = loadQuestions();
+      questionsSource = CACHE;
+    }
 
-  const total = CACHE.length;
-  const score = total ? Math.round((correct / total) * 100) : 0;
-  const feedback = score >= 85 ? 'Excelente' : score >= 70 ? 'Bien' : 'Necesita repaso';
+    let correct = 0;
+    const breakdown = questionsSource.map(q => {
+      const user = answers[String(q.id)] ?? null;
+      // q.options puede ser array de { id, text, is_correct } o formato antiguo
+      const correctOpt = Array.isArray(q.options) ? q.options.find(o => o.is_correct || o.es_correcta || false) : null;
 
-  res.json({ total, correct, score, feedback, breakdown });
+      const correctText = correctOpt ? (correctOpt.text ?? correctOpt.texto ?? null) : null;
+      const ok = user === correctText;
+      if (ok) correct++;
+
+      return {
+        id: q.id,
+        question: q.text || q.question || null,
+        userAnswer: user,
+        correctAnswer: correctText,
+        correct: ok,
+        explanation: q.explanation || q.explicacion || null,
+        epigrafe: q.epigrafe || null,
+        pagina: q.pagina || q.pagina_pdf || q.pagina_bop || null
+      };
+    });
+
+    const total = questionsSource.length;
+    const score = total ? Math.round((correct / total) * 100) : 0;
+    const feedback = score >= 85 ? 'Excelente' : score >= 70 ? 'Bien' : 'Necesita repaso';
+
+    return res.json({ total, correct, score, feedback, breakdown });
+  } catch (err) {
+    console.error('Error procesando submit:', err);
+    return res.status(500).json({ error: 'Error al procesar respuestas' });
+  }
 });
 
 app.get('*', (_req, res) => {
