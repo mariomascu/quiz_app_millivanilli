@@ -5,6 +5,8 @@ import morgan from 'morgan';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+import mysql from 'mysql2/promise';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,6 +14,60 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 8080;
 const DATA_FILE = process.env.QUESTIONS_FILE || path.join(__dirname, 'data', 'preguntas.json');
+// Config desde .env
+dotenv.config();
+const USE_DB = process.env.USE_DB === 'true';
+let dbPool = null;
+
+async function initDb() {
+  if (!USE_DB) return;
+  if (dbPool) return;
+  const dbHost = process.env.DB_HOST || 'localhost';
+  const dbPort = process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : 3306;
+  const dbUser = process.env.DB_USER || 'root';
+  const dbPass = process.env.DB_PASSWORD || '';
+  const dbName = process.env.DB_NAME || '';
+
+  dbPool = await mysql.createPool({
+    host: dbHost,
+    port: dbPort,
+    user: dbUser,
+    password: dbPass,
+    database: dbName,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+  });
+}
+
+async function loadQuestionsFromDb() {
+  if (!dbPool) await initDb();
+  if (!dbPool) throw new Error('DB pool no inicializado');
+
+  // Leemos preguntas y sus opciones
+  const [preguntasRows] = await dbPool.query('SELECT id, titulo_id, texto, epigrafe, pagina_pdf, pagina_bop, explicacion, respuesta_correcta FROM preguntas');
+  // Para evitar muchas queries, leer todas las opciones y agrupar
+  const [opcionesRows] = await dbPool.query('SELECT id, pregunta_id, texto, es_correcta FROM opciones');
+
+  const opcionesPorPregunta = opcionesRows.reduce((acc, opt) => {
+    (acc[opt.pregunta_id] = acc[opt.pregunta_id] || []).push({ id: opt.id, text: opt.texto, is_correct: !!opt.es_correcta });
+    return acc;
+  }, {});
+
+  const normalized = preguntasRows.map(row => ({
+    id: row.id,
+    titulo_id: row.titulo_id,
+    text: row.texto,
+    epigrafe: row.epigrafe,
+    pagina_pdf: row.pagina_pdf,
+    pagina_bop: row.pagina_bop,
+    explanation: row.explicacion,
+    answerText: row.respuesta_correcta,
+    options: opcionesPorPregunta[row.id] || []
+  }));
+
+  return normalized;
+}
 
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors());
@@ -71,19 +127,24 @@ function shuffle(array) {
 
 let CACHE = null;
 
-app.get('/api/questions', (_req, res) => {
-  if (!CACHE) CACHE = loadQuestions();
-  // barajar opciones *en cada request* sin modificar la caché original
-  const randomized = CACHE.map(q => ({
-    ...q,
-    options: shuffle(q.options.slice())
-  }));
-  // Si no quieres exponer `is_correct` antes de corregir:
-  const sanitized = randomized.map(q => ({
-    ...q,
-    options: q.options.map(o => ({ text: o.text })) // no enviamos is_correct al cliente
-  }));
-  res.json({ count: sanitized.length, questions: sanitized });
+app.get('/api/questions', async (_req, res) => {
+  try {
+    if (USE_DB) {
+      // cargar desde DB (no cache por ahora o cache si lo prefieres)
+      const rows = await loadQuestionsFromDb();
+      const randomized = rows.map(q => ({ ...q, options: shuffle((q.options || []).slice()) }));
+      const sanitized = randomized.map(q => ({ ...q, options: q.options.map(o => ({ text: o.text })) }));
+      return res.json({ count: sanitized.length, questions: sanitized });
+    }
+
+    if (!CACHE) CACHE = loadQuestions();
+    const randomized = CACHE.map(q => ({ ...q, options: shuffle(q.options.slice()) }));
+    const sanitized = randomized.map(q => ({ ...q, options: q.options.map(o => ({ text: o.text })) }));
+    return res.json({ count: sanitized.length, questions: sanitized });
+  } catch (err) {
+    console.error('Error cargando preguntas:', err);
+    return res.status(500).json({ error: 'Error al cargar preguntas' });
+  }
 });
 
 app.post('/api/submit', (req, res) => {
