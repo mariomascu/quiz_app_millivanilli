@@ -8,6 +8,8 @@ let respuestasUsuario = {};
 let cuestionarioCorregido = false;
 // Preguntas marcadas para repasar (ids)
 let reviewSet = new Set();
+// Lista ordenada de números de pregunta (1-based) para mostrar en el panel
+let reviewList = [];
 
 // Badge DOM
 let reviewBadge = null;
@@ -78,6 +80,7 @@ async function inicializarApp() {
 // Limpia el estado de repaso completamente (memoria, DOM y badge)
 function clearReviewState() {
     reviewSet = new Set();
+    reviewList = [];
     persistReviewState();
     updateReviewBadge();
 
@@ -96,6 +99,9 @@ function clearReviewState() {
         if (cnt) cnt.textContent = '0';
         existingBadge.classList.remove('visible');
     }
+    // Cerrar y re-renderizar panel de repaso
+    closeReviewPanel();
+    renderReviewPanel();
 }
 
 // ========================================
@@ -413,19 +419,27 @@ function renderizarCuestionario() {
                 const qid = String(e.currentTarget.dataset.qid);
                 const container = document.getElementById(`question-${qid}`);
                 const isActive = reviewSet.has(qid);
+                // Determinar número de pregunta (1-based) dentro del cuestionario actual
+                const qElements = Array.from(elements.questionsContainer.querySelectorAll('.question-item'));
+                const qnum = qElements.findIndex(q => q.id === `question-${qid}`) + 1;
                 if (!isActive) {
                     reviewSet.add(qid);
+                    // Añadir al final de reviewList si no existe
+                    if (!reviewList.includes(qnum)) reviewList.push(qnum);
                     e.currentTarget.classList.add('active');
                     e.currentTarget.setAttribute('aria-pressed', 'true');
                     if (container) container.classList.add('marked-review');
                 } else {
                     reviewSet.delete(qid);
+                    // Quitar de la lista ordenada
+                    reviewList = reviewList.filter(n => n !== qnum);
                     e.currentTarget.classList.remove('active');
                     e.currentTarget.setAttribute('aria-pressed', 'false');
                     if (container) container.classList.remove('marked-review');
                 }
                 persistReviewState();
                 updateReviewBadge();
+                renderReviewPanel();
             });
         });
 
@@ -468,16 +482,48 @@ function initReviewState() {
         reviewBadge.innerHTML = `<span class="review-badge-label">Repasar</span><span class="review-badge-count">0</span>`;
         document.body.appendChild(reviewBadge);
     }
+    // Cargar lista ordenada si existe
+    try {
+        const rawList = localStorage.getItem('reviewList');
+        if (rawList) reviewList = JSON.parse(rawList).map(Number);
+    } catch (e) { reviewList = []; }
+
     // Asegurar que el contenido y estado del badge reflejen reviewSet
     const countEl = reviewBadge.querySelector('.review-badge-count');
     if (countEl) countEl.textContent = reviewSet.size;
     updateReviewBadge();
+
+    // Crear panel de repaso (si no existe) y asociar toggle al badge
+    let panel = document.getElementById('reviewPanel');
+    if (!panel) {
+        panel = document.createElement('div');
+        panel.id = 'reviewPanel';
+        panel.className = 'review-panel';
+        // contenido será construido por renderReviewPanel()
+        document.body.appendChild(panel);
+    }
+    // Click en badge: toggle panel
+    reviewBadge.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleReviewPanel();
+    });
+    // Cerrar panel si se hace click fuera
+    document.addEventListener('click', (ev) => {
+        const p = document.getElementById('reviewPanel');
+        const b = document.getElementById('reviewBadge');
+        if (!p || !p.classList.contains('open')) return;
+        if (ev.target.closest('#reviewPanel') || ev.target.closest('#reviewBadge')) return;
+        closeReviewPanel();
+    });
+    renderReviewPanel();
 }
 
 function persistReviewState() {
     try {
         const arr = Array.from(reviewSet.values());
         localStorage.setItem('reviewSet', JSON.stringify(arr));
+        // Guardar la lista ordenada de números de pregunta
+        localStorage.setItem('reviewList', JSON.stringify(reviewList));
     } catch (err) {
         console.error('No se pudo guardar reviewSet en localStorage', err);
     }
@@ -655,6 +701,60 @@ function corregirCuestionario() {
     // Mostrar la pantalla de resultados
     mostrarPantalla('results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ==========================
+   PANEL DE REPASO (lista desplegable)
+   ========================== */
+function renderReviewPanel() {
+    const panel = document.getElementById('reviewPanel');
+    if (!panel) return;
+    // Construir lista en columna con números ordenados
+    if (!reviewList || reviewList.length === 0) {
+        panel.innerHTML = '<div class="review-empty">No hay preguntas marcadas para repasar</div>';
+        panel.classList.remove('has-items');
+        return;
+    }
+    panel.classList.add('has-items');
+    const itemsHtml = reviewList.map(n => `<button class="review-item" data-qnum="${n}">Pregunta ${n}</button>`).join('');
+    panel.innerHTML = `<div class="review-list">${itemsHtml}</div>`;
+
+    // Añadir listeners para saltar a la pregunta
+    panel.querySelectorAll('.review-item').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const qnum = parseInt(btn.dataset.qnum, 10);
+            // Encontrar la pregunta por orden en el DOM y hacer scroll
+            const qElements = Array.from(elements.questionsContainer.querySelectorAll('.question-item'));
+            const target = qElements[qnum - 1];
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // cerrar panel
+                closeReviewPanel();
+                // aportar un foco visible al elemento para facilitar localización
+                target.classList.add('flash-target');
+                setTimeout(() => target.classList.remove('flash-target'), 900);
+            }
+        });
+    });
+}
+
+function toggleReviewPanel() {
+    const panel = document.getElementById('reviewPanel');
+    if (!panel) return;
+    if (panel.classList.contains('open')) closeReviewPanel(); else openReviewPanel();
+}
+
+function openReviewPanel() {
+    const panel = document.getElementById('reviewPanel');
+    if (!panel) return;
+    renderReviewPanel();
+    panel.classList.add('open');
+}
+
+function closeReviewPanel() {
+    const panel = document.getElementById('reviewPanel');
+    if (!panel) return;
+    panel.classList.remove('open');
 }
 
 function calcularPuntuacion(correctas, incorrectas) {

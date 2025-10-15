@@ -507,6 +507,45 @@ h1 {
     font-weight: 700;
 }
 
+/* Panel desplegable de repaso */
+.review-panel {
+    position: fixed;
+    right: 24px;
+    bottom: 72px; /* encima del badge */
+    width: 125px;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    z-index: 100001;
+    transition: max-height 2s cubic-bezier(.2,.9,.2,1), opacity 1.5s ease;
+    opacity: 0;
+}
+.review-panel.open { opacity: 1; }
+.review-panel.has-items { padding: 8px; }
+.review-panel .review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.review-panel .review-item {
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.review-panel .review-item:hover { background: rgba(33,105,138,0.06); }
+.review-panel.open { max-height: 300px; }
+.review-panel .review-empty { padding: 12px; color: var(--text-secondary); }
+
+/* efecto de resalte temporal cuando saltamos a una pregunta */
+.flash-target { box-shadow: 0 0 0 3px rgba(248,171,40,0.18); transition: box-shadow 0.9s ease; }
+
 /* Asegurar que .question-item tenga posición relativa para posicionar el checkbox */
 .question-item { position: relative; }
 
