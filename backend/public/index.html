@@ -11,8 +11,10 @@
     <div class="container">
         <header>
             <!-- Logo fijo grande (accesible) -->
-            <img src="img/logo-opoquiz.webp" alt="Logotipo OpoQuiz" class="site-logo" width="280" height="280" />
-            <h1>📚 Cuestionarios de Oposiciones 📚</h1>
+             <div class="logo">
+                 <img src="img/logo-opoquiz.webp" alt="Logotipo OpoQuiz" class="site-logo" width="280" height="280" />
+             </div>
+            <h1>📚 Cuestionarios de Oposiciones</h1>
             <h2>Ordenanza Ayto. Córdoba</h2>
             <p class="subtitle">Reglamento Orgánico Municipal del Ayuntamiento de Córdoba</p>
         </header>
@@ -34,13 +36,25 @@
 
         <!-- Pantalla inicial -->
         <div id="initialScreen" class="screen hidden">
-            <div class="scoring-info">
-                <h3>📊 Sistema de Puntuación</h3>
-                <ul>
-                    <li>✅ Pregunta correcta: <strong>+1 punto</strong></li>
-                    <li>❌ Pregunta incorrecta: <strong>-0.33 puntos</strong> (cada 3 fallos = -1 punto)</li>
-                    <li>⚪ Pregunta sin responder: <strong>0 puntos</strong></li>
-                </ul>
+            <!-- Botón que abre el modal con el sistema de puntuación -->
+            <div class="scoring-trigger">
+                <button id="openScoringBtn" class="btn btn-secondary" type="button" aria-haspopup="dialog" aria-controls="scoringModal">Ver sistema de puntuación</button>
+            </div>
+
+            <!-- Modal de puntuación (hidden por defecto) -->
+            <div id="scoringModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="scoringTitle" aria-hidden="true">
+                <div class="modal-overlay" data-modal-close></div>
+                <div class="modal-content" role="document">
+                    <button id="closeScoringBtn" class="modal-close" aria-label="Cerrar ventana de puntuación">×</button>
+                    <div class="scoring-info" id="scoringContent">
+                        <h3 id="scoringTitle">📊 Sistema de Puntuación</h3>
+                        <ul>
+                            <li>✅ Pregunta correcta: <strong>+1 punto</strong></li>
+                            <li>❌ Pregunta incorrecta: <strong>-0.33 puntos</strong> (cada 3 fallos = -1 punto)</li>
+                            <li>⚪ Pregunta sin responder: <strong>0 puntos</strong></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="question-selector">

@@ -58,6 +58,7 @@ async function inicializarApp() {
         await cargarPreguntas();
         mostrarPantalla('initial');
         configurarEventListeners();
+        configurarModalPuntuacion();
     } catch (error) {
         const msg = (error && error.message) ? error.message : 'No se pudo cargar el archivo de preguntas. Verifica que el archivo "preguntas.json" esté en la carpeta "data/".';
         mostrarError(msg);
@@ -188,6 +189,43 @@ function configurarEventListeners() {
     elements.correctBtn.addEventListener('click', corregirCuestionario);
     elements.repeatBtn.addEventListener('click', handleRepetirCuestionario);
     elements.newQuizBtn.addEventListener('click', handleNuevoCuestionario);
+}
+
+// Event listeners para el modal de puntuación
+function configurarModalPuntuacion() {
+    const openBtn = document.getElementById('openScoringBtn');
+    const closeBtn = document.getElementById('closeScoringBtn');
+    const modal = document.getElementById('scoringModal');
+    const overlay = modal ? modal.querySelector('.modal-overlay') : null;
+    let lastFocused = null;
+
+    if (!modal || !openBtn) return;
+
+    function openModal() {
+        lastFocused = document.activeElement;
+        modal.classList.remove('hidden');
+        modal.setAttribute('aria-hidden', 'false');
+        // mover foco al primer elemento interactivo dentro del modal
+        const close = modal.querySelector('.modal-close');
+        if (close) close.focus();
+        document.addEventListener('keydown', handleKeydown);
+    }
+
+    function closeModal() {
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+        if (lastFocused) lastFocused.focus();
+        document.removeEventListener('keydown', handleKeydown);
+    }
+
+    function handleKeydown(e) {
+        if (e.key === 'Escape') closeModal();
+        // TODO: trap focus inside modal (simple implementation left for future)
+    }
+
+    openBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
 }
 
 // ========================================

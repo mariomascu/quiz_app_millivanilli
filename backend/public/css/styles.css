@@ -2,11 +2,11 @@
    VARIABLES Y RESET
    ======================================== */
 :root {
-    --primary-color: #667eea;
-    --primary-dark: #5568d3;
+    --primary-color: #21698A;
+    --primary-dark: #F8AB28;
     --secondary-color: #48bb78;
     --secondary-dark: #38a169;
-    --tertiary-color: #ed8936;
+    --tertiary-color: #234C77;
     --tertiary-dark: #dd6b20;
     --correct-color: #48bb78;
     --correct-light: #c6f6d5;
@@ -29,7 +29,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #27AAAE 0%, #682490 100%);
     min-height: 100vh;
     padding: 20px;
     color: var(--text-primary);
@@ -72,29 +72,20 @@ header {
 
 /* Logo fijo grande en el header */
 .site-logo {
-    position: fixed;
     top: 20px;
     left: 50%;
-    transform: translateX(-50%);
-    width: 280px;
+    width: 320px;
     height: auto;
     z-index: 9999;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
     background: var(--white);
     padding: 8px;
-}
-
-/* Evitar que el contenido quede tapado por el logo fijo */
-.container {
-    padding-top: 340px; /* espacio suficiente para el logo grande */
 }
 
 /* Ajustes responsivos para dispositivos pequeños */
 @media (max-width: 720px) {
     .site-logo {
-        width: 160px;
-        top: 12px;
+        width: 290px;
+        top: 27px;
     }
     .container {
         padding-top: 200px;
@@ -183,6 +174,60 @@ h1 {
     padding: 25px;
     margin-bottom: 30px;
     border-radius: 10px;
+}
+
+/* ==========================
+   Modal de Puntuación
+   ========================== */
+.modal.hidden {
+    display: none !important;
+}
+.modal {
+    position: fixed;
+    inset: 0; /* top/right/bottom/left 0 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+.modal-content {
+    position: relative;
+    z-index: 10001;
+    background: var(--white);
+    border-radius: 14px;
+    max-width: 700px;
+    width: calc(100% - 40px);
+    padding: 28px;
+    box-shadow: var(--shadow-lg);
+    animation: modalPop 0.18s ease;
+}
+@keyframes modalPop {
+    from { transform: translateY(8px) scale(0.98); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+.scoring-info ul {
+    list-style: disc inside;
+    margin-top: 12px;
+}
+.scoring-trigger { text-align: center; margin: 20px 0; }
+
+@media (max-width: 480px) {
+    .modal-content { padding: 18px; }
 }
 
 .scoring-info h3 {
