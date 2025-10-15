@@ -396,6 +396,120 @@ h1 {
     transition: all 0.3s ease;
 }
 
+/* Marca de repaso: checkbox en esquina superior derecha y estilo marcado */
+.question-item .review-toggle {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+}
+
+.question-item.marked-review {
+    border-color: var(--primary-dark);
+    /* Fondo más suave que el borde: versión translúcida del color primary-dark */
+    background: rgba(248,171,40,0.06);
+}
+
+/* Bandera de repaso (icono) */
+.review-flag {
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: color 0.18s ease, transform 0.12s ease;
+    background: transparent; /* quitar fondo de botón por defecto */
+    border: none; /* quitar borde por defecto */
+    padding: 0; /* quitar padding por defecto */
+    -webkit-appearance: none; /* evitar estilo de botón del navegador */
+    appearance: none;
+}
+
+.review-flag:focus-visible {
+    outline: 2px solid rgba(33,105,138,0.22);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.review-flag svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    stroke: none;
+}
+
+/* Estado activado: bandera rellena/iluminada en rojo */
+.review-flag.active {
+    color: var(--incorrect-color);
+    transform: scale(1.06);
+}
+
+/* Material Symbols specific styling: usar versión rellena cuando FILL>0 */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-size: 20px;
+    line-height: 1;
+    /* color por defecto: azul muy clarito corporativo */
+    color: rgba(33,105,138,0.35); /* versión clara del --primary-color */
+}
+.material-symbols-outlined.active {
+    color: var(--primary-dark);
+}
+
+.question-item .review-toggle .review-label {
+    font-size: 0.80em;
+    color: var(--text-primary);
+    font-weight: 400;
+    user-select: none;
+    color: rgba(33,105,138,0.55);
+}
+
+/* Hacer que la zona entre la etiqueta y la bandera sea clicable */
+.question-item .review-toggle {
+    padding: 4px 10px; /* aumenta el área de interacción sin modificar la apariencia drástica */
+    border-radius: 20px;
+}
+.question-item .review-toggle:hover { background: rgba(0,0,0,0.02); }
+.question-item .review-toggle, .question-item .review-toggle .review-label { cursor: pointer; }
+
+/* Badge flotante que muestra número de preguntas para repasar */
+.review-badge {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 2px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+    z-index: 100000;
+    padding-right: 2px;
+    display: none; /* se muestra cuando >0 */
+}
+
+.review-badge.visible { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+
+.review-badge .review-badge-count {
+    background: rgba(255,255,255,0.12);
+    padding: 6px 13px;
+    border-radius: 999px;
+    font-weight: 900;
+}
+
+.review-badge .review-badge-label {
+    font-size: 0.95em;
+    font-weight: 700;
+}
+
+/* Asegurar que .question-item tenga posición relativa para posicionar el checkbox */
+.question-item { position: relative; }
+
 .question-item.correct {
     background: var(--correct-light);
     border-color: var(--correct-color);

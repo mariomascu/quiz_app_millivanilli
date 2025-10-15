@@ -6,6 +6,11 @@ let todasLasPreguntas = [];
 let preguntasActuales = [];
 let respuestasUsuario = {};
 let cuestionarioCorregido = false;
+// Preguntas marcadas para repasar (ids)
+let reviewSet = new Set();
+
+// Badge DOM
+let reviewBadge = null;
 
 // Referencias a elementos del DOM
 const screens = {
@@ -59,10 +64,37 @@ async function inicializarApp() {
         mostrarPantalla('initial');
         configurarEventListeners();
         configurarModalPuntuacion();
+        initReviewState();
+        // Al iniciar la aplicación (o recargar), resetear el estado de repaso
+        // para que el contador empiece en 0 y no muestre el badge en la página principal
+        clearReviewState();
     } catch (error) {
         const msg = (error && error.message) ? error.message : 'No se pudo cargar el archivo de preguntas. Verifica que el archivo "preguntas.json" esté en la carpeta "data/".';
         mostrarError(msg);
         console.error('Error al inicializar la app:', error);
+    }
+}
+
+// Limpia el estado de repaso completamente (memoria, DOM y badge)
+function clearReviewState() {
+    reviewSet = new Set();
+    persistReviewState();
+    updateReviewBadge();
+
+    // Quitar clases active de los botones y aria-pressed
+    document.querySelectorAll('.review-flag.active').forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
+    });
+
+    // Quitar clase visual de las preguntas marcadas
+    document.querySelectorAll('.question-item.marked-review').forEach(q => q.classList.remove('marked-review'));
+    // Asegurar que el badge muestre 0 y esté oculto
+    const existingBadge = document.getElementById('reviewBadge');
+    if (existingBadge) {
+        const cnt = existingBadge.querySelector('.review-badge-count');
+        if (cnt) cnt.textContent = '0';
+        existingBadge.classList.remove('visible');
     }
 }
 
@@ -178,6 +210,12 @@ function mostrarPantalla(nombrePantalla) {
     if (screens[nombrePantalla]) {
         screens[nombrePantalla].classList.remove('hidden');
     }
+    // Si estamos en la pantalla inicial, ocultar el badge flotante de repasar
+    const badge = document.getElementById('reviewBadge');
+    if (badge) {
+        if (nombrePantalla === 'initial') badge.classList.remove('visible');
+        else if (reviewSet.size > 0) badge.classList.add('visible');
+    }
 }
 
 function mostrarError(mensaje) {
@@ -281,6 +319,8 @@ function generarCuestionario(cantidad) {
     // Resetear respuestas y estado
     respuestasUsuario = {};
     cuestionarioCorregido = false;
+    // Limpiar cualquier marca de repaso previa
+    clearReviewState();
     
     // Renderizar cuestionario
     renderizarCuestionario();
@@ -326,10 +366,15 @@ function renderizarCuestionario() {
             }
         }
     
+        // Construir HTML del enunciado y opciones
         questionDiv.innerHTML = `
+            <div class="review-toggle">
+                <span class="review-label">Repasar</span>
+                <button class="review-flag material-symbols-outlined ${reviewSet.has(String(pregunta.id)) ? 'active' : ''}" data-qid="${pregunta.id}" title="Marcar para repasar" aria-pressed="${reviewSet.has(String(pregunta.id)) ? 'true' : 'false'}">flag</button>
+            </div>
             <div class="question-number">Pregunta ${index + 1}</div>
             <div class="question-text">${escapeHTML(pregunta.text)}</div>
-        
+
             <div class="options-container">
                 ${opcionesOrdenadas.map(opcion => `
                     <div class="answer-option" data-option="${opcion.id}">
@@ -345,6 +390,11 @@ function renderizarCuestionario() {
                 `).join('')}
             </div>
         `;
+
+        // Aplicar clase si está marcada para repasar
+        if (reviewSet.has(String(pregunta.id))) {
+            questionDiv.classList.add('marked-review');
+        }
         
         elements.questionsContainer.appendChild(questionDiv);
     });
@@ -357,7 +407,88 @@ function renderizarCuestionario() {
                 respuestasUsuario[questionId] = e.target.value;
             });
         });
+        // Añadir listeners a los botones de bandera de repaso
+        elements.questionsContainer.querySelectorAll('.review-flag').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const qid = String(e.currentTarget.dataset.qid);
+                const container = document.getElementById(`question-${qid}`);
+                const isActive = reviewSet.has(qid);
+                if (!isActive) {
+                    reviewSet.add(qid);
+                    e.currentTarget.classList.add('active');
+                    e.currentTarget.setAttribute('aria-pressed', 'true');
+                    if (container) container.classList.add('marked-review');
+                } else {
+                    reviewSet.delete(qid);
+                    e.currentTarget.classList.remove('active');
+                    e.currentTarget.setAttribute('aria-pressed', 'false');
+                    if (container) container.classList.remove('marked-review');
+                }
+                persistReviewState();
+                updateReviewBadge();
+            });
+        });
+
+        // Hacer que la zona entre la etiqueta y la bandera sea clicable: delegar clicks del contenedor
+        elements.questionsContainer.querySelectorAll('.review-toggle').forEach(container => {
+            container.addEventListener('click', (e) => {
+                // Si el clic proviene ya del botón, no reinventemos la rueda
+                const clickedFlag = e.target.closest('.review-flag');
+                if (clickedFlag) return; // el handler del botón gestionará el toggle
+
+                // Si hacen click en cualquier parte del contenedor (etiqueta), encontrar el botón y disparar click
+                const btn = container.querySelector('.review-flag');
+                if (btn) btn.click();
+            });
+        });
     }
+}
+
+function initReviewState() {
+    try {
+        const raw = localStorage.getItem('reviewSet');
+        if (raw) {
+            const arr = JSON.parse(raw);
+            reviewSet = new Set(arr.map(String));
+        }
+    } catch (err) {
+        reviewSet = new Set();
+    }
+
+    // Reutilizar badge existente si ya hay uno (evita duplicados si initReviewState se llama varias veces)
+    const existing = document.getElementById('reviewBadge');
+    if (existing) {
+        reviewBadge = existing;
+    } else {
+        // Crear badge flotante
+        reviewBadge = document.createElement('div');
+        reviewBadge.className = 'review-badge';
+        reviewBadge.id = 'reviewBadge';
+        // Contenido interno: label + contador
+        reviewBadge.innerHTML = `<span class="review-badge-label">Repasar</span><span class="review-badge-count">0</span>`;
+        document.body.appendChild(reviewBadge);
+    }
+    // Asegurar que el contenido y estado del badge reflejen reviewSet
+    const countEl = reviewBadge.querySelector('.review-badge-count');
+    if (countEl) countEl.textContent = reviewSet.size;
+    updateReviewBadge();
+}
+
+function persistReviewState() {
+    try {
+        const arr = Array.from(reviewSet.values());
+        localStorage.setItem('reviewSet', JSON.stringify(arr));
+    } catch (err) {
+        console.error('No se pudo guardar reviewSet en localStorage', err);
+    }
+}
+
+function updateReviewBadge() {
+    if (!reviewBadge) return;
+    const count = reviewSet.size;
+    const countEl = reviewBadge.querySelector('.review-badge-count');
+    if (countEl) countEl.textContent = count;
+    if (count > 0) reviewBadge.classList.add('visible'); else reviewBadge.classList.remove('visible');
 }
 
 function corregirCuestionario() {
@@ -491,12 +622,18 @@ function corregirCuestionario() {
         elements.correctedQuestionsContainer.appendChild(clonedQuestion);
     });
     
-    // Deshabilitar solo los radio buttons del cuestionario (no los del selector inicial)
-    if (elements.questionsContainer) {
-        elements.questionsContainer.querySelectorAll('input[type="radio"]').forEach(input => {
+    // Deshabilitar todos los radio buttons de las preguntas (evitar que el usuario cambie respuestas)
+    const disableRadiosIn = (root) => {
+        if (!root) return;
+        root.querySelectorAll('input[type="radio"]').forEach(input => {
             input.disabled = true;
+            // quitar del tab order para mayor accesibilidad post-corrección
+            try { input.setAttribute('tabindex', '-1'); } catch (e) {}
         });
-    }
+    };
+
+    disableRadiosIn(elements.questionsContainer);
+    disableRadiosIn(elements.correctedQuestionsContainer);
     
     // Calcular puntuación
     const puntuacion = calcularPuntuacion(correctas, incorrectas);
@@ -513,6 +650,8 @@ function corregirCuestionario() {
         elements.newQuizBtn.style.display = '';
     }
 
+    // Limpiar marcas de repaso cuando se corrige el cuestionario
+    clearReviewState();
     // Mostrar la pantalla de resultados
     mostrarPantalla('results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -568,6 +707,9 @@ function repetirCuestionario() {
     respuestasUsuario = {};
     cuestionarioCorregido = false;
 
+    // Limpiar marcas de repaso al repetir
+    clearReviewState();
+
     // Renderizar cuestionario
     renderizarCuestionario();
     // Al repetir, habilitar el botón de corregir y deshabilitar repetir/nuevo hasta corregir
@@ -584,6 +726,8 @@ function nuevoCuestionario() {
     preguntasActuales = [];
     respuestasUsuario = {};
     cuestionarioCorregido = false;
+    // Limpiar marcas de repaso al iniciar nuevo cuestionario
+    clearReviewState();
     // Limpiar contenedores
     elements.questionsContainer.innerHTML = '';
     elements.resultsContainer.innerHTML = '';
