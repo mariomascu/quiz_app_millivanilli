@@ -226,6 +226,10 @@ h1 {
 }
 .scoring-trigger { text-align: center; margin: 20px 0; }
 
+#openScoringBtn{
+    background-color: var(--primary-dark);
+}
+
 @media (max-width: 480px) {
     .modal-content { padding: 18px; }
 }
