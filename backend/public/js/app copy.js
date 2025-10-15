@@ -90,40 +90,36 @@ async function cargarPreguntas() {
             throw new Error('El endpoint /api/questions devolvió un resultado vacío o con formato inesperado');
         }
 
-        // Transformar el formato del JSON/DB (soportar el formato actual del fichero y el de la BD)
+        // Transformar el formato del JSON (soportar el formato actual del fichero)
         // Formato esperado por la app (por pregunta):
-        // { id: number, text: string, options: [{ text: '...' }], answerText: '...' , explanation, source, epigrafe, pagina }
+        // { id: number, text: string, options: [{id: 'A', text: '...'}], correctAnswer: 'A', reference: string }
         todasLasPreguntas = data.map((q) => {
-            // Texto de la pregunta: puede venir como text, question o texto (BD)
-            const text = q.text || q.question || q.texto || '';
+            const text = q.text || q.question || '';
 
             // Normalizar opciones (pueden venir como strings o como objetos).
-            // Aceptamos distintos nombres en las opciones: text / texto, is_correct / es_correcta / isCorrect
+            // Nuevo formato: cada opción puede incluir un booleano que indica si es la correcta (isCorrect/ is_correct/ correct).
             let options = [];
             if (Array.isArray(q.options) && q.options.length > 0) {
                 if (typeof q.options[0] === 'string') {
-                    // Si las opciones son strings, marcar como correctas comparando con q.answer o q.respuesta_correcta si existe
-                    const answerText = q.answer || q.respuesta_correcta || q.answerText || null;
-                    options = q.options.map((optText) => ({ text: optText, isCorrect: answerText ? (optText === answerText) : false }));
+                    // Si las opciones son strings, marcar como correctas comparando con q.answer si existe
+                    options = q.options.map((optText) => ({ text: optText, isCorrect: q.answer ? (optText === q.answer) : false }));
                 } else if (typeof q.options[0] === 'object') {
                     options = q.options.map((opt) => {
-                        const optText = opt.text || opt.texto || opt.label || '';
-                        // Marcas de correcto posibles
-                        const isCorrect = (opt.isCorrect === true) || (opt.is_correct === true) || (opt.correct === true) || (opt.es_correcta === true);
-                        // Fallback: si no hay flag y q.answer/ respuesta_correcta existe, comparar por texto
-                        const fallbackAnswer = q.answer || q.respuesta_correcta || q.answerText || null;
-                        const fallbackIsCorrect = (!isCorrect && fallbackAnswer) ? (optText === fallbackAnswer) : false;
-                        return { text: optText, isCorrect: isCorrect || fallbackIsCorrect };
+                        // Considerar la opción correcta solo si el indicador es estrictamente true.
+                        // Aceptamos distintas claves: isCorrect, is_correct, correct
+                        const isCorrect = (opt.isCorrect === true) || (opt.is_correct === true) || (opt.correct === true);
+                        // Para compatibilidad con formatos antiguos: si no hay flag y q.answer existe, usar comparación exacta por texto
+                        const fallbackIsCorrect = (!isCorrect && q.answer) ? (opt.text === q.answer || opt.label === q.answer) : false;
+                        return { text: opt.text || opt.label || '', isCorrect: isCorrect || fallbackIsCorrect };
                     });
                 }
             }
 
             // Normalizar campos adicionales: explanation, source, epigrafe, pagina
-            const explanation = q.explanation || q.explicacion || q.explain || q.reference || '';
+            const explanation = q.explanation || q.explain || q.reference || '';
             const source = q.source || q.referenceSource || '';
             const epigrafe = q.epigrafe || q.section || '';
-            // posibles páginas en SQL: pagina_pdf, pagina_bop
-            const pagina = q.pagina || q.page || q.p || q.pagina_pdf || q.pagina_bop || null;
+            const pagina = q.pagina || q.page || q.p || null;
 
             return {
                 id: q.id,
@@ -131,7 +127,7 @@ async function cargarPreguntas() {
                 // options: array de { text, isCorrect }
                 options,
                 // Almacenar texto de respuesta original (si existe) para fallback
-                answerText: q.answer || q.respuesta_correcta || q.correctAnswer || null,
+                answerText: q.answer || q.correctAnswer || null,
                 // no fijamos un id de respuesta aquí: lo calcularemos al renderizar tras barajar
                 correctAnswer: null,
                 reference: explanation || source || '',
