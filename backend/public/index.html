@@ -13,7 +13,9 @@
         <header>
             <!-- Logo fijo grande (accesible) -->
              <div class="logo">
-                 <img src="img/logo-opoquiz.webp" alt="Logotipo OpoQuiz" class="site-logo" width="280" height="280" />
+                 <a href="/" aria-label="Ir a la página principal">
+                     <img src="img/logo-opoquiz.webp" alt="Logotipo OpoQuiz" class="site-logo" width="280" height="280" />
+                 </a>
              </div>
             <h1>📚 Cuestionarios de Oposiciones</h1>
             <h2>Ordenanza Ayto. Córdoba</h2>
@@ -37,27 +39,6 @@
 
         <!-- Pantalla inicial -->
         <div id="initialScreen" class="screen hidden">
-            <!-- Botón que abre el modal con el sistema de puntuación -->
-            <div class="scoring-trigger">
-                <button id="openScoringBtn" class="btn btn-secondary" type="button" aria-haspopup="dialog" aria-controls="scoringModal">Ver sistema de puntuación</button>
-            </div>
-
-            <!-- Modal de puntuación (hidden por defecto) -->
-            <div id="scoringModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="scoringTitle" aria-hidden="true">
-                <div class="modal-overlay" data-modal-close></div>
-                <div class="modal-content" role="document">
-                    <button id="closeScoringBtn" class="modal-close" aria-label="Cerrar ventana de puntuación">×</button>
-                    <div class="scoring-info" id="scoringContent">
-                        <h3 id="scoringTitle">📊 Sistema de Puntuación</h3>
-                        <ul>
-                            <li>✅ Pregunta correcta: <strong>+1 punto</strong></li>
-                            <li>❌ Pregunta incorrecta: <strong>-0.33 puntos</strong> (cada 3 fallos = -1 punto)</li>
-                            <li>⚪ Pregunta sin responder: <strong>0 puntos</strong></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
             <div class="question-selector">
                 <h3>Selecciona el número de preguntas:</h3>
                 <div class="radio-group">
@@ -86,12 +67,31 @@
             <div class="quiz-header">
                 <h2>Cuestionario</h2>
                 <p class="quiz-info">Responde todas las preguntas y pulsa "Corregir Test"</p>
+                <div class="scoring-trigger-quiz">
+                    <button id="openScoringBtn" class="btn btn-secondary" type="button" aria-haspopup="dialog" aria-controls="scoringModal">Ver sistema de puntuación</button>
+                </div>
             </div>
             
             <div id="questionsContainer"></div>
 
             <div class="button-group">
                 <button class="btn btn-primary" id="correctBtn">Corregir Test</button>
+            </div>
+        </div>
+
+        <!-- Modal de puntuación (hidden por defecto) - fuera de pantallas para poder abrirlo desde cualquier pantalla -->
+        <div id="scoringModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="scoringTitle" aria-hidden="true">
+            <div class="modal-overlay" data-modal-close></div>
+            <div class="modal-content" role="document">
+                <button id="closeScoringBtn" class="modal-close" aria-label="Cerrar ventana de puntuación">×</button>
+                <div class="scoring-info" id="scoringContent">
+                    <h3 id="scoringTitle">📊 Sistema de Puntuación</h3>
+                    <ul>
+                        <li>✅ Pregunta correcta: <strong>+1 punto</strong></li>
+                        <li>❌ Pregunta incorrecta: <strong>-0.33 puntos</strong> (cada 3 fallos = -1 punto)</li>
+                        <li>⚪ Pregunta sin responder: <strong>0 puntos</strong></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -107,8 +107,26 @@
             </div>
         </div>
 
+        <!-- Modal de confirmación personalizado para la corrección -->
+        <div id="confirmModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="confirmTitle" aria-hidden="true">
+            <div class="modal-overlay" data-modal-close></div>
+            <div class="modal-content confirm-modal" role="document">
+                <h3 id="confirmTitle">Confirmar acción</h3>
+                <div id="confirmMessage" class="confirm-message">¿Deseas continuar?</div>
+                <div class="confirm-actions">
+                    <button id="confirmCancel" class="btn btn-secondary">Cancelar</button>
+                    <button id="confirmOk" class="btn btn-primary">Continuar</button>
+                </div>
+            </div>
+        </div>
+
         <footer>
-            <p>© 2025 - Cuestionarios de Oposiciones Milli Vanilli</p>
+            <div class="footer-logo-wrap">
+                <a href="/" aria-label="Ir a la página principal">
+                    <img src="img/logo-opoquiz.webp" alt="Logotipo OpoQuiz" class="footer-logo" width="72" height="72" />
+                </a>                
+            </div>
+            <p>© 2025 - Cuestionarios de Oposiciones by Milli Vanilli</p>
         </footer>
     </div>
 

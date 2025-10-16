@@ -234,6 +234,34 @@ h1 {
     .modal-content { padding: 18px; }
 }
 
+/* Estilos para el modal de confirmación personalizado */
+.confirm-modal {
+    max-width: 520px;
+    padding: 20px 24px;
+    text-align: center;
+}
+.confirm-message {
+    margin: 18px 0 20px 0;
+    color: var(--text-primary);
+    font-size: 1.05em;
+}
+.confirm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.confirm-actions .btn {
+    min-width: 120px;
+}
+.confirm-actions .btn-primary {
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+}
+.confirm-actions .btn-secondary {
+    background: #f3f4f6;
+    color: var(--text-primary);
+}
+.modal.hidden[aria-hidden="true"] .modal-content { opacity: 0; transform: translateY(12px); }
+
 .scoring-info h3 {
     color: var(--primary-color);
     margin-bottom: 15px;
@@ -477,6 +505,7 @@ h1 {
 .question-item .review-toggle:hover { background: rgba(0,0,0,0.02); }
 .question-item .review-toggle, .question-item .review-toggle .review-label { cursor: pointer; }
 
+
 /* Badge flotante que muestra número de preguntas para repasar */
 .review-badge {
     position: fixed;
@@ -490,10 +519,22 @@ h1 {
     box-shadow: var(--shadow);
     z-index: 100000;
     padding-right: 2px;
-    display: none; /* se muestra cuando >0 */
+    /* Oculto por defecto pero presente en el DOM para animar */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateX(40px); /* desplazado hacia la derecha (fuera de pantalla) */
+    transition: transform 1s ease, opacity 1s ease;
+    pointer-events: none; /* no interactuable cuando está oculto */
 }
 
-.review-badge.visible { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.review-badge.visible {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
 
 .review-badge .review-badge-count {
     background: rgba(255,255,255,0.12);
@@ -718,6 +759,23 @@ footer {
     color: var(--text-secondary);
     font-size: 0.95em;
 }
+
+/* Footer logo pequeño centrado debajo de la línea divisoria */
+.footer-logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0 8px 0; /* espacio entre la línea y el copyright */
+}
+.footer-logo {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Ensure header logo link doesn't add underline or affect layout */
+.logo a { display: inline-block; }
+.logo a:focus { outline: 2px solid rgba(33,105,138,0.18); border-radius: 6px; }
 
 /* ========================================
    RESPONSIVE

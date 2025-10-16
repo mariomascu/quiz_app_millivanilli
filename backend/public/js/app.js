@@ -234,7 +234,9 @@ function mostrarError(mensaje) {
 // ========================================
 function configurarEventListeners() {
     elements.generateBtn.addEventListener('click', handleGenerarCuestionario);
-    elements.correctBtn.addEventListener('click', corregirCuestionario);
+    elements.correctBtn.addEventListener('click', () => {
+        confirmBeforeCorrection();
+    });
     elements.repeatBtn.addEventListener('click', handleRepetirCuestionario);
     elements.newQuizBtn.addEventListener('click', handleNuevoCuestionario);
 }
@@ -701,6 +703,107 @@ function corregirCuestionario() {
     // Mostrar la pantalla de resultados
     mostrarPantalla('results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Antes de corregir, confirmar con el usuario según el estado del cuestionario
+function confirmBeforeCorrection() {
+    // Contar preguntas sin responder
+    const total = preguntasActuales.length;
+    let sinResponder = 0;
+    preguntasActuales.forEach(p => {
+        if (!respuestasUsuario[p.id]) sinResponder++;
+    });
+
+    // Número de preguntas marcadas para repasar
+    const repasarCount = reviewSet.size;
+
+    // Construir mensaje y lógica de confirmación según casos
+    (async () => {
+        if (sinResponder > 0 && repasarCount > 0) {
+            const msg = `Hay ${sinResponder} pregunta(s) sin responder y ${repassarText(repasarCount)} marcadas para repasar. ¿Deseas corregir el examen igualmente?`;
+            const ok = await showConfirmModal(msg, 'Confirmar corrección');
+            if (ok) corregirCuestionario();
+            return;
+        }
+
+        if (sinResponder > 0) {
+            const msg = `Hay ${sinResponder} pregunta(s) sin responder. ¿Deseas continuar y corregir el examen?`;
+            const ok = await showConfirmModal(msg, 'Preguntas sin responder');
+            if (ok) corregirCuestionario();
+            return;
+        }
+
+        if (repasarCount > 0) {
+            const msg = `Hay ${repassarText(repasarCount)} marcadas para repasar. ¿Deseas corregir el examen igualmente?`;
+            const ok = await showConfirmModal(msg, 'Preguntas marcadas para repasar');
+            if (ok) corregirCuestionario();
+            return;
+        }
+
+        // Si no hay sin responder y no hay marcadas, advertir antes de corregir
+        const allAnsweredMsg = 'Parece que has respondido todas las preguntas. ¿Estás seguro de que quieres proceder a corregir el examen?';
+        const ok = await showConfirmModal(allAnsweredMsg, 'Confirmar corrección');
+        if (ok) corregirCuestionario();
+    })();
+}
+
+function repassarText(count) {
+    return count === 1 ? '1 pregunta' : `${count} preguntas`;
+}
+
+// Modal de confirmación personalizado (Promise-based)
+function showConfirmModal(message, title = 'Confirmar') {
+    return new Promise((resolve) => {
+        const modal = document.getElementById('confirmModal');
+        const msgEl = document.getElementById('confirmMessage');
+        const titleEl = document.getElementById('confirmTitle');
+        const okBtn = document.getElementById('confirmOk');
+        const cancelBtn = document.getElementById('confirmCancel');
+        const overlay = modal.querySelector('.modal-overlay');
+
+        if (!modal || !msgEl || !okBtn || !cancelBtn) {
+            // Fallback al confirm nativo si algo falta
+            const res = window.confirm(message);
+            resolve(res);
+            return;
+        }
+
+        titleEl.textContent = title;
+        msgEl.textContent = message;
+
+        // Mostrar modal
+        modal.classList.remove('hidden');
+        modal.setAttribute('aria-hidden', 'false');
+
+        // Guardar foco
+        const lastFocused = document.activeElement;
+
+        function cleanup(result) {
+            modal.classList.add('hidden');
+            modal.setAttribute('aria-hidden', 'true');
+            okBtn.removeEventListener('click', onOk);
+            cancelBtn.removeEventListener('click', onCancel);
+            overlay.removeEventListener('click', onCancel);
+            document.removeEventListener('keydown', onKeydown);
+            if (lastFocused) lastFocused.focus();
+            resolve(result);
+        }
+
+        function onOk() { cleanup(true); }
+        function onCancel() { cleanup(false); }
+        function onKeydown(e) {
+            if (e.key === 'Escape') onCancel();
+            if (e.key === 'Enter') onOk();
+        }
+
+        okBtn.addEventListener('click', onOk);
+        cancelBtn.addEventListener('click', onCancel);
+        overlay.addEventListener('click', onCancel);
+        document.addEventListener('keydown', onKeydown);
+
+        // Enfocar el botón principal para accesibilidad
+        okBtn.focus();
+    });
 }
 
 /* ==========================
