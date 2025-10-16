@@ -444,14 +444,13 @@ function renderThemes(temas) {
         const btn = document.createElement('button');
         btn.className = 'theme-button';
         btn.type = 'button';
-        // Mostrar únicamente el nombre del tema (sin recuento). Si falta title, usar id como fallback
-        const display = (t && (t.title || t.nombre || t.name)) ? (t.title || t.nombre || t.name) : String(t && t.id ? t.id : 'Tema');
-        btn.textContent = display;
-        // NO exponer id en el DOM; solo mostrar el título (texto)
+    // Mostrar únicamente el nombre del tema (sin recuento). Si falta title, usar id como fallback
+    const display = (t && (t.title || t.nombre || t.name)) ? (t.title || t.nombre || t.name) : String(t && t.id ? t.id : 'Tema');
+    btn.textContent = display;
+    // NO exponer id en el DOM; solo mostrar el título (texto)
         btn.addEventListener('click', async () => {
             // Guardar selección y cargar títulos del tema
-            // Asegurarnos de que selectedTheme.title siempre tenga el texto mostrado (evitar 'undefined')
-            selectedTheme = { id: t.id, title: display };
+            selectedTheme = { id: t.id, title: t.title };
             await fetchTitlesForTheme(t.id);
         });
         container.appendChild(btn);
@@ -499,12 +498,11 @@ function renderTitles(titulos) {
         btn.className = 'theme-button';
         btn.type = 'button';
         // truncar texto largo con CSS; aquí ponemos el texto
-        const display = t.title || t.nombre || t.name || String(t.id || 'Título');
-        btn.textContent = display;
+        btn.textContent = t.title;
         btn.dataset.tid = String(t.id);
-        btn.setAttribute('aria-label', `Título ${display}`);
+        btn.setAttribute('aria-label', `Título ${t.title}`);
         btn.addEventListener('click', () => {
-            selectedTitle = { id: t.id, title: display };
+            selectedTitle = { id: t.id, title: t.title };
             // ir automáticamente a la pantalla de conteo
             const titleEl = document.getElementById('countScreenTitle');
             if (selectedTitle && titleEl) titleEl.textContent = `Selecciona el número de preguntas para el test: (${selectedTitle.title})`;
