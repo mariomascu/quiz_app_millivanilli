@@ -13,6 +13,7 @@
     --incorrect-color: #f56565;
     --incorrect-light: #fed7d7;
     --neutral-color: #e2e8f0;
+    --button-color: #26A2A8;
     --text-primary: #2d3748;
     --text-secondary: #4a5568;
     --background: #f7fafc;
@@ -293,6 +294,34 @@ h1 {
     font-size: 1.3em;
 }
 
+/* Grid de botones por tema */
+.theme-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(2, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+.theme-button {
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 2px solid var(--neutral-color);
+    background: var(--white);
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--primary-color);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    min-height: 56px;
+}
+.theme-button:hover { transform: translateY(-4px); border-color: var(--primary-color); }
+.theme-button:active { transform: translateY(-1px); }
+.selected-theme-title { font-size: 1.2em; font-weight: 700; color: var(--primary-color); margin: 10px 0 20px 0; }
+
 .radio-group {
     display: flex;
     justify-content: center;
@@ -369,29 +398,79 @@ h1 {
 .btn-primary:hover {
     background: var(--primary-dark);
 }
-
 .btn-secondary {
-    background: var(--secondary-color);
+    /* Color configurable para acciones secundarias */
+    background: var(--button-color);
     color: var(--white);
 }
 
 .btn-secondary:hover {
-    background: var(--secondary-dark);
+    background: color-mix(in srgb, var(--button-color) 80%, black 20%);
 }
 
 .btn-tertiary {
-    background: var(--tertiary-color);
+    /* Usamos primary-dark para acentos terciarios como solicitaste */
+    background: var(--primary-dark);
     color: var(--white);
 }
 
 .btn-tertiary:hover {
-    background: var(--tertiary-dark);
+    background: color-mix(in srgb, var(--primary-dark) 85%, black 15%);
 }
 
 .btn:disabled {
     background: #cbd5e0;
     cursor: not-allowed;
     transform: none;
+}
+
+/* ==========================
+   RESULTADOS - Layout de botones personalizados
+   ========================== */
+.results-actions contiene la agrupación de controles en la pantalla de resultados
+.results-actions {
+    width: 100%;
+    max-width: 720px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+.top-buttons {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+/* Restaurar formato clásico de botones (como .btn) para los botones de resultados */
+.top-buttons .btn-square {
+    flex: 0 1 auto;
+    min-width: 200px; /* tamaño similar al original */
+    padding: 15px 40px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-buttons .btn-square .btn-label { margin-left: 8px; font-weight: 700; }
+.btn-icon { font-size: 1.1rem; line-height: 1; }
+.bottom-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn-wide {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 16px 22px;
+    border-radius: 12px;
+}
+
+@media (max-width: 720px) {
+    .top-buttons { flex-direction: column; }
+    .top-buttons .btn-square { width: 100%; min-width: 0; }
 }
 
 /* ========================================

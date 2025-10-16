@@ -6,6 +6,8 @@ let todasLasPreguntas = [];
 let preguntasActuales = [];
 let respuestasUsuario = {};
 let cuestionarioCorregido = false;
+let selectedTheme = null; // objeto { id, title }
+let selectedTitle = null; // objeto { id, title }
 // Preguntas marcadas para repasar (ids)
 let reviewSet = new Set();
 // Lista ordenada de números de pregunta (1-based) para mostrar en el panel
@@ -22,6 +24,11 @@ const screens = {
     quiz: document.getElementById('quizScreen'),
     results: document.getElementById('resultsScreen')
 };
+
+// Añadir nuevas pantallas del flujo de selección
+screens.themes = document.getElementById('themesScreen');
+screens.themeConfirm = document.getElementById('themeConfirmScreen');
+screens.count = document.getElementById('countScreen');
 
 const elements = {
     errorMessage: document.getElementById('errorMessage'),
@@ -63,7 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 async function inicializarApp() {
     try {
         await cargarPreguntas();
-        mostrarPantalla('initial');
+        // mostrar pantalla de selección de temario
+        await loadAndRenderThemes();
+        mostrarPantalla('themes');
         configurarEventListeners();
         configurarModalPuntuacion();
         initReviewState();
@@ -176,7 +185,9 @@ async function cargarPreguntas() {
                 explanation,
                 source,
                 epigrafe,
-                pagina
+                pagina,
+                // conservar campo de relación con el título/tema para filtrado posterior
+                titulo_id: q.titulo_id ?? q.tituloId ?? q.titulo ?? null
             };
         });
 
@@ -208,14 +219,14 @@ async function cargarPreguntas() {
 // ========================================
 function mostrarPantalla(nombrePantalla) {
     // Ocultar todas las pantallas
-    Object.values(screens).forEach(screen => {
-        screen.classList.add('hidden');
-    });
+        Object.values(screens).forEach(screen => {
+            if (screen && screen.classList) screen.classList.add('hidden');
+        });
     
     // Mostrar la pantalla solicitada
-    if (screens[nombrePantalla]) {
-        screens[nombrePantalla].classList.remove('hidden');
-    }
+        if (screens[nombrePantalla]) {
+            screens[nombrePantalla].classList.remove('hidden');
+        }
     // Si estamos en la pantalla inicial, ocultar el badge flotante de repasar
     const badge = document.getElementById('reviewBadge');
     if (badge) {
@@ -239,6 +250,17 @@ function configurarEventListeners() {
     });
     elements.repeatBtn.addEventListener('click', handleRepetirCuestionario);
     elements.newQuizBtn.addEventListener('click', handleNuevoCuestionario);
+    // nuevo botón: volver al menú principal (recargar la app y volver al inicio)
+    const backToMenuBtn = document.getElementById('backToMenuBtn');
+    if (backToMenuBtn) backToMenuBtn.addEventListener('click', () => { window.location.reload(); });
+
+    // Nuevos listeners para navegación entre pantallas
+    const themeBackBtn = document.getElementById('themeBackBtn');
+    const toCountBtn = document.getElementById('toCountBtn');
+    const countBackBtn = document.getElementById('countBackBtn');
+    if (themeBackBtn) themeBackBtn.addEventListener('click', () => { mostrarPantalla('themes'); });
+    // toCountBtn removed: navigation happens automatically when selecting a title
+    if (countBackBtn) countBackBtn.addEventListener('click', () => { mostrarPantalla('themeConfirm'); });
 }
 
 // Event listeners para el modal de puntuación
@@ -283,12 +305,18 @@ function configurarModalPuntuacion() {
 // ========================================
 function handleGenerarCuestionario() {
     const cantidadSeleccionada = parseInt(document.querySelector('input[name="questionCount"]:checked').value);
-    
-    if (todasLasPreguntas.length < cantidadSeleccionada) {
-        alert(`No hay suficientes preguntas en el banco. Se necesitan ${cantidadSeleccionada} pero solo hay ${todasLasPreguntas.length}.`);
+
+    // Comprobar que el pool filtrado tiene suficientes preguntas
+    const pool = getFilteredPool();
+    if (!Array.isArray(pool) || pool.length === 0) {
+        alert('No se encontraron preguntas para la selección actual (tema/título). Vuelve atrás y selecciona otro título o tema.');
         return;
     }
-    
+    if (pool.length < cantidadSeleccionada) {
+        alert(`No hay suficientes preguntas en la selección filtrada. Se necesitan ${cantidadSeleccionada} pero solo hay ${pool.length}. Reduce el número o elige otro título.`);
+        return;
+    }
+
     generarCuestionario(cantidadSeleccionada);
     mostrarPantalla('quiz');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -306,8 +334,17 @@ function handleRepetirCuestionario() {
 }
 
 function handleNuevoCuestionario() {
-    nuevoCuestionario();
-    mostrarPantalla('initial');
+    // Volver a la pantalla 2 (selección de título) para elegir otro título dentro del mismo tema
+    // No borramos la selección del tema para facilitar seleccionar otro título del mismo tema
+    // limpiar preguntas y resultados visibles
+    preguntasActuales = [];
+    respuestasUsuario = {};
+    cuestionarioCorregido = false;
+    elements.questionsContainer.innerHTML = '';
+    elements.resultsContainer.innerHTML = '';
+    elements.correctedQuestionsContainer.innerHTML = '';
+    // Mostrar la pantalla de selección de títulos
+    mostrarPantalla('themeConfirm');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -321,8 +358,10 @@ function seleccionarPreguntasAleatorias(array, cantidad) {
 }
 
 function generarCuestionario(cantidad) {
+    const pool = getFilteredPool();
+    console.log('DEBUG generarCuestionario pool length after filtering:', pool.length);
     // Seleccionar preguntas aleatorias
-    preguntasActuales = seleccionarPreguntasAleatorias(todasLasPreguntas, cantidad);
+    preguntasActuales = seleccionarPreguntasAleatorias(pool, cantidad);
     
     // Resetear respuestas y estado
     respuestasUsuario = {};
@@ -332,6 +371,145 @@ function generarCuestionario(cantidad) {
     
     // Renderizar cuestionario
     renderizarCuestionario();
+}
+
+// Devuelve el pool de preguntas filtrado según selectedTitle/selectedTheme
+function getFilteredPool() {
+    let pool = Array.isArray(todasLasPreguntas) ? todasLasPreguntas.slice() : [];
+    if (selectedTitle) {
+        const key = String(selectedTitle.id);
+        const titleText = String(selectedTitle.title || '');
+        pool = pool.filter(q => {
+            const qTid = q.titulo_id !== undefined && q.titulo_id !== null ? String(q.titulo_id) : null;
+            const qText = String(q.epigrafe ?? q.titulo ?? '');
+            return (qTid && qTid === key) || (qText && qText === titleText);
+        });
+        return pool;
+    }
+
+    if (selectedTheme) {
+        const key = String(selectedTheme.id);
+        const themeText = String(selectedTheme.title || '');
+        pool = pool.filter(q => {
+            const qTid = q.titulo_id !== undefined && q.titulo_id !== null ? String(q.titulo_id) : null;
+            const qText = String(q.epigrafe ?? q.titulo ?? '');
+            return (qTid && qTid === key) || (qText && qText === themeText);
+        });
+    }
+    return pool;
+}
+
+// Cargar temas desde el endpoint y renderizar botones
+async function loadAndRenderThemes() {
+    try {
+        const res = await fetch('/api/temas');
+        if (!res.ok) throw new Error('No se pudieron cargar los temas');
+        const payload = await res.json();
+        const temas = payload?.temas || [];
+        console.log('DEBUG /api/temas payload:', payload);
+        renderThemes(temas);
+    } catch (err) {
+        console.error('Error cargando temas:', err);
+        // Si ya cargamos preguntas con éxito, construir temas cliente-side como fallback
+        if (Array.isArray(todasLasPreguntas) && todasLasPreguntas.length > 0) {
+            console.warn('Fallback: construyendo lista de temas a partir de preguntas cargadas en cliente');
+            const group = {};
+            todasLasPreguntas.forEach(q => {
+                const key = q.titulo_id ?? (q.epigrafe ? String(q.epigrafe).trim() : 'Sin tema');
+                group[key] = (group[key] || 0) + 1;
+            });
+            const temas = Object.keys(group).map(k => ({ id: k, title: String(k), count: group[k] }));
+            renderThemes(temas);
+            mostrarPantalla('themes');
+            return;
+        }
+
+        // Fallback por defecto: mostrar mensaje amigable en la pantalla de temas para reintentar
+        const container = document.getElementById('themesContainer');
+        if (container) {
+            container.innerHTML = `<div class="error-box">No se pudieron cargar los temarios. Comprueba la conexión con la base de datos y pulsa <button id="retryThemes" class="btn btn-primary">Reintentar</button></div>`;
+            const retry = document.getElementById('retryThemes');
+            if (retry) retry.addEventListener('click', () => loadAndRenderThemes());
+        }
+        mostrarPantalla('themes');
+    }
+}
+
+function renderThemes(temas) {
+    const container = document.getElementById('themesContainer');
+    if (!container) return;
+    container.innerHTML = '';
+    console.log('DEBUG renderThemes received temas:', temas);
+    temas.forEach(t => {
+        const btn = document.createElement('button');
+        btn.className = 'theme-button';
+        btn.type = 'button';
+    // Mostrar únicamente el nombre del tema (sin recuento). Si falta title, usar id como fallback
+    const display = (t && (t.title || t.nombre || t.name)) ? (t.title || t.nombre || t.name) : String(t && t.id ? t.id : 'Tema');
+    btn.textContent = display;
+    // NO exponer id en el DOM; solo mostrar el título (texto)
+        btn.addEventListener('click', async () => {
+            // Guardar selección y cargar títulos del tema
+            selectedTheme = { id: t.id, title: t.title };
+            await fetchTitlesForTheme(t.id);
+        });
+        container.appendChild(btn);
+    });
+    // Asegurar que la pantalla de temas está visible
+    mostrarPantalla('themes');
+}
+
+async function fetchTitlesForTheme(temaId) {
+    try {
+        const res = await fetch(`/api/titulos?temaId=${encodeURIComponent(String(temaId))}`);
+        if (!res.ok) throw new Error('No se pudieron cargar los títulos');
+        const payload = await res.json();
+        const titulos = payload?.titulos || [];
+        renderTitles(titulos);
+        mostrarPantalla('themeConfirm');
+    } catch (err) {
+        console.error('Error cargando títulos:', err);
+        // Fallback: intentar construir títulos desde preguntas locales si existen
+        if (Array.isArray(todasLasPreguntas) && todasLasPreguntas.length > 0) {
+            const map = {};
+            todasLasPreguntas.forEach(q => {
+                const key = q.titulo_id ?? (q.epigrafe ? String(q.epigrafe).trim() : 'Sin título');
+                map[key] = true;
+            });
+            const built = Object.keys(map).map(k => ({ id: k, title: String(k) }));
+            renderTitles(built);
+            mostrarPantalla('themeConfirm');
+            return;
+        }
+        const container = document.getElementById('titlesContainer');
+        if (container) container.innerHTML = `<div class="error-box">No se pudieron cargar los títulos. <button id="retryTitles" class="btn btn-primary">Reintentar</button></div>`;
+        const retry = document.getElementById('retryTitles');
+        if (retry) retry.addEventListener('click', () => fetchTitlesForTheme(temaId));
+        mostrarPantalla('themeConfirm');
+    }
+}
+
+function renderTitles(titulos) {
+    const container = document.getElementById('titlesContainer');
+    if (!container) return;
+    container.innerHTML = '';
+    titulos.forEach(t => {
+        const btn = document.createElement('button');
+        btn.className = 'theme-button';
+        btn.type = 'button';
+        // truncar texto largo con CSS; aquí ponemos el texto
+        btn.textContent = t.title;
+        btn.dataset.tid = String(t.id);
+        btn.setAttribute('aria-label', `Título ${t.title}`);
+        btn.addEventListener('click', () => {
+            selectedTitle = { id: t.id, title: t.title };
+            // ir automáticamente a la pantalla de conteo
+            const titleEl = document.getElementById('countScreenTitle');
+            if (selectedTitle && titleEl) titleEl.textContent = `Selecciona el número de preguntas para el test: (${selectedTitle.title})`;
+            mostrarPantalla('count');
+        });
+        container.appendChild(btn);
+    });
 }
 
 function renderizarCuestionario() {
@@ -931,6 +1109,8 @@ function nuevoCuestionario() {
     cuestionarioCorregido = false;
     // Limpiar marcas de repaso al iniciar nuevo cuestionario
     clearReviewState();
+    // Mantener selectedTheme pero limpiar selectedTitle: se volverá a la pantalla de títulos
+    selectedTitle = null;
     // Limpiar contenedores
     elements.questionsContainer.innerHTML = '';
     elements.resultsContainer.innerHTML = '';
@@ -939,8 +1119,14 @@ function nuevoCuestionario() {
     if (elements.correctBtn) elements.correctBtn.disabled = false;
     if (elements.repeatBtn) elements.repeatBtn.disabled = true;
     if (elements.newQuizBtn) elements.newQuizBtn.disabled = true;
-    // Mostrar pantalla inicial para que el usuario seleccione tipo de test
-    mostrarPantalla('initial');
+    // Mostrar pantalla de selección de títulos (segunda pantalla) si hay tema seleccionado
+    if (selectedTheme) {
+        // volver a cargar los títulos para el tema seleccionado
+        fetchTitlesForTheme(selectedTheme.id);
+        mostrarPantalla('themeConfirm');
+    } else {
+        mostrarPantalla('themes');
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 

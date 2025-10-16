@@ -38,10 +38,30 @@
         </div>
 
         <!-- Pantalla inicial -->
-        <div id="initialScreen" class="screen hidden">
+        <!-- Pantalla 1: Selección de temario (lista de botones por tema) -->
+        <div id="themesScreen" class="screen hidden">
             <div class="question-selector">
-                <h3>Selecciona el número de preguntas:</h3>
-                <div class="radio-group">
+                <h3>Selecciona el temario de los tests a realizar:</h3>
+                <div id="themesContainer" class="theme-grid"></div>
+            </div>
+        </div>
+
+        <!-- Pantalla 2: Lista de títulos del tema elegido (al pulsar un título se va directamente a selección de número) -->
+        <div id="themeConfirmScreen" class="screen hidden">
+            <div class="question-selector">
+                <h3>Seleccione el título dentro del temario</h3>
+                <div id="titlesContainer" class="theme-grid"></div>
+            </div>
+            <div class="button-group">
+                <button class="btn btn-secondary" id="themeBackBtn">← Volver</button>
+            </div>
+        </div>
+
+        <!-- Pantalla 3: Selección del número de preguntas -->
+        <div id="countScreen" class="screen hidden">
+            <div class="question-selector">
+                <h3 id="countScreenTitle">Selecciona el número de preguntas para el test:</h3>
+                <div class="radio-group" id="countOptions">
                     <label class="radio-option">
                         <input type="radio" name="questionCount" value="20" checked>
                         <span>20 preguntas</span>
@@ -59,6 +79,7 @@
 
             <div class="button-group">
                 <button class="btn btn-primary" id="generateBtn">Generar Cuestionario</button>
+                <button class="btn btn-secondary" id="countBackBtn">← Volver</button>
             </div>
         </div>
 
@@ -101,9 +122,19 @@
 
             <div class="corrected-questions" id="correctedQuestionsContainer"></div>
 
-            <div class="button-group">
-                <button class="btn btn-secondary" id="repeatBtn">🔄 Repetir Cuestionario</button>
-                <button class="btn btn-tertiary" id="newQuizBtn">✨ Generar Nuevo Cuestionario</button>
+            <div class="results-actions">
+                <div class="top-buttons">
+                    <button class="btn btn-square btn-secondary" id="repeatBtn" aria-label="Repetir cuestionario">
+                        <span class="btn-icon">🔄</span>
+                        <span class="btn-label">Repetir</span>
+                    </button>
+                    <button class="btn btn-square btn-tertiary" id="newQuizBtn" aria-label="Generar nuevo cuestionario">
+                        <span class="btn-icon">✨</span>
+                        <span class="btn-label">Nuevo</span>
+                    </button>
+                    <button class="btn btn-primary btn-wide" id="backToMenuBtn" aria-label="Volver al menú principal">↩ Volver al menú principal</button>
+                </div>
+                
             </div>
         </div>
 

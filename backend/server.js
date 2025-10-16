@@ -14,19 +14,41 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 8080;
 const DATA_FILE = process.env.QUESTIONS_FILE || path.join(__dirname, 'data', 'preguntas.json');
-// Config desde .env
-dotenv.config();
+// Config desde .env (cargar explícitamente el .env junto a este fichero)
+dotenv.config({ path: path.join(__dirname, '.env') });
 const USE_DB = process.env.USE_DB === 'true';
 let dbPool = null;
 
 async function initDb() {
   if (!USE_DB) return;
   if (dbPool) return;
-  const dbHost = process.env.DB_HOST || 'localhost';
-  const dbPort = process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : 3306;
-  const dbUser = process.env.DB_USER || 'root';
-  const dbPass = process.env.DB_PASSWORD || '';
-  const dbName = process.env.DB_NAME || '';
+  // Permitir seleccionar entre distintas configuraciones mediante DB_ENV
+  // Valores esperados: 'production' (por defecto) o 'local'
+  const dbEnv = (process.env.DB_ENV || 'production').trim();
+
+  // helper: quitar comillas accidentales en valores del .env
+  const strip = (v) => {
+    if (typeof v !== 'string') return v;
+    return v.replace(/^\s*"\s*|\s*"\s*$/g, '').replace(/^\s*'\s*|\s*'\s*$/g, '');
+  };
+
+  let dbHost, dbPort, dbUser, dbPass, dbName;
+  if (dbEnv === 'local') {
+    dbHost = strip(process.env.LOCAL_DB_HOST || process.env.DB_HOST || '127.0.0.1');
+    dbPort = process.env.LOCAL_DB_PORT ? parseInt(strip(process.env.LOCAL_DB_PORT), 10) : (process.env.DB_PORT ? parseInt(strip(process.env.DB_PORT), 10) : 3306);
+    dbUser = strip(process.env.LOCAL_DB_USER || process.env.DB_USER || 'root');
+    dbPass = strip(process.env.LOCAL_DB_PASSWORD || process.env.DB_PASSWORD || '');
+    dbName = strip(process.env.LOCAL_DB_NAME || process.env.DB_NAME || '');
+  } else {
+    // production/default: usar variables DB_* (ej. conexión AlwaysData)
+    dbHost = strip(process.env.DB_HOST || 'localhost');
+    dbPort = process.env.DB_PORT ? parseInt(strip(process.env.DB_PORT), 10) : 3306;
+    dbUser = strip(process.env.DB_USER || 'root');
+    dbPass = strip(process.env.DB_PASSWORD || '');
+    dbName = strip(process.env.DB_NAME || '');
+  }
+
+  console.log(`Init DB (env=${dbEnv}) connecting to ${dbHost}:${dbPort} database='${dbName}' user='${dbUser ? dbUser : 'N/A'}'`);
 
   dbPool = await mysql.createPool({
     host: dbHost,
@@ -132,18 +154,137 @@ app.get('/api/questions', async (_req, res) => {
     if (USE_DB) {
       // cargar desde DB (no cache por ahora o cache si lo prefieres)
       const rows = await loadQuestionsFromDb();
-      const randomized = rows.map(q => ({ ...q, options: shuffle((q.options || []).slice()) }));
-      const sanitized = randomized.map(q => ({ ...q, options: q.options.map(o => ({ text: o.text })) }));
+  const randomized = rows.map(q => ({ ...q, options: shuffle((q.options || []).slice()) }));
+  const sanitized = randomized.map(q => ({ ...q, options: q.options.map(o => ({ id: o.id, text: o.text, is_correct: !!o.is_correct })) }));
       return res.json({ count: sanitized.length, questions: sanitized });
     }
 
     if (!CACHE) CACHE = loadQuestions();
-    const randomized = CACHE.map(q => ({ ...q, options: shuffle(q.options.slice()) }));
-    const sanitized = randomized.map(q => ({ ...q, options: q.options.map(o => ({ text: o.text })) }));
-    return res.json({ count: sanitized.length, questions: sanitized });
+  const randomized = CACHE.map(q => ({ ...q, options: shuffle(q.options.slice()) }));
+  const sanitized = randomized.map(q => ({ ...q, options: q.options.map(o => ({ id: o.id ?? null, text: o.text ?? o.label ?? o.texto ?? '', is_correct: !!(o.is_correct || o.isCorrect || o.es_correcta || o.correct) })) }));
+  return res.json({ count: sanitized.length, questions: sanitized });
   } catch (err) {
     console.error('Error cargando preguntas:', err);
     return res.status(500).json({ error: 'Error al cargar preguntas' });
+  }
+});
+
+// Endpoint para listar temas (temarios) disponibles
+app.get('/api/temas', async (_req, res) => {
+  try {
+    console.log('/api/temas called');
+    let rows = [];
+    if (USE_DB) {
+      if (!dbPool) await initDb();
+      // Intentar leer tabla de temas/títulos si existe
+      try {
+        // Preferir tabla 'temas' con columnas id/name/title
+        const [temasRows] = await dbPool.query("SHOW TABLES LIKE 'temas'");
+        if (temasRows && temasRows.length > 0) {
+          const [rowsTemas] = await dbPool.query('SELECT * FROM temas');
+          // mapear posible nombre entre las columnas disponibles
+          const temasMapped = rowsTemas.map(r => ({ id: r.id, title: r.nombre || r.title || r.name || r.nombre_tema || String(r.id), count: 0 }));
+          return res.json({ count: temasMapped.length, temas: temasMapped });
+        }
+      } catch (e) {
+        // ignorar y continuar con fallback
+        console.warn('Error comprobando tabla temas:', e.message);
+      }
+
+      try {
+        // Si existe tabla 'titulos' (nombres de títulos), devolverlos
+        const [titTables] = await dbPool.query("SHOW TABLES LIKE 'titulos'");
+        if (titTables && titTables.length > 0) {
+          const [titRows] = await dbPool.query('SELECT * FROM titulos');
+          const mapped = titRows.map(r => ({ id: r.id, title: r.nombre || r.title || r.name || r.titulo || String(r.id), count: 0 }));
+          return res.json({ count: mapped.length, temas: mapped });
+        }
+      } catch (e) {
+        console.warn('Error comprobando tabla titulos:', e.message);
+      }
+
+      // Fallback: leer preguntas y agrupar por titulo_id/epigrafe
+      const [preguntasRows] = await dbPool.query('SELECT id, titulo_id, texto, epigrafe FROM preguntas');
+      rows = preguntasRows.map(r => ({ id: r.id, titulo_id: r.titulo_id, epigrafe: r.epigrafe }));
+    } else {
+      if (!CACHE) CACHE = loadQuestions();
+      rows = CACHE.map(q => ({ id: q.id, titulo_id: q.titulo_id ?? null, epigrafe: q.epigrafe ?? null }));
+    }
+
+    // Agrupar por titulo_id o por epigrafe como fallback
+    const group = {};
+    rows.forEach(r => {
+      const key = r.titulo_id ?? (r.epigrafe ? String(r.epigrafe).trim() : 'Sin tema');
+      group[key] = (group[key] || 0) + 1;
+    });
+
+    // Construir array de temas. Si titulo_id es numérico, devolverlo como id; si es texto usar como id también
+    const temas = Object.keys(group).map(k => ({ id: k, title: String(k), count: group[k] }));
+    return res.json({ count: temas.length, temas });
+  } catch (err) {
+    console.error('Error cargando temas:', err);
+    return res.status(500).json({ error: 'Error al cargar temas' });
+  }
+});
+
+// Endpoint para listar los títulos asociados a un tema (si existe tabla 'titulos' o por preguntas)
+app.get('/api/titulos', async (req, res) => {
+  const temaId = req.query.temaId;
+  try {
+    if (USE_DB) {
+      if (!dbPool) await initDb();
+      // Si existe tabla 'titulos' y tiene relación con tema, intentar leer
+      try {
+        const [tables] = await dbPool.query("SHOW TABLES LIKE 'titulos'");
+        if (tables && tables.length > 0) {
+          // Intentar buscar por tema_id si se pasó
+          if (temaId) {
+            const [rows] = await dbPool.query('SELECT * FROM titulos WHERE tema_id = ?', [temaId]);
+            if (rows && rows.length > 0) return res.json({ count: rows.length, titulos: rows.map(r => ({ id: r.id, title: r.nombre || r.title || r.name || r.titulo || String(r.id) })) });
+          }
+          // Fallback: devolver todos los titulos
+          const [all] = await dbPool.query('SELECT * FROM titulos');
+          return res.json({ count: all.length, titulos: all.map(r => ({ id: r.id, title: r.nombre || r.title || r.name || r.titulo || String(r.id) })) });
+        }
+      } catch (e) {
+        console.warn('Error comprobando tabla titulos:', e.message);
+      }
+
+      // Si no hay tabla titulos, intentar obtener titulos únicos desde preguntas por titulo_id
+      const [preguntasRows] = await dbPool.query('SELECT DISTINCT titulo_id, epigrafe FROM preguntas');
+      const temas = preguntasRows.map(r => ({ id: r.titulo_id ?? r.epigrafe ?? String(r.titulo_id), title: String(r.titulo_id || r.epigrafe) }));
+      return res.json({ count: temas.length, titulos: temas });
+    }
+
+    // Fallback cuando no hay DB: agrupar desde CACHE
+    if (!CACHE) CACHE = loadQuestions();
+    const map = {};
+    CACHE.forEach(q => {
+      const key = q.titulo_id ?? q.epigrafe ?? 'Sin título';
+      map[key] = true;
+    });
+    const titulos = Object.keys(map).map(k => ({ id: k, title: String(k) }));
+    return res.json({ count: titulos.length, titulos });
+  } catch (err) {
+    console.error('Error cargando titulos:', err);
+    return res.status(500).json({ error: 'Error al cargar titulos' });
+  }
+});
+
+// Health check: verifica conexión a la DB (si está habilitada)
+app.get('/api/health', async (_req, res) => {
+  try {
+    if (USE_DB) {
+      await initDb();
+      // prueba simple
+      const [rows] = await dbPool.query('SELECT 1 as ok');
+      if (Array.isArray(rows)) return res.json({ db: 'ok' });
+      return res.status(500).json({ db: 'unexpected result', rows });
+    }
+    return res.json({ db: 'disabled', message: 'USE_DB=false' });
+  } catch (err) {
+    console.error('Health check DB error:', err);
+    return res.status(500).json({ db: 'error', message: err.message });
   }
 });
 
