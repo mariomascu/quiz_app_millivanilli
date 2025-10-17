@@ -407,7 +407,22 @@ async function loadAndRenderThemes() {
         const payload = await res.json();
         const temas = payload?.temas || [];
         console.log('DEBUG /api/temas payload:', payload);
-        renderThemes(temas);
+        // Si la lista de temas es excesivamente larga (p.ej. fallback que devuelve
+        // todos los títulos), reducirla a temas de primer nivel agrupando por
+        // la parte izquierda antes de guiones largos/medios/cortos.
+        let toRender = temas;
+        if (Array.isArray(temas) && temas.length > 12) {
+            console.warn('La lista de temas es larga, aplicando reducción a temas de primer nivel');
+            const map = {};
+            temas.forEach(t => {
+                const raw = String(t.title || t.nombre || t.name || t.id || '').trim();
+                const root = raw.split(/\s*[–—-]\s*/)[0].trim() || raw;
+                if (!root) return;
+                map[root] = (map[root] || 0) + (Number(t.count) || 1);
+            });
+            toRender = Object.keys(map).map(k => ({ id: k, title: k, count: map[k] }));
+        }
+        renderThemes(toRender);
     } catch (err) {
         console.error('Error cargando temas:', err);
         // Si ya cargamos preguntas con éxito, construir temas cliente-side como fallback
