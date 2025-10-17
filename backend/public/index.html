@@ -19,7 +19,6 @@
              </div>
             <h1>📚 Cuestionarios de Oposiciones</h1>
             <h2>Ordenanza Ayto. Córdoba</h2>
-            <p class="subtitle">Reglamento Orgánico Municipal del Ayuntamiento de Córdoba</p>
         </header>
 
         <!-- Pantalla de carga -->
@@ -41,13 +40,15 @@
         <!-- Pantalla 1: Selección de temario (lista de botones por tema) -->
         <div id="themesScreen" class="screen hidden">
             <div class="question-selector">
-                <h3>Selecciona el temario de los tests a realizar:</h3>
+                <h3>Selecciona el temario</h3>
                 <div id="themesContainer" class="theme-grid"></div>
             </div>
         </div>
 
         <!-- Pantalla 2: Lista de títulos del tema elegido (al pulsar un título se va directamente a selección de número) -->
         <div id="themeConfirmScreen" class="screen hidden">
+            <!-- Subtitle dinámico: se rellena con el nombre del tema seleccionado -->
+            <p id="themeSubtitle" class="subtitle" aria-live="polite"></p>
             <div class="question-selector">
                 <h3>Seleccione el título dentro del temario</h3>
                 <div id="titlesContainer" class="theme-grid"></div>

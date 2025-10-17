@@ -450,7 +450,11 @@ function renderThemes(temas) {
     // NO exponer id en el DOM; solo mostrar el título (texto)
         btn.addEventListener('click', async () => {
             // Guardar selección y cargar títulos del tema
-            selectedTheme = { id: t.id, title: t.title };
+            const display = (t && (t.title || t.nombre || t.name)) ? (t.title || t.nombre || t.name) : String(t && t.id ? t.id : 'Tema');
+            selectedTheme = { id: t.id, title: display };
+            // Actualizar el subtítulo dinámico en la pantalla de confirmación
+            const subtitleEl = document.getElementById('themeSubtitle');
+            if (subtitleEl) subtitleEl.textContent = display;
             await fetchTitlesForTheme(t.id);
         });
         container.appendChild(btn);
@@ -493,6 +497,9 @@ function renderTitles(titulos) {
     const container = document.getElementById('titlesContainer');
     if (!container) return;
     container.innerHTML = '';
+    // Asegurarnos de que el subtítulo muestre el tema seleccionado (por si no se actualizó antes)
+    const subtitleEl = document.getElementById('themeSubtitle');
+    if (subtitleEl && selectedTheme) subtitleEl.textContent = String(selectedTheme.title || '');
     titulos.forEach(t => {
         const btn = document.createElement('button');
         btn.className = 'theme-button';
