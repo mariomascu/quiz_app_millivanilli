@@ -266,30 +266,60 @@ app.get('/api/temas', async (_req, res) => {
       group[key] = (group[key] || 0) + 1;
     });
 
-    // Construir array de temas. Normalizar claves para agrupar por 'Título N' o 'Artículo N'
-    const normalized = Object.keys(group).map(k => {
-      const raw = String(k);
-      // Normalizar 'Título I', 'Título II', etc.
-      const tituloMatch = raw.match(/^(Título\s+[IVXLCDM0-9]+)/i);
-      if (tituloMatch) return { id: tituloMatch[1].trim(), title: tituloMatch[1].trim(), count: group[k] };
-      const articuloMatch = raw.match(/^(Artículo\s+\d+)/i);
-      if (articuloMatch) return { id: articuloMatch[1].trim(), title: articuloMatch[1].trim(), count: group[k] };
-      // Fallback: usar las primeras 5 palabras para evitar títulos larguísimos
-      const short = raw.split(/\s+/).slice(0, 5).join(' ');
-      return { id: short, title: short, count: group[k] };
+    // Construir array de temas con normalización agresiva.
+    const normalized = Object.keys(group).map(k => ({ raw: String(k), count: group[k] }));
+
+    const mapped = normalized.map(item => {
+      const raw = item.raw || '';
+      // Buscar 'Título N' en cualquier parte del texto (numeración romana o arábiga)
+      const tituloAnywhere = raw.match(/Título\s*[:\.]?\s*([IVXLCDM]+|\d+)/i);
+      if (tituloAnywhere) {
+        const num = tituloAnywhere[1];
+        const id = `Título ${num}`;
+        return { id, title: id, count: item.count };
+      }
+      // Buscar 'Artículo N' en cualquier parte
+      const articuloAnywhere = raw.match(/Artículo\s*[:\.]?\s*(\d+)/i);
+      if (articuloAnywhere) {
+        const num = articuloAnywhere[1];
+        const id = `Artículo ${num}`;
+        return { id, title: id, count: item.count };
+      }
+      // Si el texto es muy largo, recortar a primeras 4 palabras
+      const words = raw.split(/\s+/).filter(Boolean);
+      const short = words.slice(0, 4).join(' ');
+      const id = short || raw || 'Sin tema';
+      return { id, title: id, count: item.count };
     });
 
-    // Combinar elementos con mismo id (porque la normalización puede colapsar varias claves)
+    // Combinar por id y sumar contadores
     const combined = {};
-    normalized.forEach(n => {
-      combined[n.id] = combined[n.id] || { id: n.id, title: n.title, count: 0 };
-      combined[n.id].count += Number(n.count) || 0;
+    mapped.forEach(m => {
+      combined[m.id] = combined[m.id] || { id: m.id, title: m.title, count: 0 };
+      combined[m.id].count += Number(m.count) || 0;
     });
 
-    const temasArr = Object.values(combined).sort((a, b) => b.count - a.count);
-    // Limitar a top 20 para evitar pantalla inicial excesiva
-    const top = temasArr.slice(0, 20);
-    return res.json({ count: top.length, temas: top });
+    // Ordenar por frecuencia y limitar
+    let temasArr = Object.values(combined).sort((a, b) => b.count - a.count);
+    // Colapsar los de baja frecuencia en 'Otros' para limpiar la lista
+    const thresholdToKeep = 3; // mantener directamente solo los que aparecen >= threshold
+    const keep = temasArr.filter(t => t.count >= thresholdToKeep);
+    const others = temasArr.filter(t => t.count < thresholdToKeep);
+    const othersCount = others.reduce((s, o) => s + (o.count || 0), 0);
+
+    // Si keep tiene más de 18, recortar a 18 y sumar el resto en 'Otros'
+    let result = keep.sort((a, b) => b.count - a.count).slice(0, 18);
+    // Añadir 'Otros' si hay items pequeños o si keep era menor y there are remaining
+    if (othersCount > 0) {
+      result.push({ id: 'Otros', title: 'Otros temas', count: othersCount });
+    }
+
+    // Si no hay suficientes 'keep' (p.ej. dataset peculiar), devolver los top 18 de all
+    if (result.length === 0) {
+      result = temasArr.slice(0, 18);
+    }
+
+    return res.json({ count: result.length, temas: result });
   } catch (err) {
     console.error('Error cargando temas:', err);
     return res.status(500).json({ error: 'Error al cargar temas' });
