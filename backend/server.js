@@ -227,10 +227,23 @@ app.get('/api/temas', async (_req, res) => {
       rows = CACHE.map(q => ({ id: q.id, titulo_id: q.titulo_id ?? null, epigrafe: q.epigrafe ?? null }));
     }
 
-    // Agrupar por titulo_id o por epigrafe como fallback
+    // Agrupar por titulo_id o por epigrafe como fallback.
+    // Cuando no haya un id numérico de título, intentaremos derivar un 'tema'
+    // de nivel superior partiendo del campo `epigrafe`. Esto reduce que se
+    // muestren todos los títulos como temas en la primera pantalla.
     const group = {};
     rows.forEach(r => {
-      const key = r.titulo_id ?? (r.epigrafe ? String(r.epigrafe).trim() : 'Sin tema');
+      let key;
+      if (r.titulo_id !== undefined && r.titulo_id !== null) {
+        key = r.titulo_id;
+      } else if (r.epigrafe) {
+        // Tomar la parte antes del primer guion largo/medio/corto como tema principal
+        const s = String(r.epigrafe).trim();
+        const parts = s.split(/\s*[–—-]\s*/);
+        key = parts[0] ? parts[0].trim() : s;
+      } else {
+        key = 'Sin tema';
+      }
       group[key] = (group[key] || 0) + 1;
     });
 
