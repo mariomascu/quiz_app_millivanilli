@@ -196,8 +196,24 @@ app.get('/api/temas', async (_req, res) => {
         const [titTables] = await dbPool.query("SHOW TABLES LIKE 'titulos'");
         if (titTables && titTables.length > 0) {
           const [titRows] = await dbPool.query('SELECT * FROM titulos');
-          const mapped = titRows.map(r => ({ id: r.id, title: r.nombre || r.title || r.name || r.titulo || String(r.id), count: 0 }));
-          return res.json({ count: mapped.length, temas: mapped });
+          // Si la tabla 'titulos' existe pero contiene una columna 'tema_id' (o similar),
+          // entonces agrupamos los títulos por ese campo y devolvemos los temas resultantes.
+          // Esto evita exponer una lista de todos los títulos como si fuesen 'temas'.
+          if (Array.isArray(titRows) && titRows.length > 0) {
+            const sample = titRows[0];
+            const temaIdKey = ('tema_id' in sample) ? 'tema_id' : (('temaId' in sample) ? 'temaId' : (('id_tema' in sample) ? 'id_tema' : null));
+            if (temaIdKey) {
+              const grup = {};
+              titRows.forEach(r => {
+                const key = r[temaIdKey] ?? 'sin_tema';
+                grup[key] = (grup[key] || 0) + 1;
+              });
+              const temasFromTitulos = Object.keys(grup).map(k => ({ id: k, title: String(k), count: grup[k] }));
+              return res.json({ count: temasFromTitulos.length, temas: temasFromTitulos });
+            }
+          }
+          // Si no hay relación con tema en 'titulos', NO devolver la lista completa de títulos
+          // como temas; continuar con los fallbacks más abajo (preguntas agrupadas).
         }
       } catch (e) {
         console.warn('Error comprobando tabla titulos:', e.message);
