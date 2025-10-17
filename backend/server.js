@@ -237,10 +237,29 @@ app.get('/api/temas', async (_req, res) => {
       if (r.titulo_id !== undefined && r.titulo_id !== null) {
         key = r.titulo_id;
       } else if (r.epigrafe) {
-        // Tomar la parte antes del primer guion largo/medio/corto como tema principal
         const s = String(r.epigrafe).trim();
-        const parts = s.split(/\s*[–—-]\s*/);
-        key = parts[0] ? parts[0].trim() : s;
+        let candidate = s;
+
+        // 1) Si empieza por 'Título' intentar capturar 'Título I' o similar
+        const tituloMatch = s.match(/^(Título\s+[IVXLCDM0-9]+)\b/i);
+        if (tituloMatch) {
+          candidate = tituloMatch[1];
+        } else {
+          // 2) Si empieza por 'Artículo 23' capturar 'Artículo 23'
+          const articuloMatch = s.match(/^(Artículo\s+\d+)\b/i);
+          if (articuloMatch) {
+            candidate = articuloMatch[1];
+          } else {
+            // 3) Split por guiones o por punto para obtener un encabezado más corto
+            candidate = s.split(/[–—-\.]/)[0].trim();
+            // Si queda demasiado corto (p.ej. "1"), tomar las primeras 3 palabras
+            if (candidate.length < 3 || candidate.split(/\s+/).length < 2) {
+              candidate = s.split(/\s+/).slice(0, 3).join(' ');
+            }
+          }
+        }
+
+        key = candidate || 'Sin tema';
       } else {
         key = 'Sin tema';
       }
