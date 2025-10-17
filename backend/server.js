@@ -266,9 +266,30 @@ app.get('/api/temas', async (_req, res) => {
       group[key] = (group[key] || 0) + 1;
     });
 
-    // Construir array de temas. Si titulo_id es numérico, devolverlo como id; si es texto usar como id también
-    const temas = Object.keys(group).map(k => ({ id: k, title: String(k), count: group[k] }));
-    return res.json({ count: temas.length, temas });
+    // Construir array de temas. Normalizar claves para agrupar por 'Título N' o 'Artículo N'
+    const normalized = Object.keys(group).map(k => {
+      const raw = String(k);
+      // Normalizar 'Título I', 'Título II', etc.
+      const tituloMatch = raw.match(/^(Título\s+[IVXLCDM0-9]+)/i);
+      if (tituloMatch) return { id: tituloMatch[1].trim(), title: tituloMatch[1].trim(), count: group[k] };
+      const articuloMatch = raw.match(/^(Artículo\s+\d+)/i);
+      if (articuloMatch) return { id: articuloMatch[1].trim(), title: articuloMatch[1].trim(), count: group[k] };
+      // Fallback: usar las primeras 5 palabras para evitar títulos larguísimos
+      const short = raw.split(/\s+/).slice(0, 5).join(' ');
+      return { id: short, title: short, count: group[k] };
+    });
+
+    // Combinar elementos con mismo id (porque la normalización puede colapsar varias claves)
+    const combined = {};
+    normalized.forEach(n => {
+      combined[n.id] = combined[n.id] || { id: n.id, title: n.title, count: 0 };
+      combined[n.id].count += Number(n.count) || 0;
+    });
+
+    const temasArr = Object.values(combined).sort((a, b) => b.count - a.count);
+    // Limitar a top 20 para evitar pantalla inicial excesiva
+    const top = temasArr.slice(0, 20);
+    return res.json({ count: top.length, temas: top });
   } catch (err) {
     console.error('Error cargando temas:', err);
     return res.status(500).json({ error: 'Error al cargar temas' });
