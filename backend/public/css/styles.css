@@ -51,14 +51,8 @@ body {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ========================================
@@ -71,15 +65,26 @@ header {
     border-bottom: 3px solid var(--primary-color);
 }
 
-/* Logo fijo grande en el header */
+/* Logo en header - CORREGIDO */
 .site-logo {
-    top: 20px;
-    left: 50%;
-    width: 320px;
+    width: 280px;
     height: auto;
-    z-index: 9999;
-    background: var(--white);
-    padding: 8px;
+    margin: 0 auto 20px auto;
+    display: block;
+    max-width: 100%;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1em;
+    font-weight: 500;
 }
 
 /* Ajustes responsivos para dispositivos pequeños */
