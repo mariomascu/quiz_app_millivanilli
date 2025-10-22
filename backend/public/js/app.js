@@ -16,6 +16,9 @@ let reviewList = [];
 // Badge DOM
 let reviewBadge = null;
 
+// Mapa para relacionar titulo_id -> tema_id (se rellena al cargar títulos desde el servidor)
+const titleToTheme = new Map();
+
 // Referencias a elementos del DOM
 const screens = {
     loading: document.getElementById('loadingScreen'),
@@ -389,20 +392,33 @@ function getFilteredPool() {
         const key = String(selectedTitle.id);
         const titleText = String(selectedTitle.title || '');
         pool = pool.filter(q => {
-            const qTid = q.titulo_id !== undefined && q.titulo_id !== null ? String(q.titulo_id) : null;
+            // Preferir comparar por campo titulo_id si existe
+            const qTid = (q.titulo_id !== undefined && q.titulo_id !== null) ? String(q.titulo_id) : null;
             const qText = String(q.epigrafe ?? q.titulo ?? '');
-            return (qTid && qTid === key) || (qText && qText === titleText);
+            if (qTid) return qTid === key;
+            // Fallback: comparar por texto del epígrafe/título
+            return (qText && qText === titleText);
         });
         return pool;
     }
-
     if (selectedTheme) {
-        const key = String(selectedTheme.id);
+        const themeKey = String(selectedTheme.id);
         const themeText = String(selectedTheme.title || '');
         pool = pool.filter(q => {
-            const qTid = q.titulo_id !== undefined && q.titulo_id !== null ? String(q.titulo_id) : null;
+            // 1) Si la pregunta tiene un campo explícito tema_id, comparar directamente
+            const qTema = (q.tema_id !== undefined && q.tema_id !== null) ? String(q.tema_id) : null;
+            if (qTema) return qTema === themeKey;
+
+            // 2) Si solo tiene titulo_id, intentar mapear titulo->tema usando titleToTheme
+            const qTid = (q.titulo_id !== undefined && q.titulo_id !== null) ? String(q.titulo_id) : null;
+            if (qTid) {
+                const mappedTema = titleToTheme.get(qTid);
+                if (mappedTema) return mappedTema === themeKey;
+            }
+
+            // 3) Fallback: comparar por texto (epígrafe/título)
             const qText = String(q.epigrafe ?? q.titulo ?? '');
-            return (qTid && qTid === key) || (qText && qText === themeText);
+            return (qText && qText === themeText);
         });
     }
     return pool;
@@ -477,6 +493,16 @@ async function fetchTitlesForTheme(temaId) {
         if (!res.ok) throw new Error('No se pudieron cargar los títulos');
         const payload = await res.json();
         const titulos = payload?.titulos || [];
+        // Poblar mapping titulo_id -> temaId para que el filtrado pueda usar tema_id explícito
+        if (Array.isArray(titulos)) {
+            titulos.forEach(tt => {
+                try {
+                    if (tt && (tt.id !== undefined && tt.id !== null)) {
+                        titleToTheme.set(String(tt.id), String(temaId));
+                    }
+                } catch (e) { /* ignore malformed */ }
+            });
+        }
         renderTitles(titulos);
         mostrarPantalla('themeConfirm');
     } catch (err) {
@@ -522,6 +548,23 @@ function renderTitles(titulos) {
         });
         container.appendChild(btn);
     });
+    // Añadir botón para seleccionar "Todo el temario" (todas las preguntas del tema seleccionado) al final
+    if (selectedTheme) {
+        const allBtn = document.createElement('button');
+        allBtn.className = 'theme-button all-titles-button';
+        allBtn.type = 'button';
+        allBtn.textContent = `Todo el temario`;
+        allBtn.setAttribute('aria-label', `Todo el temario: ${selectedTheme.title || ''}`);
+        allBtn.addEventListener('click', () => {
+            // selectedTitle null = usar selectedTheme para filtrar en getFilteredPool()
+            selectedTitle = null;
+            // Actualizar título de la pantalla de selección de número
+            const titleEl = document.getElementById('countScreenTitle');
+            if (titleEl) titleEl.textContent = `Selecciona el número de preguntas para el test: (Todo el temario: ${selectedTheme.title || ''})`;
+            mostrarPantalla('count');
+        });
+        container.appendChild(allBtn);
+    }
 }
 
 function renderizarCuestionario() {
