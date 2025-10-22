@@ -41,6 +41,9 @@ const elements = {
     correctedQuestionsContainer: document.getElementById('correctedQuestionsContainer')
 };
 
+// Elemento subtítulo bajo el h2 (se mostrará el nombre del tema seleccionado)
+const subtitleEl = document.querySelector('p.subtitle');
+
 // ========================================
 // UTILIDADES DE SEGURIDAD Y ALEATORIEDAD
 // ========================================
@@ -232,6 +235,12 @@ function mostrarPantalla(nombrePantalla) {
     if (badge) {
         if (nombrePantalla === 'initial') badge.classList.remove('visible');
         else if (reviewSet.size > 0) badge.classList.add('visible');
+    }
+    // Controlar subtítulo: en la pantalla de temas debe estar vacío
+    if (subtitleEl) {
+        if (nombrePantalla === 'themes') subtitleEl.textContent = '';
+        // si vamos a la pantalla de selección de título, mostrar el tema si está seleccionado
+        if (nombrePantalla === 'themeConfirm' && selectedTheme) subtitleEl.textContent = String(selectedTheme.title || '');
     }
 }
 
@@ -450,7 +459,10 @@ function renderThemes(temas) {
     // NO exponer id en el DOM; solo mostrar el título (texto)
         btn.addEventListener('click', async () => {
             // Guardar selección y cargar títulos del tema
-            selectedTheme = { id: t.id, title: t.title };
+            // Usar como título el texto mostrado (display) como fallback si t.title es falsy
+            selectedTheme = { id: t.id, title: (t.title || display) };
+            // Actualizar subtítulo inmediatamente con el texto mostrado
+            if (subtitleEl) subtitleEl.textContent = String(selectedTheme.title || '');
             await fetchTitlesForTheme(t.id);
         });
         container.appendChild(btn);
