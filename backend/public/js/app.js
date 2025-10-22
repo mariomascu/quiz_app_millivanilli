@@ -273,6 +273,39 @@ function configurarEventListeners() {
     if (themeBackBtn) themeBackBtn.addEventListener('click', () => { mostrarPantalla('themes'); });
     // toCountBtn removed: navigation happens automatically when selecting a title
     if (countBackBtn) countBackBtn.addEventListener('click', () => { mostrarPantalla('themeConfirm'); });
+
+    // Advertir si el usuario intenta refrescar/cerrar la pestaña mientras hay un test en curso
+    function isQuizInProgress() {
+        // Consideramos en curso si hay preguntas generadas y aún no se ha corregido
+        return Array.isArray(preguntasActuales) && preguntasActuales.length > 0 && !cuestionarioCorregido;
+    }
+
+    window.addEventListener('beforeunload', (e) => {
+        if (isQuizInProgress()) {
+            // Mensaje personalizado no mostrado por la mayoría de navegadores modernos,
+            // pero setting returnValue hace que aparezca el diálogo de confirmación.
+            e.preventDefault();
+            e.returnValue = '';
+            return '';
+        }
+        // otherwise allow unload
+        return undefined;
+    });
+
+    // Interceptar click en el logo (enlace a la home) para confirmar si hay un test en curso
+    const logoLink = document.querySelector('.logo a');
+    if (logoLink) {
+        logoLink.addEventListener('click', async (ev) => {
+            if (isQuizInProgress()) {
+                ev.preventDefault();
+                const ok = await showConfirmModal('Estás realizando un test y no lo has terminado. ¿Seguro que quieres abandonar y volver a la página inicial?', 'Confirmar salida');
+                if (ok) {
+                    // permitir navegación
+                    window.location.href = logoLink.href;
+                }
+            }
+        });
+    }
 }
 
 // Event listeners para el modal de puntuación
